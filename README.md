@@ -20,18 +20,4 @@ A real‑world modernization story from on‑prem to cloud.
 
 ---
 
-# 🏷️ Repo Banner Tagline (Short + Strong)
-
-**Modernizing the Enterprise BI Ecosystem — From SQL Server & SSIS to Fabric, Python ETL, and Power BI.**
-
----
-
-# 💼 LinkedIn “About” Section (Modernization‑Aligned)
-
-I design and modernize analytics systems that help organizations move from legacy BI to scalable, cloud‑ready architectures. My work spans SQL Server, SSIS, SSAS, and SSRS all the way to Azure Data Factory, Microsoft Fabric, Python ETL, Power BI, and Power Automate.
-
-I specialize in rebuilding traditional BI ecosystems into clean, automated pipelines with strong documentation, metadata‑driven design, and production‑grade engineering practices. My flagship project — **Gulf to Bay Analytics** — is a full modernization narrative that demonstrates how an on‑prem Microsoft BI stack evolves into a modern analytics platform.
-
-I enjoy solving real‑world data challenges, designing semantic models, building automated refresh pipelines, and creating BI systems that are maintainable, scalable, and easy to understand.
-
-If you're looking for someone who can bridge legacy systems with modern cloud analytics — and communicate the journey clearly — that’s where I do my best work.
+# 🏷️ **Modernizing the Enterprise BI Ecosystem — From SQL Server & SSIS to Fabric, Python ETL, and Power BI.**
