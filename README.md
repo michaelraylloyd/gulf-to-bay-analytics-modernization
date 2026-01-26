@@ -1,4 +1,4 @@
-# 🧩 GitHub Profile README (Portfolio‑Grade)
+# 🧩 GitHub Profile README
 
 # 👋 Hi, I'm Michael Lloyd  
 ### I modernize analytics systems from legacy on‑prem to clean, cloud‑ready architectures.
