@@ -60,6 +60,23 @@ The repo is structured to help recruiters, engineers, and hiring managers follow
 
 ---
 
+## 📊 Sample Gulf to Bay Analytics Dashboard
+
+Explore a live, interactive Power BI report that showcases the **Revenue Stream KPI Overview** used in this modernization project.
+
+This dashboard highlights:
+
+- Revenue trends across product lines  
+- KPI performance against targets  
+- Year‑over‑year comparisons  
+- Drill‑through paths for deeper analysis  
+- Clean, modern visuals aligned with the Gulf to Bay branding  
+
+🔗 **Sample Gulf to Bay Analytics Dashboard**  
+https://app.powerbi.com/view?r=eyJrIjoiNjEwZWU1M2UtMzhiZS00OTExLThmMjctNDczOGNmZmU5OWE0IiwidCI6ImE0MzI2YTU4LWY3ZDktNDQ0ZC1iM2FhLWIwOTAyN2U1ZTg2NiIsImMiOjF9
+
+---
+
 ## 🔗 Related Projects
 
 - **Profile Repo:** https://github.com/michaelraylloyd/michaelraylloyd  
