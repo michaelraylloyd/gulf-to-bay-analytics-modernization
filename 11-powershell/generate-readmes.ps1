@@ -1,91 +1,79 @@
-<#
-.SYNOPSIS
-  Recursively walks the repo and ensures every folder contains a professional README.md.
-  - Creates README.md if missing
-  - Updates README.md if it exists
-  - Inserts folder-specific descriptions based on folder name
+# Root of the repo
+$root = "C:\Users\Public\_MRLloydWorkProjects\gulf-to-bay-analytics-modernization"
 
-.DESCRIPTION
-  Idempotent. Safe to run repeatedly. Produces consistent, professional documentation.
-#>
+# Folder to skip (special handling)
+$skipDocsPortfolio = Join-Path $root "12-docs\portfolio-overview"
 
-param(
-    [string]$RepoRoot = (Get-Location).Path
-)
-
-# --------------------------------------------------------------------
-# Folder description map (extend anytime)
-# --------------------------------------------------------------------
-$FolderDescriptions = @{
-    "azure-data-factory"      = "Contains Azure Data Factory assets including pipelines, datasets, linked services, and triggers."
-    "pipelines"               = "Contains pipeline definitions and documentation."
-    "datasets"                = "Contains dataset definitions and documentation."
-    "linked-services"         = "Contains linked service definitions and connection metadata."
-    "triggers"                = "Contains trigger definitions and scheduling metadata."
-    "integration-runtimes"    = "Contains integration runtime configuration and documentation."
-    "global-parameters"       = "Contains global parameter definitions for ADF."
-    "fabric-data-factory"     = "Contains Fabric Data Factory pipelines, dataflows, and connection documentation."
-    "dataflows"               = "Contains Dataflow Gen2 definitions or documentation."
-    "connections"             = "Contains Fabric connection and gateway documentation."
-    "power-automate"          = "Contains Power Automate flow exports and documentation."
-    "flows"                   = "Contains exported flow definitions (definition.json, connections.json, manifest.json)."
-    "sql"                     = "Contains SQL objects including tables, views, stored procedures, and scripts."
-    "tables"                  = "Contains SQL table creation scripts."
-    "views"                   = "Contains SQL view definitions."
-    "stored-procedures"       = "Contains SQL stored procedure definitions."
-    "scripts"                 = "Contains utility SQL scripts."
-    "docs"                    = "Contains project documentation, architecture notes, and modernization narrative."
-    "modernization"           = "Contains documentation of the end-to-end modernization journey."
+# Function to convert folder names like "03-sql-server" → "SQL Server"
+function Convert-FolderName {
+    param($name)
+    $clean = $name -replace "^\d+-", ""
+    $clean = $clean -replace "-", " "
+    return ($clean.Substring(0,1).ToUpper() + $clean.Substring(1))
 }
 
-# --------------------------------------------------------------------
-# Function: Generate README content
-# --------------------------------------------------------------------
+# Function to generate README content
 function Get-ReadmeContent {
-    param(
-        [string]$FolderName,
-        [string]$FullPath
-    )
+    param($folderPath)
 
-    $description = $FolderDescriptions[$FolderName]
-    if (-not $description) {
-        $description = "This folder contains project assets related to $FolderName."
-    }
+    $folderName = Split-Path $folderPath -Leaf
+    $title = Convert-FolderName $folderName
 
     return @"
-# $FolderName
+# $title
 
-$description
+This folder is part of the Gulf to Bay Analytics modernization project.  
+It contains assets, scripts, or resources related to **$title**, aligned with the overall goal of creating a clean, automated, cloud‑ready analytics ecosystem.
 
-## Location
-$FullPath
+## Purpose
 
-## Notes
-This README was automatically generated or updated to maintain consistent documentation across the repository.
+This folder contributes to the modernization effort by organizing work related to **$title** in a clear, maintainable structure.
+
+## Contents
+
+This folder may include:
+- Source files
+- Scripts
+- Configuration
+- Supporting assets
+
+## Modernization Context
+
+As part of the end‑to‑end modernization, this folder helps ensure:
+- Clean separation of responsibilities
+- Improved maintainability
+- Consistent documentation
+- Recruiter‑ready project organization
 "@
 }
 
-# --------------------------------------------------------------------
-# Main: Walk repo and update/create README.md
-# --------------------------------------------------------------------
-Write-Output "Scanning repo: $RepoRoot"
+# Walk all folders
+Get-ChildItem -Path $root -Directory -Recurse | ForEach-Object {
 
-$folders = Get-ChildItem -Path $RepoRoot -Directory -Recurse
+    $folder = $_.FullName
 
-foreach ($folder in $folders) {
-    $readmePath = Join-Path $folder.FullName "README.md"
-    $folderName = $folder.Name
+    # Skip the root folder
+    if ($folder -eq $root) { return }
 
-    $content = Get-ReadmeContent -FolderName $folderName -FullPath $folder.FullName
+    # Skip the special docs folder entirely
+    if ($folder -eq $skipDocsPortfolio) { return }
 
-    if (Test-Path $readmePath) {
-        Write-Output "Updating README: $readmePath"
-        Set-Content -Path $readmePath -Value $content -Encoding UTF8
+    # Look for README variants
+    $existingReadme = Get-ChildItem -Path $folder -File |
+        Where-Object { $_.Name -match "^readme(\.md)?$" }
+
+    $readmePath = Join-Path $folder "README.md"
+    $content = Get-ReadmeContent -folderPath $folder
+
+    if ($existingReadme) {
+        # Overwrite existing README
+        $existingPath = $existingReadme.FullName
+        $content | Out-File -FilePath $existingPath -Encoding UTF8
+        Write-Host "Updated README in $folder"
     }
     else {
-        Write-Output "Creating README: $readmePath"
-        Set-Content -Path $readmePath -Value $content -Encoding UTF8
+        # Create new README
+        $content | Out-File -FilePath $readmePath -Encoding UTF8
+        Write-Host "Created README in $folder"
     }
 }
-
-Write-Output "README generation and update complete."

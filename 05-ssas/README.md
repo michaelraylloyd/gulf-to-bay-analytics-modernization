@@ -1,9 +1,24 @@
-# ssas
+# Ssas
 
-This folder contains project assets related to ssas.
+This folder is part of the Gulf to Bay Analytics modernization project.  
+It contains assets, scripts, or resources related to **Ssas**, aligned with the overall goal of creating a clean, automated, cloud‑ready analytics ecosystem.
 
-## Location
-C:\Users\Public\1MRLloydWorkProjects\GulfToBay_Analytics_Modernization\ssas
+## Purpose
 
-## Notes
-This README was automatically generated or updated to maintain consistent documentation across the repository.
+This folder contributes to the modernization effort by organizing work related to **Ssas** in a clear, maintainable structure.
+
+## Contents
+
+This folder may include:
+- Source files
+- Scripts
+- Configuration
+- Supporting assets
+
+## Modernization Context
+
+As part of the end‑to‑end modernization, this folder helps ensure:
+- Clean separation of responsibilities
+- Improved maintainability
+- Consistent documentation
+- Recruiter‑ready project organization

@@ -1,11 +1,11 @@
-# GTB   KPI Explorer
+# Portfolio overview
 
 This folder is part of the Gulf to Bay Analytics modernization project.  
-It contains assets, scripts, or resources related to **GTB   KPI Explorer**, aligned with the overall goal of creating a clean, automated, cloud‑ready analytics ecosystem.
+It contains assets, scripts, or resources related to **Portfolio overview**, aligned with the overall goal of creating a clean, automated, cloud‑ready analytics ecosystem.
 
 ## Purpose
 
-This folder contributes to the modernization effort by organizing work related to **GTB   KPI Explorer** in a clear, maintainable structure.
+This folder contributes to the modernization effort by organizing work related to **Portfolio overview** in a clear, maintainable structure.
 
 ## Contents
 
