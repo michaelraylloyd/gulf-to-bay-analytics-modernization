@@ -100,7 +100,7 @@ This structure ensures:
 
 ## 5. SQL Server Modernization
 
-![alt text](image-2.png)
+![alt text](SQL_Server.png)
 
 The SQL layer was restructured using metadata‑driven design, modular stored procedures, and standardized formatting (GTB SQL).
 
@@ -120,15 +120,15 @@ The SQL layer was restructured using metadata‑driven design, modular stored pr
 
 # SQL SSIS - Server Integration Services
 
-![alt text](image-5.png)
+![alt text](SSIS.png)
 
 # Azure Data Fictory Pipelines
 
-![alt text](image-4.png)
+![alt text](ADF.png)
 
 # Fabric Data Factory
 
-![alt text](image-6.png)
+![alt text](Fabric.png)
 
 The legacy SSIS packages were replaced with a modern ETL stack built on Python and Fabric Data Factory.
 
@@ -148,11 +148,11 @@ The legacy SSIS packages were replaced with a modern ETL stack built on Python a
 
 # SSAS - SQL Server Analysis Services
 
-![alt text](image-7.png)
+![alt text](SSAS.png)
 
 # Power BI
 
-![alt text](image-9.png)
+![alt text](Power_BI.png)
 
 
 
@@ -177,23 +177,23 @@ https://app.powerbi.com/view?r=eyJrIjoiNjEwZWU1M2UtMzhiZS00OTExLThmMjctNDczOGNmZ
 
 # Revenue Stream KPI Overview - Global KPIs
 
-![alt text](image-10.png)
+![alt text](Rev_Stream_KPI_Overview_Global_KPIs.png)
 
 # Revenue Stream KPI Overview - Sales KPIs
 
-![alt text](image-11.png)
+![alt text](Rev_Stream_KPI_Overview_Sales_KPIs.png.png)
 
 # Revenue Stream KPI Overview - Orders KPIs
 
-![alt text](image-12.png)
+![alt text](Rev_Stream_KPI_Overview_Orders_KPIs.png)
 
 # Revenue Stream KPI Overview - Customers KPIs
 
-![alt text](image-13.png)
+![alt text](Rev_Stream_KPI_Overview_Customers_KPIs.png)
 
 # Revenue Stream KPI Overview - Details
 
-![alt text](image-14.png)
+![alt text](Rev_Stream_KPI_Overview_Details.png)
 
 <details>
 <summary><strong>Expanded Dashboard Notes</strong></summary>
@@ -210,7 +210,7 @@ https://app.powerbi.com/view?r=eyJrIjoiNjEwZWU1M2UtMzhiZS00OTExLThmMjctNDczOGNmZ
 
 ## 9. Automation (Power Automate)
 
-![alt text](image-15.png)
+![alt text](Power_Automate.png)
 
 <details>
 <summary><strong>Expanded Automation Details</strong></summary>
@@ -226,7 +226,7 @@ https://app.powerbi.com/view?r=eyJrIjoiNjEwZWU1M2UtMzhiZS00OTExLThmMjctNDczOGNmZ
 
 ## 10. Documentation & Repo Hygiene
 
-![alt text](image-16.png)
+![alt text](PowerShell.png)
 
 <details>
 <summary><strong>Expanded Documentation Notes</strong></summary>
@@ -242,7 +242,7 @@ https://app.powerbi.com/view?r=eyJrIjoiNjEwZWU1M2UtMzhiZS00OTExLThmMjctNDczOGNmZ
 
 ## 11. (Ongoing) Architecture Diagram
 
-![alt text](image-17.png)
+![alt text](ArchitectureDiagram.png)
 
 ---
 
