@@ -240,7 +240,7 @@ https://app.powerbi.com/view?r=eyJrIjoiNjEwZWU1M2UtMzhiZS00OTExLThmMjctNDczOGNmZ
 
 ---
 
-## 11. Final Architecture Diagram
+## 11. (Ongoing) Architecture Diagram
 
 ![alt text](image-17.png)
 
