@@ -100,8 +100,7 @@ This structure ensures:
 
 ## 5. SQL Server Modernization
 
-![alt text](../13-images/SQL_Server
-.png)
+![alt text](../13-images/SQL_Server.png)
 
 The SQL layer was restructured using metadata‑driven design, modular stored procedures, and standardized formatting (GTB SQL).
 
