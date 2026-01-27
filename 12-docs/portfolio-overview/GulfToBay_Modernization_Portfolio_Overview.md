@@ -116,13 +116,19 @@ The SQL layer was restructured using metadata‑driven design, modular stored pr
 
 ---
 
-## 6. ETL Migration (SSIS → Azure Data Factory Pipelines + Fabric Data FactoryPipelines)
+## 6. ETL Migration (SSIS → Azure Data Factory + Fabric Data Factory
 
-![alt text](image-3.png)
+#SQL SSIS - Server Integration Services
+
+![alt text](image-5.png)
+
+#Azure Data Fictory Pipelines
 
 ![alt text](image-4.png)
 
-_[Screenshot Placeholder — Fabric Pipeline]_
+#Fabric Data Factory
+
+![alt text](image-6.png)
 
 The legacy SSIS packages were replaced with a modern ETL stack built on Python and Fabric Data Factory.
 
@@ -140,7 +146,13 @@ The legacy SSIS packages were replaced with a modern ETL stack built on Python a
 
 ## 7. Semantic Modeling (SSAS → Power BI)
 
-_[Screenshot Placeholder — Power BI Model View]_
+#SSAS - SQL Server Analysis Services
+
+![alt text](image-7.png)
+
+#
+
+
 
 The semantic layer was rebuilt to support modern Power BI capabilities.
 
