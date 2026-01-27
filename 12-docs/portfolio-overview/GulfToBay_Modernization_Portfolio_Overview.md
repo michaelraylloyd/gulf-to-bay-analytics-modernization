@@ -64,7 +64,7 @@ The modernization effort focused on creating a scalable, maintainable, and cloud
 
 ## 4. Repository Structure
 
-_[Screenshot Placeholder — GitHub Repo Root]_
+![alt text](image.png)
 
 The repository is organized into modular, prefixed folders that reflect the modernization flow:
 
