@@ -64,7 +64,7 @@ The modernization effort focused on creating a scalable, maintainable, and cloud
 
 ## 4. Repository Structure
 
-![alt text](image-8.png)
+![alt text](Repo_Structure.png)
 
 The repository is organized into modular, prefixed folders that reflect the modernization flow:
 
@@ -100,7 +100,8 @@ This structure ensures:
 
 ## 5. SQL Server Modernization
 
-![alt text](SQL_Server.png)
+![alt text](../13-images/SQL_Server
+.png)
 
 The SQL layer was restructured using metadata‑driven design, modular stored procedures, and standardized formatting (GTB SQL).
 
