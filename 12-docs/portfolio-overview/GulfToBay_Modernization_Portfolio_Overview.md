@@ -64,7 +64,7 @@ The modernization effort focused on creating a scalable, maintainable, and cloud
 
 ## 4. Repository Structure
 
-![alt text](image.png)
+![alt text](image-1.png)
 
 The repository is organized into modular, prefixed folders that reflect the modernization flow:
 
@@ -100,7 +100,7 @@ This structure ensures:
 
 ## 5. SQL Server Modernization
 
-_[Screenshot Placeholder — SQL Scripts or SSMS]_
+![alt text](image-2.png)
 
 The SQL layer was restructured using metadata‑driven design, modular stored procedures, and standardized formatting (GTB SQL).
 
@@ -116,11 +116,11 @@ The SQL layer was restructured using metadata‑driven design, modular stored pr
 
 ---
 
-## 6. ETL Migration (SSIS → Python + Fabric Data Factory)
+## 6. ETL Migration (SSIS → Azure Data Factory Pipelines + Fabric Data FactoryPipelines)
 
-_[Screenshot Placeholder — SSIS Package]_
+![alt text](image-3.png)
 
-_[Screenshot Placeholder — Python ETL Folder]_
+![alt text](image-4.png)
 
 _[Screenshot Placeholder — Fabric Pipeline]_
 
