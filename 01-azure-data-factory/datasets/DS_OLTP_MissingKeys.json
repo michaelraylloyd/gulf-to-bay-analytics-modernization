@@ -1,0 +1,35 @@
+{
+            "name": "[concat(parameters('factoryName'), '/DS_OLTP_MissingKeys')]",
+            "type": "Microsoft.DataFactory/factories/datasets",
+            "apiVersion": "2018-06-01",
+            "properties": {
+                "linkedServiceName": {
+                    "referenceName": "LS_AzureSQL_OLTP",
+                    "type": "LinkedServiceReference"
+                },
+                "annotations": [],
+                "type": "AzureSqlTable",
+                "schema": [
+                    {
+                        "name": "SalesOrderID",
+                        "type": "int",
+                        "precision": 10
+                    },
+                    {
+                        "name": "ProductID",
+                        "type": "int",
+                        "precision": 10
+                    },
+                    {
+                        "name": "SalesOrderNumber",
+                        "type": "nvarchar"
+                    }
+                ],
+                "typeProperties": {
+                    "tableName": "ml.MissingKeys"
+                }
+            },
+            "dependsOn": [
+                "[concat(variables('factoryId'), '/linkedServices/LS_AzureSQL_OLTP')]"
+            ]
+        }

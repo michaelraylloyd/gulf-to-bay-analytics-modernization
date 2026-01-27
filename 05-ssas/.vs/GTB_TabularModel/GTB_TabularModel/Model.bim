@@ -1,0 +1,292 @@
+{
+  "name": "SemanticModel",
+  "compatibilityLevel": 1200,
+  "model": {
+    "culture": "en-US",
+    "dataSources": [
+      {
+        "name": "GTBAnalytics",
+        "connectionString": "Provider=SQLNCLI11;Data Source=DESKTOP-JIA1LJ1\\SQLEXPRESS;User ID=fabric_user;Persist Security Info=true;Initial Catalog=AdventureWorksDW2019",
+        "impersonationMode": "impersonateServiceAccount",
+        "annotations": [
+          {
+            "name": "ConnectionEditUISource",
+            "value": "SqlServer"
+          }
+        ]
+      }
+    ],
+    "tables": [
+      {
+        "name": "FactInternetSales",
+        "columns": [
+          {
+            "name": "CarrierTrackingNumber",
+            "dataType": "string",
+            "sourceColumn": "CarrierTrackingNumber",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "CustomerKey",
+            "dataType": "int64",
+            "sourceColumn": "CustomerKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "CurrencyKey",
+            "dataType": "int64",
+            "sourceColumn": "CurrencyKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "CustomerPONumber",
+            "dataType": "string",
+            "sourceColumn": "CustomerPONumber",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "DiscountAmount",
+            "dataType": "double",
+            "sourceColumn": "DiscountAmount",
+            "sourceProviderType": "Double"
+          },
+          {
+            "name": "OrderYearQuarter",
+            "dataType": "string",
+            "sourceColumn": "OrderYearQuarter",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "OrderDate",
+            "dataType": "dateTime",
+            "sourceColumn": "OrderDate",
+            "formatString": "General Date",
+            "sourceProviderType": "Date"
+          },
+          {
+            "name": "OrderDateKey",
+            "dataType": "int64",
+            "sourceColumn": "OrderDateKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "OrderQuantity",
+            "dataType": "int64",
+            "sourceColumn": "OrderQuantity",
+            "sourceProviderType": "SmallInt"
+          },
+          {
+            "name": "ProductKey",
+            "dataType": "int64",
+            "sourceColumn": "ProductKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ProductStandardCost",
+            "dataType": "double",
+            "sourceColumn": "ProductStandardCost",
+            "sourceProviderType": "Decimal"
+          },
+          {
+            "name": "PromotionKey",
+            "dataType": "int64",
+            "sourceColumn": "PromotionKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "SalesAmount",
+            "dataType": "double",
+            "sourceColumn": "SalesAmount",
+            "sourceProviderType": "Decimal"
+          },
+          {
+            "name": "SalesOrderLineNumber",
+            "dataType": "int64",
+            "sourceColumn": "SalesOrderLineNumber",
+            "sourceProviderType": "UnsignedTinyInt"
+          },
+          {
+            "name": "SalesOrderNumber",
+            "dataType": "string",
+            "sourceColumn": "SalesOrderNumber",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "TotalProductCost",
+            "dataType": "double",
+            "sourceColumn": "TotalProductCost",
+            "sourceProviderType": "Decimal"
+          },
+          {
+            "name": "ShipDate",
+            "dataType": "dateTime",
+            "sourceColumn": "ShipDate",
+            "formatString": "General Date",
+            "sourceProviderType": "Date"
+          },
+          {
+            "name": "DueDate",
+            "dataType": "dateTime",
+            "sourceColumn": "DueDate",
+            "formatString": "General Date",
+            "sourceProviderType": "Date"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "FactInternetSales",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": [
+                "--FactInternetSales table definition in tabular model. I'm only pulling in the fields I need.",
+                "",
+                "select",
+                "    fis.CarrierTrackingNumber",
+                "    , fis.CustomerKey",
+                "    , fis.CurrencyKey",
+                "    , fis.CustomerPONumber",
+                "    , fis.DiscountAmount",
+                "    , CAST(DATEPART(YEAR, DATEADD(year, 12, fis.OrderDate)) AS varchar(4))",
+                "        + ' - Q'",
+                "        + CAST(DATEPART(QUARTER, DATEADD(year, 12, fis.OrderDate)) AS varchar(1)) AS 'OrderYearQuarter'",
+                "    , dateadd(year, 12, OrderDate) as OrderDate",
+                "    , fis.OrderDateKey",
+                "    , fis.OrderQuantity",
+                "    , fis.ProductKey",
+                "    , fis.ProductStandardCost",
+                "    , fis.PromotionKey",
+                "    , fis.SalesAmount",
+                "    , fis.SalesOrderLineNumber",
+                "    , fis.SalesOrderNumber",
+                "    , fis.TotalProductCost",
+                "    , cast(dateadd(year, 12, fis.ShipDate) as date)     as 'ShipDate' --ML Note:  Bring ShipDate up to current times, since this it is 2026 at the time this was written.",
+                "    , cast(dateadd(year, 12, fis.DueDate) as date)      as 'DueDate' --ML Note:  Bring DueDate up to current times, since this it is 2026 at the time this was written.",
+                "",
+                "from dbo.FactInternetSales fis",
+                "where",
+                "    fis.OrderDate >= '2011'",
+                "    and fis.OrderDate < '2014'"
+              ],
+              "dataSource": "GTBAnalytics"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>--FactInternetSales table definition in tabular model. I'm only pulling in the fields I need.",
+                  "",
+                  "select",
+                  "    fis.CarrierTrackingNumber",
+                  "    , fis.CustomerKey",
+                  "    , fis.CurrencyKey",
+                  "    , fis.CustomerPONumber",
+                  "    , fis.DiscountAmount",
+                  "    , CAST(DATEPART(YEAR, DATEADD(year, 12, fis.OrderDate)) AS varchar(4))",
+                  "        + ' - Q'",
+                  "        + CAST(DATEPART(QUARTER, DATEADD(year, 12, fis.OrderDate)) AS varchar(1)) AS 'OrderYearQuarter'",
+                  "    , dateadd(year, 12, OrderDate) as OrderDate",
+                  "    , fis.OrderDateKey",
+                  "    , fis.OrderQuantity",
+                  "    , fis.ProductKey",
+                  "    , fis.ProductStandardCost",
+                  "    , fis.PromotionKey",
+                  "    , fis.SalesAmount",
+                  "    , fis.SalesOrderLineNumber",
+                  "    , fis.SalesOrderNumber",
+                  "    , fis.TotalProductCost",
+                  "    , cast(dateadd(year, 12, fis.ShipDate) as date)     as 'ShipDate' --ML Note:  Bring ShipDate up to current times, since this it is 2026 at the time this was written.",
+                  "    , cast(dateadd(year, 12, fis.DueDate) as date)      as 'DueDate' --ML Note:  Bring DueDate up to current times, since this it is 2026 at the time this was written.",
+                  "",
+                  "from dbo.FactInternetSales fis",
+                  "where",
+                  "    fis.OrderDate >= '2011'",
+                  "    and fis.OrderDate < '2014'</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": [
+              "--FactInternetSales table definition in tabular model. I'm only pulling in the fields I need.",
+              "",
+              "select",
+              "    fis.CarrierTrackingNumber",
+              "    , fis.CustomerKey",
+              "    , fis.CurrencyKey",
+              "    , fis.CustomerPONumber",
+              "    , fis.DiscountAmount",
+              "    , CAST(DATEPART(YEAR, DATEADD(year, 12, fis.OrderDate)) AS varchar(4))",
+              "        + ' - Q'",
+              "        + CAST(DATEPART(QUARTER, DATEADD(year, 12, fis.OrderDate)) AS varchar(1)) AS 'OrderYearQuarter'",
+              "    , dateadd(year, 12, OrderDate) as OrderDate",
+              "    , fis.OrderDateKey",
+              "    , fis.OrderQuantity",
+              "    , fis.ProductKey",
+              "    , fis.ProductStandardCost",
+              "    , fis.PromotionKey",
+              "    , fis.SalesAmount",
+              "    , fis.SalesOrderLineNumber",
+              "    , fis.SalesOrderNumber",
+              "    , fis.TotalProductCost",
+              "    , cast(dateadd(year, 12, fis.ShipDate) as date)     as 'ShipDate' --ML Note:  Bring ShipDate up to current times, since this it is 2026 at the time this was written.",
+              "    , cast(dateadd(year, 12, fis.DueDate) as date)      as 'DueDate' --ML Note:  Bring DueDate up to current times, since this it is 2026 at the time this was written.",
+              "",
+              "from dbo.FactInternetSales fis",
+              "where",
+              "    fis.OrderDate >= '2011'",
+              "    and fis.OrderDate < '2014'"
+            ]
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "FactInternetSales"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>--FactInternetSales table definition in tabular model. I'm only pulling in the fields I need.",
+              "",
+              "select",
+              "    fis.CarrierTrackingNumber",
+              "    , fis.CustomerKey",
+              "    , fis.CurrencyKey",
+              "    , fis.CustomerPONumber",
+              "    , fis.DiscountAmount",
+              "    , CAST(DATEPART(YEAR, DATEADD(year, 12, fis.OrderDate)) AS varchar(4))",
+              "        + ' - Q'",
+              "        + CAST(DATEPART(QUARTER, DATEADD(year, 12, fis.OrderDate)) AS varchar(1)) AS 'OrderYearQuarter'",
+              "    , dateadd(year, 12, OrderDate) as OrderDate",
+              "    , fis.OrderDateKey",
+              "    , fis.OrderQuantity",
+              "    , fis.ProductKey",
+              "    , fis.ProductStandardCost",
+              "    , fis.PromotionKey",
+              "    , fis.SalesAmount",
+              "    , fis.SalesOrderLineNumber",
+              "    , fis.SalesOrderNumber",
+              "    , fis.TotalProductCost",
+              "    , cast(dateadd(year, 12, fis.ShipDate) as date)     as 'ShipDate' --ML Note:  Bring ShipDate up to current times, since this it is 2026 at the time this was written.",
+              "    , cast(dateadd(year, 12, fis.DueDate) as date)      as 'DueDate' --ML Note:  Bring DueDate up to current times, since this it is 2026 at the time this was written.",
+              "",
+              "from dbo.FactInternetSales fis",
+              "where",
+              "    fis.OrderDate >= '2011'",
+              "    and fis.OrderDate < '2014'</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
+      }
+    ],
+    "annotations": [
+      {
+        "name": "ClientCompatibilityLevel",
+        "value": "400"
+      }
+    ]
+  },
+  "id": "SemanticModel"
+}

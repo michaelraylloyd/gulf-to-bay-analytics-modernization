@@ -1,0 +1,134 @@
+{
+    "name": "PL_Load_MissingFactInternetSalesKeys",
+    "objectId": "2a088066-db94-4795-b352-5c7d6f00a157",
+    "properties": {
+        "activities": [
+            {
+                "name": "SP_Load_Load_MissingFactInterneetSalesKeys",
+                "type": "SqlServerStoredProcedure",
+                "dependsOn": [
+                    {
+                        "activity": "Copy_Stage_MissingFactInternetSalesKeys",
+                        "dependencyConditions": [
+                            "Succeeded"
+                        ]
+                    }
+                ],
+                "policy": {
+                    "timeout": "0.12:00:00",
+                    "retry": 0,
+                    "retryIntervalInSeconds": 30,
+                    "secureOutput": false,
+                    "secureInput": false
+                },
+                "typeProperties": {
+                    "storedProcedureName": "[ML].[Load_MissingFactInternetSalesKeys]",
+                    "database": "AdventureWorksCloudDW"
+                },
+                "externalReferences": {
+                    "connection": "b2d9d7f7-8a82-49bc-8043-0ef773f64463"
+                }
+            },
+            {
+                "name": "Copy_Stage_MissingFactInternetSalesKeys",
+                "type": "Copy",
+                "dependsOn": [],
+                "policy": {
+                    "timeout": "0.12:00:00",
+                    "retry": 0,
+                    "retryIntervalInSeconds": 30,
+                    "secureOutput": false,
+                    "secureInput": false
+                },
+                "typeProperties": {
+                    "source": {
+                        "type": "AzureSqlSource",
+                        "queryTimeout": "02:00:00",
+                        "partitionOption": "None",
+                        "datasetSettings": {
+                            "annotations": [],
+                            "type": "AzureSqlTable",
+                            "schema": [],
+                            "typeProperties": {
+                                "schema": "ml",
+                                "table": "MissingKeys",
+                                "database": "AdventureWorksCloud"
+                            },
+                            "externalReferences": {
+                                "connection": "00fe624b-0fb4-4d54-81e5-a29aa0093be4"
+                            }
+                        }
+                    },
+                    "sink": {
+                        "type": "AzureSqlSink",
+                        "preCopyScript": "truncate table stg.MissingKeys;",
+                        "writeBehavior": "insert",
+                        "sqlWriterUseTableLock": false,
+                        "disableMetricsCollection": false,
+                        "datasetSettings": {
+                            "annotations": [],
+                            "type": "AzureSqlTable",
+                            "schema": [],
+                            "typeProperties": {
+                                "schema": "stg",
+                                "table": "MissingKeys",
+                                "database": "AdventureWorksCloudDW"
+                            },
+                            "externalReferences": {
+                                "connection": "b2d9d7f7-8a82-49bc-8043-0ef773f64463"
+                            }
+                        }
+                    },
+                    "enableStaging": false,
+                    "translator": {
+                        "type": "TabularTranslator",
+                        "mappings": [
+                            {
+                                "source": {
+                                    "name": "SalesOrderID",
+                                    "type": "Int32",
+                                    "physicalType": "int"
+                                },
+                                "sink": {
+                                    "name": "SalesOrderID",
+                                    "physicalType": "int"
+                                }
+                            },
+                            {
+                                "source": {
+                                    "name": "ProductID",
+                                    "type": "Int32",
+                                    "physicalType": "int"
+                                },
+                                "sink": {
+                                    "name": "ProductID",
+                                    "physicalType": "int"
+                                }
+                            },
+                            {
+                                "source": {
+                                    "name": "SalesOrderNumber",
+                                    "type": "String",
+                                    "physicalType": "nvarchar",
+                                    "length": "25"
+                                },
+                                "sink": {
+                                    "name": "SalesOrderNumber",
+                                    "physicalType": "nvarchar",
+                                    "length": "25"
+                                }
+                            }
+                        ],
+                        "typeConversion": true,
+                        "typeConversionSettings": {
+                            "allowDataTruncation": true,
+                            "treatBooleanAsNumber": false
+                        }
+                    }
+                }
+            }
+        ],
+        "lastModifiedByObjectId": "23d76db4-a096-40e5-94c4-28048d97a39f",
+        "lastPublishTime": "2026-01-25T17:49:33Z"
+    }
+}

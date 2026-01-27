@@ -1,0 +1,31 @@
+{
+            "name": "[concat(parameters('factoryName'), '/Trigger PL_Load_MissingFactInternetSalesKeys 1 AM Eastern')]",
+            "type": "Microsoft.DataFactory/factories/triggers",
+            "apiVersion": "2018-06-01",
+            "properties": {
+                "annotations": [],
+                "runtimeState": "Started",
+                "pipelines": [
+                    {
+                        "pipelineReference": {
+                            "referenceName": "PL_Load_MissingFactInternetSalesKeys",
+                            "type": "PipelineReference"
+                        },
+                        "parameters": {}
+                    }
+                ],
+                "type": "ScheduleTrigger",
+                "typeProperties": {
+                    "recurrence": {
+                        "frequency": "Day",
+                        "interval": 1,
+                        "startTime": "2026-01-24T01:00:00",
+                        "timeZone": "Eastern Standard Time",
+                        "schedule": {}
+                    }
+                }
+            },
+            "dependsOn": [
+                "[concat(variables('factoryId'), '/pipelines/PL_Load_MissingFactInternetSalesKeys')]"
+            ]
+        }

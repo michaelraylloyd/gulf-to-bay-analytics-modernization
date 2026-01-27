@@ -1,0 +1,22 @@
+{
+            "name": "[concat(parameters('factoryName'), '/LS_AzureSQL_DW')]",
+            "type": "Microsoft.DataFactory/factories/linkedServices",
+            "apiVersion": "2018-06-01",
+            "properties": {
+                "annotations": [],
+                "type": "AzureSqlDatabase",
+                "typeProperties": {
+                    "server": "[parameters('LS_AzureSQL_DW_properties_typeProperties_server')]",
+                    "database": "[parameters('LS_AzureSQL_DW_properties_typeProperties_database')]",
+                    "encrypt": "mandatory",
+                    "trustServerCertificate": false,
+                    "authenticationType": "SQL",
+                    "userName": "[parameters('LS_AzureSQL_DW_properties_typeProperties_userName')]",
+                    "password": {
+                        "type": "SecureString",
+                        "value": "[parameters('LS_AzureSQL_DW_password')]"
+                    }
+                }
+            },
+            "dependsOn": []
+        }
