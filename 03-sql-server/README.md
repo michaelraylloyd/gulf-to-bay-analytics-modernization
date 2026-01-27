@@ -1,4 +1,4 @@
-# Sql server
+﻿# Sql server
 
 This folder is part of the Gulf to Bay Analytics modernization project.  
 It contains assets, scripts, or resources related to **Sql server**, aligned with the overall goal of creating a clean, automated, cloud‑ready analytics ecosystem.

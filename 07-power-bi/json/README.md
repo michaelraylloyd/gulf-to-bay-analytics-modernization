@@ -1,4 +1,4 @@
-# Json
+﻿# Json
 
 This folder is part of the Gulf to Bay Analytics modernization project.  
 It contains assets, scripts, or resources related to **Json**, aligned with the overall goal of creating a clean, automated, cloud‑ready analytics ecosystem.

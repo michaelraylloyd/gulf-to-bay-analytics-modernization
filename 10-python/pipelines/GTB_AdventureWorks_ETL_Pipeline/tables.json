@@ -1,0 +1,8 @@
+{
+    "tables": [
+        "Sales.SalesOrderHeader",
+        "Sales.SalesOrderDetail",
+        "Person.Person",
+        "Production.Product"
+    ]
+}

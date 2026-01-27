@@ -1,4 +1,4 @@
-# Gtb power bi semantic model refresh
+﻿# Gtb power bi semantic model refresh
 
 This folder is part of the Gulf to Bay Analytics modernization project.  
 It contains assets, scripts, or resources related to **Gtb power bi semantic model refresh**, aligned with the overall goal of creating a clean, automated, cloud‑ready analytics ecosystem.
