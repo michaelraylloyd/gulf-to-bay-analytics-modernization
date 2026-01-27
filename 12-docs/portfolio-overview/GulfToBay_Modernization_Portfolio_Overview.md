@@ -64,7 +64,7 @@ The modernization effort focused on creating a scalable, maintainable, and cloud
 
 ## 4. Repository Structure
 
-![alt text](image-1.png)
+![alt text](image-8.png)
 
 The repository is organized into modular, prefixed folders that reflect the modernization flow:
 
@@ -118,15 +118,15 @@ The SQL layer was restructured using metadata‑driven design, modular stored pr
 
 ## 6. ETL Migration (SSIS → Azure Data Factory + Fabric Data Factory
 
-#SQL SSIS - Server Integration Services
+# SQL SSIS - Server Integration Services
 
 ![alt text](image-5.png)
 
-#Azure Data Fictory Pipelines
+# Azure Data Fictory Pipelines
 
 ![alt text](image-4.png)
 
-#Fabric Data Factory
+# Fabric Data Factory
 
 ![alt text](image-6.png)
 
@@ -146,11 +146,13 @@ The legacy SSIS packages were replaced with a modern ETL stack built on Python a
 
 ## 7. Semantic Modeling (SSAS → Power BI)
 
-#SSAS - SQL Server Analysis Services
+# SSAS - SQL Server Analysis Services
 
 ![alt text](image-7.png)
 
-#
+# Power BI
+
+![alt text](image-9.png)
 
 
 
@@ -173,7 +175,25 @@ The semantic layer was rebuilt to support modern Power BI capabilities.
 🔗 **Sample Gulf to Bay Analytics Dashboard**  
 https://app.powerbi.com/view?r=eyJrIjoiNjEwZWU1M2UtMzhiZS00OTExLThmMjctNDczOGNmZmU5OWE0IiwidCI6ImE0MzI2YTU4LWY3ZDktNDQ0ZC1iM2FhLWIwOTAyN2U1ZTg2NiIsImMiOjF9
 
-_[Screenshot Placeholder — Revenue Stream KPI Overview]_
+# Revenue Stream KPI Overview - Global KPIs
+
+![alt text](image-10.png)
+
+# Revenue Stream KPI Overview - Sales KPIs
+
+![alt text](image-11.png)
+
+# Revenue Stream KPI Overview - Orders KPIs
+
+![alt text](image-12.png)
+
+# Revenue Stream KPI Overview - Customers KPIs
+
+![alt text](image-13.png)
+
+# Revenue Stream KPI Overview - Details
+
+![alt text](image-14.png)
 
 <details>
 <summary><strong>Expanded Dashboard Notes</strong></summary>
@@ -190,7 +210,7 @@ _[Screenshot Placeholder — Revenue Stream KPI Overview]_
 
 ## 9. Automation (Power Automate)
 
-_[Screenshot Placeholder — Power Automate Flow]_
+![alt text](image-15.png)
 
 <details>
 <summary><strong>Expanded Automation Details</strong></summary>
@@ -206,7 +226,7 @@ _[Screenshot Placeholder — Power Automate Flow]_
 
 ## 10. Documentation & Repo Hygiene
 
-_[Screenshot Placeholder — Git Sync Utility]_
+![alt text](image-16.png)
 
 <details>
 <summary><strong>Expanded Documentation Notes</strong></summary>
@@ -222,7 +242,7 @@ _[Screenshot Placeholder — Git Sync Utility]_
 
 ## 11. Final Architecture Diagram
 
-_[Screenshot Placeholder — Architecture Diagram]_
+![alt text](image-17.png)
 
 ---
 
@@ -241,13 +261,11 @@ Clearwater, FL
 - Metadata‑driven design  
 - Modernization strategy  
 
-_[Screenshot Placeholder — Headshot or Branding]_
-
 ---
 
 ## 13. Contact
 
 - GitHub: https://github.com/michaelraylloyd  
-- LinkedIn: _Add your link here_  
-- Email: _Add your email here_  
+- LinkedIn: https://www.linkedin.com/in/michael-lloyd-7aa62250/
+- Email: [mrlloyd9@gmail.com](mailto:mlloyd@gmail.com)
 
