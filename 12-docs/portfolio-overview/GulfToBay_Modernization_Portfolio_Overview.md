@@ -14,7 +14,7 @@ This document provides a visual, narrative walkthrough of the **Gulf to Bay Anal
 The original environment ran on a traditional Microsoft BI stack — SQL Server, SSIS, SSAS, and SSRS — with manual refreshes, tightly coupled ETL packages, and fragmented logic spread across multiple tools. Pipelines lacked automation, documentation was minimal, and changes often required hands‑on intervention. The system worked, but it wasn’t scalable, cloud‑ready, or easy to maintain.
 
 <details>
-<summary><strong>Expanded Legacy Environment Overview</strong></summary>
+<summary><strong>🏗️ Expanded Legacy Environment Overview</strong></summary>
 
 The original Gulf to Bay Analytics environment operated on a traditional on‑premises Microsoft BI stack. While it delivered essential reporting, the architecture had accumulated technical debt over time and lacked the automation and scalability expected in a modern analytics platform.
 
@@ -47,7 +47,7 @@ Operational challenges:
 - Improve documentation and maintainability  
 
 <details>
-<summary><strong>Expanded Modernization Goals</strong></summary>
+<summary><strong>🏗️ Expanded Modernization Goals</strong></summary>
 
 The modernization effort focused on creating a scalable, maintainable, and cloud‑aligned analytics ecosystem. Key objectives included:
 
@@ -67,7 +67,7 @@ The modernization effort focused on creating a scalable, maintainable, and cloud
 The repository is organized into modular, prefixed folders that reflect the modernization flow:
 
 <details>
-<summary><strong>Expanded Repository Structure Notes</strong></summary>
+<summary><strong>🗂️ Expanded Repository Structure Notes</strong></summary>
 
 This structure ensures:
 
@@ -101,7 +101,7 @@ This structure ensures:
 The SQL layer was restructured using metadata‑driven design, modular stored procedures, and standardized formatting (GTB SQL).
 
 <details>
-<summary><strong>Expanded SQL Server Modernization Details</strong></summary>
+<summary><strong>🏗️ Expanded SQL Server Modernization Details</strong></summary>
 
 - Consolidated business logic into modular stored procedures  
 - Applied GTB SQL formatting for readability and consistency  
@@ -110,7 +110,7 @@ The SQL layer was restructured using metadata‑driven design, modular stored pr
 
 </details>
 
-### 🖼️ Modular Stored Procedure Architecture (GTB SQL Format)
+### 🔧 Modular Stored Procedure Architecture (GTB SQL Format)
 
 ![alt text](../../13-images/portfolio-overview/SQL_Server.png)
 
@@ -121,7 +121,7 @@ The SQL layer was restructured using metadata‑driven design, modular stored pr
 The ETL layer was modernized by rebuilding legacy SSIS dataflows into cloud‑native pipelines using Azure Data Factory and Fabric Data Factory, creating a cleaner, more automated, and scalable orchestration framework.
 
 <details>
-<summary><strong>Expanded ETL Migration Details</strong></summary>
+<summary><strong>⚙️ Expanded ETL Migration Details</strong></summary>
 
 - Extracted logic from SSIS and rebuilt it in Python  
 - Introduced modular ETL scripts with reusable components  
@@ -130,15 +130,15 @@ The ETL layer was modernized by rebuilding legacy SSIS dataflows into cloud‑na
 
 </details>
 
-### 🖼️ SQL SSIS - Server Integration Services
+### 🔧 SQL SSIS - Server Integration Services
 
 ![alt text](../../13-images/portfolio-overview/SSIS.png)
 
-### 🖼️ Azure Data Fictory Pipelines
+### 🔧 Azure Data Fictory Pipelines
 
 ![alt text](../../13-images/portfolio-overview/ADF.png)
 
-### 🖼️  Fabric Data Factory
+### 🔧  Fabric Data Factory
 
 ![alt text](../../13-images/portfolio-overview/Fabric.png)
 
@@ -149,7 +149,7 @@ The ETL layer was modernized by rebuilding legacy SSIS dataflows into cloud‑na
 The semantic layer was rebuilt to support modern Power BI capabilities.
 
 <details>
-<summary><strong>Expanded Semantic Model Details</strong></summary>
+<summary><strong>🔧 Expanded Semantic Model Details</strong></summary>
 
 - Rebuilt relationships and hierarchies  
 - Standardized KPI definitions  
@@ -158,11 +158,11 @@ The semantic layer was rebuilt to support modern Power BI capabilities.
 
 </details>
 
-### 🖼️ SSAS - SQL Server Analysis Services
+### 🔧 SSAS - SQL Server Analysis Services
 
 ![alt text](../../13-images/portfolio-overview/SSAS.png)
 
-### 🖼️ Power BI
+### 📊 Power BI
 
 ![alt text](../../13-images/portfolio-overview/Power_BI.png)
 
@@ -187,7 +187,7 @@ The modernization effort includes a Python‑based ETL pipeline that migrates an
 
 </details>
 
-### 🖼️ Python ETL Execution in VS Code
+### 🔧 Python ETL Execution in VS Code
 ![alt text](../../13-images/portfolio-overview/Python.png)
 
 ---
@@ -197,7 +197,7 @@ The modernization effort includes a Python‑based ETL pipeline that migrates an
 This reporting layer delivers a suite of Power BI dashboards that surface revenue performance, customer behavior, and operational KPIs through clean, executive‑ready visuals.
 
 <details>
-<summary><strong>Dashboard Highlights & Design Notes</strong></summary>
+<summary><strong>📊 Dashboard Highlights & Design Notes</strong></summary>
 
 - Revenue trends across product lines  
 - KPI performance vs. targets  
@@ -210,23 +210,23 @@ This reporting layer delivers a suite of Power BI dashboards that surface revenu
 🔗 **Sample Gulf to Bay Analytics Dashboard**  
 https://app.powerbi.com/view?r=eyJrIjoiNjEwZWU1M2UtMzhiZS00OTExLThmMjctNDczOGNmZmU5OWE0IiwidCI6ImE0MzI2YTU4LWY3ZDktNDQ0ZC1iM2FhLWIwOTAyN2U1ZTg2NiIsImMiOjF9
 
-### 🖼️ Revenue Stream KPI Overview - Global KPIs
+### 📊 Revenue Stream KPI Overview - Global KPIs
 
 ![alt text](../../13-images/portfolio-overview/Rev_Stream_KPI_Overview_Global_KPIs.png)
 
-### 🖼️ Revenue Stream KPI Overview - Sales KPIs
+### 📊 Revenue Stream KPI Overview - Sales KPIs
 
 ![alt text](../../13-images/portfolio-overview/Rev_Stream_KPI_Overview_Sales_KPIs.png)
 
-### 🖼️ Revenue Stream KPI Overview - Orders KPIs
+### 📊 Revenue Stream KPI Overview - Orders KPIs
 
 ![alt text](../../13-images/portfolio-overview/Rev_Stream_KPI_Overview_Orders_KPIs.png)
 
-### 🖼️ Revenue Stream KPI Overview - Customers KPIs
+### 📊 Revenue Stream KPI Overview - Customers KPIs
 
 ![alt text](../../13-images/portfolio-overview/Rev_Stream_KPI_Overview_Customers_KPIs.png)
 
-### 🖼️ Revenue Stream KPI Overview - Details
+### 📊 Revenue Stream KPI Overview - Details
 
 ![alt text](../../13-images/portfolio-overview/Rev_Stream_KPI_Overview_Details.png)
 
@@ -237,7 +237,7 @@ https://app.powerbi.com/view?r=eyJrIjoiNjEwZWU1M2UtMzhiZS00OTExLThmMjctNDczOGNmZ
 Power Automate orchestrates the final stage of the modernization pipeline by automating dataset refreshes, integrating with Fabric workflows, and eliminating manual intervention.
 
 <details>
-<summary><strong>Expanded Automation Details</strong></summary>
+<summary><strong>⚙️ Expanded Automation Details</strong></summary>
 
 - Automated dataset refreshes  
 - Added notifications for failures  
@@ -246,7 +246,7 @@ Power Automate orchestrates the final stage of the modernization pipeline by aut
 
 </details>
 
-### 🖼️ Power Automate Workflow Overview
+### ⚙️ Power Automate Workflow Overview
 
 ![alt text](../../13-images/portfolio-overview/Power_Automate.png)
 
@@ -257,7 +257,7 @@ Power Automate orchestrates the final stage of the modernization pipeline by aut
 This phase focused on creating a clean, maintainable repository through automated documentation, standardized naming conventions, and PowerShell tooling that keeps the entire project organized and recruiter‑ready.
 
 <details>
-<summary><strong>Expanded Documentation Notes</strong></summary>
+<summary><strong>🗂️ Expanded Documentation Notes</strong></summary>
 
 - Auto‑generated folder‑level READMEs  
 - Standardized naming conventions  
@@ -266,7 +266,7 @@ This phase focused on creating a clean, maintainable repository through automate
 
 </details>
 
-### 🖼️ PowerShell Automation & Repo Maintenance Tools
+### 🗂️ PowerShell Automation & Repo Maintenance Tools
 
 ![alt text](../../13-images/portfolio-overview/PowerShell.png)
 
@@ -277,7 +277,7 @@ This phase focused on creating a clean, maintainable repository through automate
 This high‑level architecture diagram illustrates the end‑to‑end flow of the Gulf to Bay Analytics modernization, connecting data sources, ETL pipelines, semantic modeling, reporting, and automation into a unified ecosystem.
 
 <details>
-<summary><strong>Architecture Overview & Design Notes</strong></summary>
+<summary><strong>🏗️ Architecture Overview & Design Notes</strong></summary>
 
 - Visualizes the full modernization flow from source systems to Power BI  
 - Highlights the transition from legacy components to modern cloud‑aligned services  
@@ -287,7 +287,7 @@ This high‑level architecture diagram illustrates the end‑to‑end flow of th
 
 </details>
 
-### 🖼️ Modernization Architecture Overview
+### 🏗️ Modernization Architecture Overview
 
 ![alt text](../../13-images/portfolio-overview/ArchitectureDiagram.png)
 
