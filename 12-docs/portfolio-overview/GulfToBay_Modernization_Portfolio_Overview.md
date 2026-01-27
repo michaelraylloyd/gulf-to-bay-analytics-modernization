@@ -130,15 +130,15 @@ The ETL layer was modernized by rebuilding legacy SSIS dataflows into cloud‑na
 
 </details>
 
-# SQL SSIS - Server Integration Services
+### 🖼️ SQL SSIS - Server Integration Services
 
 ![alt text](../../13-images/portfolio-overview/SSIS.png)
 
-# Azure Data Fictory Pipelines
+### 🖼️ Azure Data Fictory Pipelines
 
 ![alt text](../../13-images/portfolio-overview/ADF.png)
 
-# Fabric Data Factory
+### 🖼️  Fabric Data Factory
 
 ![alt text](../../13-images/portfolio-overview/Fabric.png)
 
@@ -158,11 +158,11 @@ The semantic layer was rebuilt to support modern Power BI capabilities.
 
 </details>
 
-# SSAS - SQL Server Analysis Services
+### 🖼️ SSAS - SQL Server Analysis Services
 
 ![alt text](../../13-images/portfolio-overview/SSAS.png)
 
-# Power BI
+### 🖼️ Power BI
 
 ![alt text](../../13-images/portfolio-overview/Power_BI.png)
 
@@ -175,6 +175,7 @@ The modernization effort includes a Python‑based ETL pipeline that migrates an
 <details>
 <summary><strong>🔧 Key Capabilities</strong></summary>
 
+- Pipeline Entry Point: `GTB_CloudMigration_ETL_AdventureWorks.py`
 - Loads secure configuration from `.env`
 - Connects to Azure SQL using pyodbc and SQLAlchemy
 - Copies OLTP tables into the DW environment using modular, reusable components
@@ -185,9 +186,6 @@ The modernization effort includes a Python‑based ETL pipeline that migrates an
 - Demonstrates Python‑based ETL modernization within the Gulf to Bay Analytics platform
 
 </details>
-
-### ▶️ Pipeline Entry Point
-`GTB_CloudMigration_ETL_AdventureWorks.py`
 
 ### 🖼️ Python ETL Execution in VS Code
 ![alt text](../../13-images/portfolio-overview/Python.png)
@@ -212,23 +210,23 @@ This reporting layer delivers a suite of Power BI dashboards that surface revenu
 🔗 **Sample Gulf to Bay Analytics Dashboard**  
 https://app.powerbi.com/view?r=eyJrIjoiNjEwZWU1M2UtMzhiZS00OTExLThmMjctNDczOGNmZmU5OWE0IiwidCI6ImE0MzI2YTU4LWY3ZDktNDQ0ZC1iM2FhLWIwOTAyN2U1ZTg2NiIsImMiOjF9
 
-# Revenue Stream KPI Overview - Global KPIs
+### 🖼️ Revenue Stream KPI Overview - Global KPIs
 
 ![alt text](../../13-images/portfolio-overview/Rev_Stream_KPI_Overview_Global_KPIs.png)
 
-# Revenue Stream KPI Overview - Sales KPIs
+### 🖼️ Revenue Stream KPI Overview - Sales KPIs
 
 ![alt text](../../13-images/portfolio-overview/Rev_Stream_KPI_Overview_Sales_KPIs.png)
 
-# Revenue Stream KPI Overview - Orders KPIs
+### 🖼️ Revenue Stream KPI Overview - Orders KPIs
 
 ![alt text](../../13-images/portfolio-overview/Rev_Stream_KPI_Overview_Orders_KPIs.png)
 
-# Revenue Stream KPI Overview - Customers KPIs
+### 🖼️ Revenue Stream KPI Overview - Customers KPIs
 
 ![alt text](../../13-images/portfolio-overview/Rev_Stream_KPI_Overview_Customers_KPIs.png)
 
-# Revenue Stream KPI Overview - Details
+### 🖼️ Revenue Stream KPI Overview - Details
 
 ![alt text](../../13-images/portfolio-overview/Rev_Stream_KPI_Overview_Details.png)
 
@@ -237,8 +235,6 @@ https://app.powerbi.com/view?r=eyJrIjoiNjEwZWU1M2UtMzhiZS00OTExLThmMjctNDczOGNmZ
 ## 10. Automation (Power Automate)
 
 Power Automate orchestrates the final stage of the modernization pipeline by automating dataset refreshes, integrating with Fabric workflows, and eliminating manual intervention.
-
-![alt text](../../13-images/portfolio-overview/Power_Automate.png)
 
 <details>
 <summary><strong>Expanded Automation Details</strong></summary>
@@ -249,6 +245,10 @@ Power Automate orchestrates the final stage of the modernization pipeline by aut
 - Reduced manual intervention to zero  
 
 </details>
+
+### 🖼️ Power Automate Workflow Overview
+
+![alt text](../../13-images/portfolio-overview/Power_Automate.png)
 
 ---
 
@@ -266,6 +266,8 @@ This phase focused on creating a clean, maintainable repository through automate
 
 </details>
 
+### 🖼️ PowerShell Automation & Repo Maintenance Tools
+
 ![alt text](../../13-images/portfolio-overview/PowerShell.png)
 
 ---
@@ -274,7 +276,18 @@ This phase focused on creating a clean, maintainable repository through automate
 
 This high‑level architecture diagram illustrates the end‑to‑end flow of the Gulf to Bay Analytics modernization, connecting data sources, ETL pipelines, semantic modeling, reporting, and automation into a unified ecosystem.
 
-<details> <summary><strong>Architecture Overview & Design Notes</strong></summary> - Visualizes the full modernization flow from source systems to Power BI - Highlights the transition from legacy components to modern cloud‑aligned services - Shows how SQL, Python ETL, Fabric pipelines, and Power BI integrate - Provides a single reference point for recruiters and engineers reviewing the project - Continues to evolve as new components and enhancements are added </details>
+<details>
+<summary><strong>Architecture Overview & Design Notes</strong></summary>
+
+- Visualizes the full modernization flow from source systems to Power BI  
+- Highlights the transition from legacy components to modern cloud‑aligned services  
+- Shows how SQL, Python ETL, Fabric pipelines, and Power BI integrate  
+- Provides a single reference point for recruiters and engineers reviewing the project  
+- Continues to evolve as new components and enhancements are added  
+
+</details>
+
+### 🖼️ Modernization Architecture Overview
 
 ![alt text](../../13-images/portfolio-overview/ArchitectureDiagram.png)
 
