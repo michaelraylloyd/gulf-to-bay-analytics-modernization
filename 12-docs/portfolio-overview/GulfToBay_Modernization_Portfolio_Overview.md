@@ -181,7 +181,7 @@ https://app.powerbi.com/view?r=eyJrIjoiNjEwZWU1M2UtMzhiZS00OTExLThmMjctNDczOGNmZ
 
 # Revenue Stream KPI Overview - Sales KPIs
 
-![alt text](../../13-images/portfolio-overview/Rev_Stream_KPI_Overview_Sales_KPIs.png.png)
+![alt text](../../13-images/portfolio-overview/Rev_Stream_KPI_Overview_Sales_KPIs.png)
 
 # Revenue Stream KPI Overview - Orders KPIs
 
