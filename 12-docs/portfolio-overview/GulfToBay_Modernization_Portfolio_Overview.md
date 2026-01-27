@@ -64,7 +64,19 @@ The modernization effort focused on creating a scalable, maintainable, and cloud
 
 ## 4. Repository Structure
 
-### The repository is organized into modular, prefixed folders that reflect the modernization flow:
+The repository is organized into modular, prefixed folders that reflect the modernization flow:
+
+<details>
+<summary><strong>Expanded Repository Structure Notes</strong></summary>
+
+This structure ensures:
+
+- Clear separation of legacy vs. modern components  
+- Easy navigation for recruiters and engineers  
+- Consistent documentation across all folders  
+- A narrative flow that mirrors the modernization journey  
+
+</details>
 
 | Prefix | Folder | Purpose |
 |--------|--------|---------|
@@ -82,23 +94,9 @@ The modernization effort focused on creating a scalable, maintainable, and cloud
 | **12‑** | docs | Modernization notes, diagrams, and architecture |
 | **13‑** | images | Branding and visual assets |
 
-<details>
-<summary><strong>Expanded Repository Structure Notes</strong></summary>
-
-This structure ensures:
-
-- Clear separation of legacy vs. modern components  
-- Easy navigation for recruiters and engineers  
-- Consistent documentation across all folders  
-- A narrative flow that mirrors the modernization journey  
-
-</details>
-
 ---
 
 ## 5. SQL Server Modernization
-
-![alt text](../../13-images/portfolio-overview/SQL_Server.png)
 
 The SQL layer was restructured using metadata‑driven design, modular stored procedures, and standardized formatting (GTB SQL).
 
@@ -112,9 +110,25 @@ The SQL layer was restructured using metadata‑driven design, modular stored pr
 
 </details>
 
+### 🖼️ Modular Stored Procedure Architecture (GTB SQL Format)
+
+![alt text](../../13-images/portfolio-overview/SQL_Server.png)
+
 ---
 
-## 6. ETL Migration (SSIS → Azure Data Factory + Fabric Data Factory
+## 6. ETL Migration (SSIS → Azure Data Factory + Fabric Data Factory)
+
+The ETL layer was modernized by rebuilding legacy SSIS dataflows into cloud‑native pipelines using Azure Data Factory and Fabric Data Factory, creating a cleaner, more automated, and scalable orchestration framework.
+
+<details>
+<summary><strong>Expanded ETL Migration Details</strong></summary>
+
+- Extracted logic from SSIS and rebuilt it in Python  
+- Introduced modular ETL scripts with reusable components  
+- Implemented Fabric Data Factory pipelines for orchestration  
+- Improved error handling, logging, and maintainability  
+
+</details>
 
 # SQL SSIS - Server Integration Services
 
@@ -128,31 +142,9 @@ The SQL layer was restructured using metadata‑driven design, modular stored pr
 
 ![alt text](../../13-images/portfolio-overview/Fabric.png)
 
-The legacy SSIS packages were replaced with a modern ETL stack built on Python and Fabric Data Factory.
-
-<details>
-<summary><strong>Expanded ETL Migration Details</strong></summary>
-
-- Extracted logic from SSIS and rebuilt it in Python  
-- Introduced modular ETL scripts with reusable components  
-- Implemented Fabric Data Factory pipelines for orchestration  
-- Improved error handling, logging, and maintainability  
-
-</details>
-
 ---
 
 ## 7. Semantic Modeling (SSAS → Power BI)
-
-# SSAS - SQL Server Analysis Services
-
-![alt text](../../13-images/portfolio-overview/SSAS.png)
-
-# Power BI
-
-![alt text](../../13-images/portfolio-overview/Power_BI.png)
-
-
 
 The semantic layer was rebuilt to support modern Power BI capabilities.
 
@@ -166,9 +158,56 @@ The semantic layer was rebuilt to support modern Power BI capabilities.
 
 </details>
 
+# SSAS - SQL Server Analysis Services
+
+![alt text](../../13-images/portfolio-overview/SSAS.png)
+
+# Power BI
+
+![alt text](../../13-images/portfolio-overview/Power_BI.png)
+
 ---
 
-## 8. Reporting & Dashboards
+## 8. Python ETL Pipeline — Cloud Migration & Data Synchronization
+
+The modernization effort includes a Python‑based ETL pipeline that migrates and synchronizes data between Azure SQL environments. It powers the AdventureWorks dataset used throughout the Gulf to Bay Analytics platform.
+
+<details>
+<summary><strong>🔧 Key Capabilities</strong></summary>
+
+- Loads secure configuration from `.env`
+- Connects to Azure SQL using pyodbc and SQLAlchemy
+- Copies OLTP tables into the DW environment using modular, reusable components
+- Executes stored procedures for downstream key‑management and processing
+- Logs all activity for traceability, debugging, and repeatable cloud migrations
+- Supports table‑level copy operations and metadata‑driven execution
+- Provides a foundation for future orchestration (Airflow, Azure Data Factory, Fabric Data Factory)
+- Demonstrates Python‑based ETL modernization within the Gulf to Bay Analytics platform
+
+</details>
+
+### ▶️ Pipeline Entry Point
+`GTB_CloudMigration_ETL_AdventureWorks.py`
+
+### 🖼️ Python ETL Execution in VS Code
+![alt text](../../13-images/portfolio-overview/Python.png)
+
+---
+
+## 9. Reporting & Dashboards
+
+This reporting layer delivers a suite of Power BI dashboards that surface revenue performance, customer behavior, and operational KPIs through clean, executive‑ready visuals.
+
+<details>
+<summary><strong>Dashboard Highlights & Design Notes</strong></summary>
+
+- Revenue trends across product lines  
+- KPI performance vs. targets  
+- Year‑over‑year comparisons  
+- Drill‑through paths for deeper analysis  
+- Clean, modern visuals aligned with Gulf to Bay branding  
+
+</details>
 
 🔗 **Sample Gulf to Bay Analytics Dashboard**  
 https://app.powerbi.com/view?r=eyJrIjoiNjEwZWU1M2UtMzhiZS00OTExLThmMjctNDczOGNmZmU5OWE0IiwidCI6ImE0MzI2YTU4LWY3ZDktNDQ0ZC1iM2FhLWIwOTAyN2U1ZTg2NiIsImMiOjF9
@@ -193,20 +232,11 @@ https://app.powerbi.com/view?r=eyJrIjoiNjEwZWU1M2UtMzhiZS00OTExLThmMjctNDczOGNmZ
 
 ![alt text](../../13-images/portfolio-overview/Rev_Stream_KPI_Overview_Details.png)
 
-<details>
-<summary><strong>Expanded Dashboard Notes</strong></summary>
-
-- Revenue trends across product lines  
-- KPI performance vs. targets  
-- Year‑over‑year comparisons  
-- Drill‑through paths for deeper analysis  
-- Clean, modern visuals aligned with Gulf to Bay branding  
-
-</details>
-
 ---
 
-## 9. Automation (Power Automate)
+## 10. Automation (Power Automate)
+
+Power Automate orchestrates the final stage of the modernization pipeline by automating dataset refreshes, integrating with Fabric workflows, and eliminating manual intervention.
 
 ![alt text](../../13-images/portfolio-overview/Power_Automate.png)
 
@@ -222,9 +252,9 @@ https://app.powerbi.com/view?r=eyJrIjoiNjEwZWU1M2UtMzhiZS00OTExLThmMjctNDczOGNmZ
 
 ---
 
-## 10. Documentation & Repo Hygiene
+## 11. Documentation & Repo Hygiene
 
-![alt text](../../13-images/portfolio-overview/PowerShell.png)
+This phase focused on creating a clean, maintainable repository through automated documentation, standardized naming conventions, and PowerShell tooling that keeps the entire project organized and recruiter‑ready.
 
 <details>
 <summary><strong>Expanded Documentation Notes</strong></summary>
@@ -236,15 +266,21 @@ https://app.powerbi.com/view?r=eyJrIjoiNjEwZWU1M2UtMzhiZS00OTExLThmMjctNDczOGNmZ
 
 </details>
 
+![alt text](../../13-images/portfolio-overview/PowerShell.png)
+
 ---
 
-## 11. (Ongoing) Architecture Diagram
+## 12. (Ongoing) Architecture Diagram
+
+This high‑level architecture diagram illustrates the end‑to‑end flow of the Gulf to Bay Analytics modernization, connecting data sources, ETL pipelines, semantic modeling, reporting, and automation into a unified ecosystem.
+
+<details> <summary><strong>Architecture Overview & Design Notes</strong></summary> - Visualizes the full modernization flow from source systems to Power BI - Highlights the transition from legacy components to modern cloud‑aligned services - Shows how SQL, Python ETL, Fabric pipelines, and Power BI integrate - Provides a single reference point for recruiters and engineers reviewing the project - Continues to evolve as new components and enhancements are added </details>
 
 ![alt text](../../13-images/portfolio-overview/ArchitectureDiagram.png)
 
 ---
 
-## 12. About the Developer
+## 13. About the Developer
 
 **Michael Lloyd**  
 Business Intelligence Developer  
@@ -261,9 +297,8 @@ Clearwater, FL
 
 ---
 
-## 13. Contact
+## 14. Contact
 
 - GitHub: https://github.com/michaelraylloyd  
 - LinkedIn: https://www.linkedin.com/in/michael-lloyd-7aa62250/
 - Email: [mrlloyd9@gmail.com](mailto:mlloyd@gmail.com)
-
