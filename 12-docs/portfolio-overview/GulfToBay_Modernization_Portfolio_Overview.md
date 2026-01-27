@@ -130,15 +130,15 @@ The ETL layer was modernized by rebuilding legacy SSIS dataflows into cloud‑na
 
 </details>
 
-### 🔧 SQL SSIS - Server Integration Services
+### ⚙️ SQL SSIS - Server Integration Services
 
 ![alt text](../../13-images/portfolio-overview/SSIS.png)
 
-### 🔧 Azure Data Fictory Pipelines
+### ⚙️ Azure Data Fictory Pipelines
 
 ![alt text](../../13-images/portfolio-overview/ADF.png)
 
-### 🔧  Fabric Data Factory
+### ⚙️ Fabric Data Factory
 
 ![alt text](../../13-images/portfolio-overview/Fabric.png)
 
