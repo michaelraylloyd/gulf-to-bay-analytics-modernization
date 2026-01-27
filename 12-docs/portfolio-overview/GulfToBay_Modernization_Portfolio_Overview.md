@@ -64,7 +64,7 @@ The modernization effort focused on creating a scalable, maintainable, and cloud
 
 ## 4. Repository Structure
 
-![alt text](../13-images/portfolio-overview/Repo_Structure.png)
+![alt text](../../13-images/portfolio-overview/Repo_Structure.png)
 
 The repository is organized into modular, prefixed folders that reflect the modernization flow:
 
@@ -100,7 +100,7 @@ This structure ensures:
 
 ## 5. SQL Server Modernization
 
-![alt text](../13-images/portfolio-overview/SQL_Server.png)
+![alt text](../../13-images/portfolio-overview/SQL_Server.png)
 
 The SQL layer was restructured using metadata‑driven design, modular stored procedures, and standardized formatting (GTB SQL).
 
@@ -120,15 +120,15 @@ The SQL layer was restructured using metadata‑driven design, modular stored pr
 
 # SQL SSIS - Server Integration Services
 
-![alt text](../13-images/portfolio-overview/SSIS.png)
+![alt text](../../13-images/portfolio-overview/SSIS.png)
 
 # Azure Data Fictory Pipelines
 
-![alt text](../13-images/portfolio-overview/ADF.png)
+![alt text](../../13-images/portfolio-overview/ADF.png)
 
 # Fabric Data Factory
 
-![alt text](../13-images/portfolio-overview/Fabric.png)
+![alt text](../../13-images/portfolio-overview/Fabric.png)
 
 The legacy SSIS packages were replaced with a modern ETL stack built on Python and Fabric Data Factory.
 
@@ -148,11 +148,11 @@ The legacy SSIS packages were replaced with a modern ETL stack built on Python a
 
 # SSAS - SQL Server Analysis Services
 
-![alt text](../13-images/portfolio-overview/SSAS.png)
+![alt text](../../13-images/portfolio-overview/SSAS.png)
 
 # Power BI
 
-![alt text](../13-images/portfolio-overview/Power_BI.png)
+![alt text](../../13-images/portfolio-overview/Power_BI.png)
 
 
 
@@ -177,23 +177,23 @@ https://app.powerbi.com/view?r=eyJrIjoiNjEwZWU1M2UtMzhiZS00OTExLThmMjctNDczOGNmZ
 
 # Revenue Stream KPI Overview - Global KPIs
 
-![alt text](../13-images/portfolio-overview/Rev_Stream_KPI_Overview_Global_KPIs.png)
+![alt text](../../13-images/portfolio-overview/Rev_Stream_KPI_Overview_Global_KPIs.png)
 
 # Revenue Stream KPI Overview - Sales KPIs
 
-![alt text](../13-images/portfolio-overview/Rev_Stream_KPI_Overview_Sales_KPIs.png.png)
+![alt text](../../13-images/portfolio-overview/Rev_Stream_KPI_Overview_Sales_KPIs.png.png)
 
 # Revenue Stream KPI Overview - Orders KPIs
 
-![alt text](../13-images/portfolio-overview/Rev_Stream_KPI_Overview_Orders_KPIs.png)
+![alt text](../../13-images/portfolio-overview/Rev_Stream_KPI_Overview_Orders_KPIs.png)
 
 # Revenue Stream KPI Overview - Customers KPIs
 
-![alt text](../13-images/portfolio-overview/Rev_Stream_KPI_Overview_Customers_KPIs.png)
+![alt text](../../13-images/portfolio-overview/Rev_Stream_KPI_Overview_Customers_KPIs.png)
 
 # Revenue Stream KPI Overview - Details
 
-![alt text](../13-images/portfolio-overview/Rev_Stream_KPI_Overview_Details.png)
+![alt text](../../13-images/portfolio-overview/Rev_Stream_KPI_Overview_Details.png)
 
 <details>
 <summary><strong>Expanded Dashboard Notes</strong></summary>
@@ -210,7 +210,7 @@ https://app.powerbi.com/view?r=eyJrIjoiNjEwZWU1M2UtMzhiZS00OTExLThmMjctNDczOGNmZ
 
 ## 9. Automation (Power Automate)
 
-![alt text](../13-images/portfolio-overview/Power_Automate.png)
+![alt text](../../13-images/portfolio-overview/Power_Automate.png)
 
 <details>
 <summary><strong>Expanded Automation Details</strong></summary>
@@ -226,7 +226,7 @@ https://app.powerbi.com/view?r=eyJrIjoiNjEwZWU1M2UtMzhiZS00OTExLThmMjctNDczOGNmZ
 
 ## 10. Documentation & Repo Hygiene
 
-![alt text](../13-images/portfolio-overview/PowerShell.png)
+![alt text](../../13-images/portfolio-overview/PowerShell.png)
 
 <details>
 <summary><strong>Expanded Documentation Notes</strong></summary>
@@ -242,7 +242,7 @@ https://app.powerbi.com/view?r=eyJrIjoiNjEwZWU1M2UtMzhiZS00OTExLThmMjctNDczOGNmZ
 
 ## 11. (Ongoing) Architecture Diagram
 
-![alt text](../13-images/portfolio-overview/ArchitectureDiagram.png)
+![alt text](../../13-images/portfolio-overview/ArchitectureDiagram.png)
 
 ---
 
