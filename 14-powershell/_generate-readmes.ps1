@@ -1,8 +1,8 @@
-# Root of the repo
-$root = "C:\Users\Public\_MRLloydWorkProjects\gulf-to-bay-analytics-modernization"
+# Root of the repo (DEV)
+$root = "C:\Users\Public\_MRLloydWorkProjects\gulf-to-bay-analytics-modernization-dev"
 
 # Folder to skip (special handling)
-$skipDocsPortfolio = Join-Path $root "12-docs\portfolio-overview"
+$skipDocsPortfolio = Join-Path $root "docs\portfolio-overview"
 
 # Function to convert folder names like "03-sql-server" → "SQL Server"
 function Convert-FolderName {

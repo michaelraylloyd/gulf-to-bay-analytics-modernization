@@ -112,7 +112,7 @@ The SQL layer was restructured using metadata‑driven design, modular stored pr
 
 ### 🔧 Modular Stored Procedure Architecture (GTB SQL Format)
 
-![alt text](../../13-images/portfolio-overview/SQL_Server.png)
+![alt text](../../assets/images/portfolio-overview/SQL_Server.png)
 
 ---
 
@@ -132,15 +132,15 @@ The ETL layer was modernized by rebuilding legacy SSIS dataflows into cloud‑na
 
 ### ⚙️ SQL SSIS - Server Integration Services
 
-![alt text](../../13-images/portfolio-overview/SSIS.png)
+![alt text](../../assets/images/portfolio-overview/SSIS.png)
 
 ### ⚙️ Azure Data Fictory Pipelines
 
-![alt text](../../13-images/portfolio-overview/ADF.png)
+![alt text](../../assets/images/portfolio-overview/ADF.png)
 
 ### ⚙️ Fabric Data Factory
 
-![alt text](../../13-images/portfolio-overview/Fabric.png)
+![alt text](../../assets/images/portfolio-overview/Fabric.png)
 
 ---
 
@@ -160,11 +160,11 @@ The semantic layer was rebuilt to support modern Power BI capabilities.
 
 ### 🔧 SSAS - SQL Server Analysis Services
 
-![alt text](../../13-images/portfolio-overview/SSAS.png)
+![alt text](../../assets/images/portfolio-overview/SSAS.png)
 
 ### 🔧 Power BI
 
-![alt text](../../13-images/portfolio-overview/Power_BI.png)
+![alt text](../../assets/images/portfolio-overview/Power_BI.png)
 
 ---
 
@@ -188,7 +188,7 @@ The modernization effort includes a Python‑based ETL pipeline that migrates an
 </details>
 
 ### 🔧 Python ETL Execution in VS Code
-![alt text](../../13-images/portfolio-overview/Python.png)
+![alt text](../../assets/images/portfolio-overview/Python.png)
 
 ---
 
@@ -212,23 +212,23 @@ https://app.powerbi.com/view?r=eyJrIjoiNjEwZWU1M2UtMzhiZS00OTExLThmMjctNDczOGNmZ
 
 ### 📊 Revenue Stream KPI Overview - Global KPIs
 
-![alt text](../../13-images/portfolio-overview/Rev_Stream_KPI_Overview_Global_KPIs.png)
+![alt text](../../assets/images/portfolio-overview/Rev_Stream_KPI_Overview_Global_KPIs.png)
 
 ### 📊 Revenue Stream KPI Overview - Sales KPIs
 
-![alt text](../../13-images/portfolio-overview/Rev_Stream_KPI_Overview_Sales_KPIs.png)
+![alt text](../../assets/images/portfolio-overview/Rev_Stream_KPI_Overview_Sales_KPIs.png)
 
 ### 📊 Revenue Stream KPI Overview - Orders KPIs
 
-![alt text](../../13-images/portfolio-overview/Rev_Stream_KPI_Overview_Orders_KPIs.png)
+![alt text](../../assets/images/portfolio-overview/Rev_Stream_KPI_Overview_Orders_KPIs.png)
 
 ### 📊 Revenue Stream KPI Overview - Customers KPIs
 
-![alt text](../../13-images/portfolio-overview/Rev_Stream_KPI_Overview_Customers_KPIs.png)
+![alt text](../../assets/images/portfolio-overview/Rev_Stream_KPI_Overview_Customers_KPIs.png)
 
 ### 📊 Revenue Stream KPI Overview - Details
 
-![alt text](../../13-images/portfolio-overview/Rev_Stream_KPI_Overview_Details.png)
+![alt text](../../assets/images/portfolio-overview/Rev_Stream_KPI_Overview_Details.png)
 
 ---
 
@@ -248,7 +248,7 @@ Power Automate orchestrates the final stage of the modernization pipeline by aut
 
 ### ⚙️ Power Automate Workflow Overview
 
-![alt text](../../13-images/portfolio-overview/Power_Automate.png)
+![alt text](../../assets/images/portfolio-overview/Power_Automate.png)
 
 ---
 
@@ -268,7 +268,7 @@ This phase focused on creating a clean, maintainable repository through automate
 
 ### 🗂️ PowerShell Automation & Repo Maintenance Tools
 
-![alt text](../../13-images/portfolio-overview/PowerShell.png)
+![alt text](../../assets/images/portfolio-overview/PowerShell.png)
 
 ---
 
@@ -289,7 +289,7 @@ This high‑level architecture diagram illustrates the end‑to‑end flow of th
 
 ### 🏗️ Modernization Architecture Overview
 
-![alt text](../../13-images/portfolio-overview/ArchitectureDiagram.png)
+![alt text](../../assets/images/portfolio-overview/ArchitectureDiagram.png)
 
 ---
 
