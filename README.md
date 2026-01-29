@@ -1,48 +1,48 @@
 # Gulf to Bay Analytics — End‑to‑End Modernization of the Enterprise BI Ecosystem
 
-## 🏷️ Overview
+## 🏷️ Purpose
 
-Gulf to Bay Analytics is a full‑stack modernization initiative transforming a legacy Microsoft BI environment into a clean, automated, cloud‑aligned analytics platform. This repository reflects the complete modernization lifecycle — from SQL Server and SSIS to Fabric Data Factory, Databricks, Python ETL, semantic modeling, and automated reporting.
-
-The structure, documentation, and SDLC workflow are intentionally designed to mirror real‑world enterprise engineering practices.
+This repository represents the development workspace for the Gulf to Bay Analytics modernization effort. It demonstrates how a legacy Microsoft BI environment evolves into a clean, automated, cloud‑aligned analytics platform using modern engineering practices, structured documentation, and a disciplined Dev→Prod SDLC pipeline.
 
 ---
 
-## 🧭 Navigation
+## 🧭 Navigation — Repo Map
 
-This repository is organized into modular domains representing the modernization journey:
+This repository is organized into modular domains that reflect the full modernization journey from legacy Microsoft BI to a cloud‑aligned analytics ecosystem.
 
-- **01‑azure-data-factory** — Legacy ADF pipelines  
-- **02‑fabric-data-factory** — Modern Fabric orchestration  
-- **03‑sql-server** — SQL logic, schema, and metadata  
-- **04‑python** — Python ETL pipelines  
-- **05‑r** — R analytics and modeling  
-- **06‑databricks** — Spark notebooks and lakehouse transformations  
-- **07‑dataverse** — Dataverse schema and integrations  
-- **08‑ssis** — Legacy SSIS packages  
-- **09‑ssas** — Tabular model artifacts  
-- **10‑ssrs** — Legacy reporting assets  
-- **11‑power-bi** — PBIX files, DAX, M scripts  
-- **12‑power-automate** — Automated flows  
-- **13‑power-apps** — Application components  
-- **14‑powershell** — SDLC automation and Dev→Prod pipeline  
-- **assets** — Icons and branding  
-- **docs** — Architecture and modernization documentation  
+- **01‑azure-data-factory** — Legacy ADF pipelines and JSON assets  
+- **02‑fabric-data-factory** — Modern Fabric Data Factory pipelines and orchestration  
+- **03‑sql-server** — SQL scripts, schema definitions, metadata, and database logic  
+- **04‑python** — Python ETL pipelines, transformations, and data quality utilities  
+- **05‑r** — R scripts for statistical analysis, modeling, and exploratory work  
+- **06‑databricks** — Databricks notebooks, Spark jobs, and lakehouse transformations  
+- **07‑dataverse** — Dataverse schema, tables, and integration artifacts  
+- **08‑ssis** — Legacy SSIS packages and migration reference materials  
+- **09‑ssas** — SSAS Tabular models, partitions, and semantic layer definitions  
+- **10‑ssrs** — SSRS report definitions, RDL files, and legacy reporting assets  
+- **11‑power-bi** — PBIX files, DAX, M scripts, themes, and semantic modeling  
+- **12‑power-automate** — Automated refresh flows and workflow orchestration  
+- **13‑power-apps** — Power Apps components, screens, and app logic  
+- **14‑powershell** — SDLC automation, Dev→Prod promotion pipeline, and repo tooling  
+- **assets** — Branding, icons, screenshots, and visual assets  
+- **docs** — Architecture diagrams, modernization notes, and narrative documentation  
 
 Each folder includes an auto‑generated README describing its purpose and role in the modernization effort.
 
 ---
 
-## 🧱 Architecture at a Glance
+## 🧱 Modernization Context
 
-- **On‑Prem Foundations:** SQL Server, SSIS, SSAS, SSRS  
-- **Modern Cloud ETL:** Azure Data Factory → Fabric Data Factory → Databricks  
-- **Python & R Pipelines:** Modular ETL and analytics workflows  
+This project spans the full analytics lifecycle:
+
+- **Data Integration:** Azure Data Factory → Fabric Data Factory → Databricks  
+- **Data Engineering:** SQL Server optimization, Python ETL, R analytics  
 - **Semantic Modeling:** SSAS Tabular → Power BI  
 - **Automation:** Power Automate refresh orchestration  
+- **SDLC Discipline:** PowerShell‑driven Dev→Prod pipeline, repo hygiene, deterministic validators  
 - **Documentation:** Auto‑generated folder READMEs and modernization notes  
 
-This repository serves as both a technical implementation and a narrative artifact — demonstrating not just *what* was modernized, but *why* each step matters.
+The structure is intentionally designed to reflect real‑world enterprise engineering patterns and to present a clear modernization narrative.
 
 ---
 
@@ -55,14 +55,12 @@ This repository serves as both a technical implementation and a narrative artifa
 5. Automate refreshes and deployments  
 6. Document the modernization journey with clarity and intent  
 
-The repo is structured to help engineers, recruiters, and hiring managers follow the modernization arc end‑to‑end.
-
 ---
 
-## 🔗 Related Projects
+## 🔗 Related Repositories
 
-- **Profile Repo:** https://github.com/michaelraylloyd/michaelraylloyd  
-- **Featured Project:** Gulf to Bay Analytics — End‑to‑End BI Modernization  
+- **Profile:** https://github.com/michaelraylloyd  
+- **Featured Project:** Gulf to Bay Analytics Modernization  
   https://github.com/michaelraylloyd/gulf-to-bay-analytics-modernization
 
 ---
