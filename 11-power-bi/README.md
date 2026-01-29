@@ -13,7 +13,7 @@ This folder may include:
 - Source files
 - Scripts
 - Configuration
-- Supporting assets such as .pbix files
+- Supporting assets
 
 ## Modernization Context
 
