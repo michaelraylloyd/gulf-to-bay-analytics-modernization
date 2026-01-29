@@ -2,17 +2,42 @@
 
 ## 🏷️ Overview
 
-Gulf to Bay Analytics is a full modernization narrative that demonstrates how a legacy Microsoft BI ecosystem evolves into a clean, automated, cloud‑aligned analytics platform. This project showcases the complete lifecycle of enterprise analytics modernization — from SQL Server and SSIS to Fabric Data Factory, Python ETL, semantic modeling, and automated reporting.
+Gulf to Bay Analytics is a full modernization narrative demonstrating how a legacy Microsoft BI ecosystem evolves into a clean, automated, cloud‑aligned analytics platform. This project showcases the complete lifecycle of enterprise analytics modernization — from SQL Server and SSIS to Fabric Data Factory, Python ETL, semantic modeling, and automated reporting.
 
 The repository is intentionally structured to reflect a real‑world modernization journey, with clear folder boundaries, modular pipelines, and production‑grade documentation.
+
+---
+
+## Navigation 🧭
+
+This repository is organized into clear, modular components that reflect the full modernization workflow:
+
+- **01‑azure‑data-factory** — Legacy Azure Data Factory pipelines and JSON assets  
+- **02‑fabric‑data-factory** — Modern Fabric Data Factory pipelines and orchestration  
+- **03‑sql-server** — SQL scripts, schema definitions, metadata, and database logic  
+- **04‑python** — Python ETL pipelines, transformations, and data quality utilities  
+- **05‑r** — R scripts for statistical analysis, modeling, and exploratory work  
+- **06‑databricks** — Databricks notebooks, Spark jobs, and lakehouse transformations  
+- **07‑dataverse** — Dataverse schema, tables, and integration artifacts  
+- **08‑ssis** — Legacy SSIS packages and migration reference materials  
+- **09‑ssas** — SSAS Tabular models, partitions, and semantic layer definitions  
+- **10‑ssrs** — SSRS report definitions, RDL files, and legacy reporting assets  
+- **11‑power-bi** — PBIX files, DAX, M scripts, themes, and semantic modeling  
+- **12‑power-automate** — Automated refresh flows and workflow orchestration  
+- **13‑power-apps** — Power Apps components, screens, and app logic  
+- **14‑powershell** — SDLC automation, Dev→Prod promotion pipeline, and repo tooling  
+- **assets** — Branding, icons, screenshots, and visual assets  
+- **docs** — Architecture diagrams, modernization notes, and narrative documentation  
+
+Each folder contains its own README, automatically generated for consistency.
 
 ---
 
 ## 🧱 Architecture at a Glance
 
 - **On‑Prem Foundations:** SQL Server, SSIS, SSAS, SSRS  
-- **Modern Cloud ETL:** Azure Data Factory → Fabric Data Factory  
-- **Python ETL:** Modular extract/transform/load pipelines  
+- **Modern Cloud ETL:** Azure Data Factory → Fabric Data Factory → Databricks  
+- **Python & R ETL:** Modular extract/transform/load pipelines  
 - **Semantic Modeling:** SSAS Tabular → Power BI  
 - **Automation:** Power Automate refresh orchestration  
 - **Documentation:** Auto‑generated READMEs, repo hygiene, and folder‑level summaries  
@@ -27,21 +52,22 @@ The top‑level folders are intentionally prefixed to guide readers through the 
 
 | Prefix | Folder | Purpose |
 |--------|--------|---------|
-| **01‑** | azure‑data‑factory | Legacy ADF pipelines and assets |
-| **02‑** | fabric‑data‑factory | Modern Fabric pipelines |
+| **01‑** | azure‑data-factory | Legacy ADF pipelines and assets |
+| **02‑** | fabric‑data-factory | Modern Fabric pipelines |
 | **03‑** | sql‑server | SQL scripts, metadata, and database elements |
-| **04‑** | ssis | Legacy ETL packages |
-| **05‑** | ssas | Tabular model artifacts |
-| **06‑** | ssrs | Reporting Services assets |
-| **07‑** | power‑bi | PBIX files, M scripts, DAX, themes |
-| **08‑** | power‑automate | Automated refresh flows |
-| **09‑** | power‑apps | KPI Explorer app |
-| **10‑** | python | ETL scripts and modular pipeline |
-| **11‑** | powershell | Repo automation and documentation tooling |
-| **12‑** | docs | Modernization notes, diagrams, and architecture |
-| **13‑** | images | Branding and visual assets |
-
-Each folder contains its own README, automatically generated for consistency.
+| **04‑** | python | Python ETL pipelines |
+| **05‑** | r | R analytics and modeling |
+| **06‑** | databricks | Spark notebooks and lakehouse transformations |
+| **07‑** | dataverse | Dataverse schema and integration |
+| **08‑** | ssis | Legacy ETL packages |
+| **09‑** | ssas | Tabular model artifacts |
+| **10‑** | ssrs | Reporting Services assets |
+| **11‑** | power‑bi | PBIX files, DAX, M scripts |
+| **12‑** | power‑automate | Automated refresh flows |
+| **13‑** | power‑apps | KPI Explorer app |
+| **14‑** | powershell | Repo automation and SDLC tooling |
+| — | assets | Branding and visual assets |
+| — | docs | Modernization notes and diagrams |
 
 ---
 
@@ -51,7 +77,7 @@ This project walks through a realistic modernization arc:
 
 1. **Assess the legacy stack**  
 2. **Extract and modularize SQL logic**  
-3. **Migrate ETL from SSIS to Python + Fabric**  
+3. **Migrate ETL from SSIS to Python, Fabric, and Databricks**  
 4. **Rebuild semantic models for Power BI**  
 5. **Automate refreshes and deployments**  
 6. **Document everything with clarity and intent**
@@ -91,4 +117,4 @@ https://app.powerbi.com/view?r=eyJrIjoiNjEwZWU1M2UtMzhiZS00OTExLThmMjctNDczOGNmZ
 - **Scalability:** Architectures that grow with the business  
 - **Modernization:** Bridging legacy systems with cloud‑native tools  
 - **Automation:** Reducing manual refreshes and maintenance  
-- **Narrative:** Every artifact tells a story of improvement  
+- **Narrative:** Every artifact tells a story of improvement

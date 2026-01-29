@@ -1,5 +1,9 @@
-# Root of the repo (DEV)
-$root = "C:\Users\Public\_MRLloydWorkProjects\gulf-to-bay-analytics-modernization-dev"
+# Determine the repo root dynamically based on the script's location
+$scriptPath = $PSScriptRoot
+$root = Split-Path $scriptPath -Parent   # 14-powershell → repo root
+
+# Folder to skip (special handling)
+$skipDocsPortfolio = Join-Path $root "docs\portfolio-overview"
 
 # Folder to skip (special handling)
 $skipDocsPortfolio = Join-Path $root "docs\portfolio-overview"
