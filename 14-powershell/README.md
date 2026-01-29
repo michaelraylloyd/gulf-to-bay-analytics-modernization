@@ -13,7 +13,7 @@ This folder may include:
 - Source files
 - Scripts
 - Configuration
-- Supporting assets
+- Supporting assets and images
 
 ## Modernization Context
 
