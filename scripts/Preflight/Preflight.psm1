@@ -161,7 +161,7 @@ function Promote-ToProd {
         }
     }
 
-    robocopy $DevPath $ProdPath /MIR /NFL /NDL /NJH /NJS /NP | Out-Null
+    robocopy $DevPath $ProdPath /MIR /NFL /NDL /NJH /NJS /NP /XD ".git" | Out-Null
 
     if ($LASTEXITCODE -ge 8) {
         return [PSCustomObject]@{
