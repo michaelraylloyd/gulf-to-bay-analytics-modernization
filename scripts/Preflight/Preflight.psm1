@@ -1,52 +1,22 @@
 # =====================================================================
 #  SECTION 1 — CONFIGURATION & MODULE SETUP
-# ---------------------------------------------------------------------
-#  PURPOSE:
-#     Centralizes all configuration for the Dev→Prod SDLC pipeline.
-#     Defines repository paths, exposes them globally, and loads all
-#     validator functions from the validators/ directory.
-#
-#  WHY THIS MATTERS:
-#     • Ensures consistent path usage across all validators.
-#     • Prevents stale inline definitions from overriding dot-sourced files.
-#     • Makes the module deterministic, portable, and CI/CD‑safe.
 # =====================================================================
 
-# --- Repository Paths -------------------------------------------------
 $DevPath  = "C:\Repos\Dev\gulf-to-bay-analytics-modernization-dev"
 $ProdPath = "C:\Repos\Prod\gulf-to-bay-analytics-modernization"
 
-# Expose paths globally so all validators can reference them
 Set-Variable -Name DevPath  -Value $DevPath  -Scope Global -Force
 Set-Variable -Name ProdPath -Value $ProdPath -Scope Global -Force
 
-# --- Load Validators --------------------------------------------------
 . $PSScriptRoot\validators\Test-Readme.ps1
 . $PSScriptRoot\validators\Test-Links.ps1
 . $PSScriptRoot\validators\Test-Gitignore.ps1
 . $PSScriptRoot\validators\Test-RepoHygiene.ps1
 . $PSScriptRoot\validators\Test-BranchState.ps1
 
+
 # =====================================================================
 #  SECTION 2 — VALIDATORS & PIPELINE FUNCTIONS
-# ---------------------------------------------------------------------
-#  PURPOSE:
-#     Implements the full SDLC validation and promotion workflow.
-#     All functions return structured PSCustomObjects instead of
-#     console output, enabling clean orchestration and reporting.
-#
-#  ARCHITECTURE:
-#     • Validators: Test-* functions (no console output)
-#     • Diff Engine: Dev↔Prod drift detection
-#     • Sync Gate: Ensures repos match before promotion
-#     • Preflight: Aggregates validator results
-#     • Promotion: Mirrors Dev → Prod safely
-#     • Orchestrator: Run-Pipeline (user-facing entrypoint)
-# =====================================================================
-
-
-# =====================================================================
-#  DEV↔PROD DIFF ENGINE
 # =====================================================================
 
 function Get-RelativeFileMap {
@@ -127,11 +97,6 @@ function Compare-DevProd {
     return Test-DevProdDiff
 }
 
-
-# =====================================================================
-#  SYNC GATE — ENSURES DEV & PROD MATCH BEFORE PROMOTION
-# =====================================================================
-
 function Sync-DevToProd {
 
     $diff = Test-DevProdDiff
@@ -155,11 +120,6 @@ function Sync-DevToProd {
         )
     }
 }
-
-
-# =====================================================================
-#  PREFLIGHT (DEV & PROD)
-# =====================================================================
 
 function Invoke-Preflight {
 
@@ -189,11 +149,6 @@ function Invoke-PreflightProd {
 
     return $result
 }
-
-
-# =====================================================================
-#  PROMOTION PIPELINE — DEV → PROD MIRRORING
-# =====================================================================
 
 function Promote-ToProd {
 
@@ -229,18 +184,134 @@ function Promote-ToProd {
 # =====================================================================
 
 function Run-Pipeline {
+    param(
+        [switch]$Publish,
+        [string]$CommitMessage = "Promotion: Dev → Prod sync and publish"
+    )
 
+    # PHASE 1 — DEV PREFLIGHT
     $dev = Invoke-Preflight
-    if (-not $dev.Passed) { return $dev }
+    if (-not $dev.Passed) {
+        return [PSCustomObject]@{
+            Name    = "Pipeline"
+            Passed  = $false
+            Stage   = "Dev Preflight"
+            Details = $dev
+        }
+    }
 
+    # PHASE 2 — PROD PREFLIGHT
     $prod = Invoke-PreflightProd
-    if (-not $prod.Passed) { return $prod }
+    if (-not $prod.Passed) {
+        return [PSCustomObject]@{
+            Name    = "Pipeline"
+            Passed  = $false
+            Stage   = "Prod Preflight"
+            Details = $prod
+        }
+    }
 
+    # PHASE 3 — SYNC GATE
     $sync = Sync-DevToProd
-    if (-not $sync.Passed) { return $sync }
+    if (-not $sync.Passed) {
+        return [PSCustomObject]@{
+            Name    = "Pipeline"
+            Passed  = $false
+            Stage   = "Sync Gate"
+            Details = $sync
+        }
+    }
 
+    # PHASE 4 — PROMOTION
     $promote = Promote-ToProd
-    return $promote
+    if (-not $promote.Passed) {
+        return [PSCustomObject]@{
+            Name    = "Pipeline"
+            Passed  = $false
+            Stage   = "Promotion"
+            Details = $promote
+        }
+    }
+
+    # PHASE 5 — OPTIONAL GIT PUBLISH
+    if ($Publish) {
+
+        $repoRoot = git rev-parse --show-toplevel 2>$null
+        if (-not $repoRoot) {
+            return [PSCustomObject]@{
+                Name    = "Pipeline"
+                Passed  = $false
+                Stage   = "Git Publish"
+                Details = "Not inside a Git repository."
+            }
+        }
+
+        $originalLocation = Get-Location
+        Set-Location $repoRoot
+
+        try {
+            $conflicts = git diff --name-only --diff-filter=U
+            if ($conflicts) {
+                return [PSCustomObject]@{
+                    Name    = "Pipeline"
+                    Passed  = $false
+                    Stage   = "Git Publish"
+                    Details = "Merge conflicts detected: $($conflicts -join ', ')"
+                }
+            }
+
+            $pending = git status --porcelain
+            if (-not $pending) {
+                return [PSCustomObject]@{
+                    Name    = "Pipeline"
+                    Passed  = $true
+                    Stage   = "Complete (No Git Changes)"
+                    Details = @{
+                        DevPreflight   = $dev
+                        ProdPreflight  = $prod
+                        SyncGate       = $sync
+                        Promotion      = $promote
+                        GitPublish     = "No changes to commit."
+                    }
+                }
+            }
+
+            $timestamp = (Get-Date).ToString("yyyy-MM-dd HH:mm:ss")
+            $finalMessage = "$CommitMessage — $timestamp"
+
+            git add .
+            git commit -m "$finalMessage"
+            git push
+
+            return [PSCustomObject]@{
+                Name    = "Pipeline"
+                Passed  = $true
+                Stage   = "Complete + Published"
+                Details = @{
+                    DevPreflight   = $dev
+                    ProdPreflight  = $prod
+                    SyncGate       = $sync
+                    Promotion      = $promote
+                    GitPublish     = "Committed and pushed: $finalMessage"
+                }
+            }
+        }
+        finally {
+            Set-Location $originalLocation
+        }
+    }
+
+    return [PSCustomObject]@{
+        Name    = "Pipeline"
+        Passed  = $true
+        Stage   = "Complete"
+        Details = @{
+            DevPreflight   = $dev
+            ProdPreflight  = $prod
+            SyncGate       = $sync
+            Promotion      = $promote
+        }
+    }
 }
 
 
