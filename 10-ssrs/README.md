@@ -17,7 +17,7 @@ This folder may include:
 
 ## Modernization Context
 
-As part of the end‑to‑end modernization, this folder helps ensure:
+As part of the end‑to‑end modernization, this folder ensures:
 - Clean separation of responsibilities
 - Improved maintainability
 - Consistent documentation
