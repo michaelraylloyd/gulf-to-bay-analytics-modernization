@@ -1,5 +1,5 @@
 # List folders and subfolders only, exclude files except in root
-$repoRoot = "C:\Users\Public\_MRLloydWorkProjects\gulf-to-bay-analytics-modernization"
+$repoRoot = "C:\Repos\Dev\gulf-to-bay-analytics-modernization-dev"
 
 Write-Host "`n📁 Folders and Subfolders:`n"
 
