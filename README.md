@@ -6,7 +6,7 @@ This repository represents the development workspace for the Gulf to Bay Analyti
 
 ---
 
-## 🧭 Navigation — Repo Map
+## 🧭 Navigation (Repo Map)
 
 This repository is organized into modular domains that reflect the full modernization journey from legacy Microsoft BI to a cloud‑aligned analytics ecosystem.
 
