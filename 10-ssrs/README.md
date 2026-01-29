@@ -5,7 +5,7 @@ It contains assets, scripts, or resources related to **Ssrs**, aligned with the 
 
 ## Purpose
 
-This folder contributes to the modernization effort by organizing work related to **Ssrs** in a clear, maintainable structure.
+This folder contributes to the modernization effort by organizing work related to **SSRS** in a clear, maintainable structure.
 
 ## Contents
 
