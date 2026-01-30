@@ -1,0 +1,11 @@
+{
+  "table": "sales",
+  "checks": [
+    { "type": "not_null", "column": "order_id" },
+    { "type": "not_null", "column": "customer_id" },
+    { "type": "type", "column": "order_amount", "expected": "float" },
+    { "type": "range", "column": "order_amount", "min": 0 },
+    { "type": "unique", "column": "order_id" },
+    { "type": "row_count_min", "min": 1 }
+  ]
+}

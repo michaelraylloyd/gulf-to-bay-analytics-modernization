@@ -1,0 +1,32 @@
+# Pipeline — Bronze Ingestion with Data Quality Validation
+
+This pipeline orchestrates the ingestion of raw sales data into the Bronze layer and immediately executes the Data Quality framework against the ingested dataset. The sequence enforces a deterministic flow: Bronze ingestion must succeed before Data Quality checks are executed. This pattern establishes the foundational contract for all downstream Lakehouse layers, ensuring that only validated data progresses into Silver and beyond.
+
+The pipeline is defined as a JSON artifact to support versioning, promotion, and reproducible deployment across environments within the Lakehouse Expansion pillar.
+
+{
+  "name": "bronze_sales_with_dq_pipeline",
+  "description": "Bronze ingestion followed by Data Quality validation for the sales table.",
+  "activities": [
+    {
+      "name": "bronze_ingest_sales",
+      "type": "Notebook",
+      "notebook": {
+        "path": "15-lakehouse-expansion/features/bronze/bronze_ingest_sales"
+      }
+    },
+    {
+      "name": "dq_sales",
+      "type": "Notebook",
+      "dependsOn": [
+        {
+          "activity": "bronze_ingest_sales",
+          "dependencyConditions": ["Succeeded"]
+        }
+      ],
+      "notebook": {
+        "path": "15-lakehouse-expansion/features/data-quality/dq_run_sales"
+      }
+    }
+  ]
+}

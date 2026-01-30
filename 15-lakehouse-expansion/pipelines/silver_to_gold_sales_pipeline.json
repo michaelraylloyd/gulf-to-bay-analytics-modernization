@@ -1,0 +1,32 @@
+# Pipeline — Silver to Gold Sales Transformation
+
+This pipeline orchestrates the transformation of the Silver sales dataset into the curated Gold‑layer fact table. It enforces a deterministic sequence where the Silver transformation must complete successfully before the Gold aggregation is executed. This pattern ensures that all curated business‑ready datasets are derived from validated, consistently processed upstream layers.
+
+The pipeline is defined as a JSON artifact to support versioning, promotion, and reproducible deployment across environments within the Lakehouse Expansion pillar.
+
+{
+  "name": "silver_to_gold_sales_pipeline",
+  "description": "Transforms Silver sales data into the curated Gold fact table.",
+  "activities": [
+    {
+      "name": "silver_sales_transform",
+      "type": "Notebook",
+      "notebook": {
+        "path": "15-lakehouse-expansion/features/silver/silver_sales_transform"
+      }
+    },
+    {
+      "name": "gold_sales_fact",
+      "type": "Notebook",
+      "dependsOn": [
+        {
+          "activity": "silver_sales_transform",
+          "dependencyConditions": ["Succeeded"]
+        }
+      ],
+      "notebook": {
+        "path": "15-lakehouse-expansion/features/gold/gold_sales_fact"
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+# silver-pipeline-definition.json
+
+This pipeline definition orchestrates the Silver transformation process, coordinating the refinement of Bronze data into a clean, normalized, and analytics‑ready Silver dataset. It references the Silver transformation script, schema, and configuration files to ensure deterministic execution across development and automated environments.
+
+The pipeline is designed to be modular and environment‑agnostic, supporting execution within Databricks Jobs, Fabric Pipelines, Airflow, or any enterprise orchestration framework. All retry behavior, scheduling controls, and task definitions are explicitly declared to provide operational clarity and reliability.
+
+{
+  "pipeline_name": "silver_transformation_pipeline",
+  "description": "Refine Bronze sales data into the Silver layer using deterministic schema and transformation rules.",
+  "tasks": [
+    {
+      "name": "silver_transformation",
+      "type": "spark_python",
+      "script_path": "scripts/silver-transform/silver-transform.py",
+      "config_path": "configs/silver-transform/silver-transform-config.json",
+      "schema_path": "configs/silver-transform/silver-schema.json",
+      "retry": {
+        "max_attempts": 3,
+        "delay_seconds": 60
+      }
+    }
+  ],
+  "schedule": {
+    "type": "manual",
+    "enabled": true
+  },
+  "notifications": {
+    "on_success": "log_only",
+    "on_failure": "alert"
+  }
+}
