@@ -1,0 +1,28 @@
+# bronze-ingestion-config.json
+
+This configuration file defines the input paths, output paths, table identifiers, and ingestion parameters for Bronze ingestion. It externalizes environment‑specific values so that notebooks, scripts, and pipelines can reuse the same configuration without hard‑coding paths.
+
+All values are ASCII‑safe and deterministic. This file is intended to be consumed by the Bronze ingestion notebook and any future orchestration pipelines.
+
+{
+  "source": {
+    "format": "json",
+    "path": "/mnt/raw/sales/"
+  },
+  "target": {
+    "format": "delta",
+    "path": "/mnt/bronze/sales/",
+    "mode": "append"
+  },
+  "table": {
+    "name": "sales_bronze",
+    "database": "lakehouse_bronze"
+  },
+  "schema": {
+    "file": "bronze-schema.json"
+  },
+  "metadata": {
+    "add_ingestion_timestamp": true,
+    "add_source_file": true
+  }
+}

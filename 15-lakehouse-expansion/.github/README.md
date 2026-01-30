@@ -1,7 +1,7 @@
-# .github
+﻿# .github
 
 This folder is part of the Gulf to Bay Analytics modernization project.  
-It contains assets, scripts, or resources related to **.github**, aligned with the overall goal of creating a clean, automated, cloud‑ready analytics ecosystem.
+It contains assets, scripts, or resources related to **.github**, aligned with the overall goal of creating a clean, automated, cloudâ€‘ready analytics ecosystem.
 
 ## Purpose
 
@@ -17,8 +17,8 @@ This folder may include:
 
 ## Modernization Context
 
-As part of the end‑to‑end modernization, this folder helps ensure:
+As part of the endâ€‘toâ€‘end modernization, this folder helps ensure:
 - Clean separation of responsibilities
 - Improved maintainability
 - Consistent documentation
-- Recruiter‑ready project organization
+- Recruiterâ€‘ready project organization
