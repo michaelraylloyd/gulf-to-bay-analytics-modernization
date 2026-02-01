@@ -1,0 +1,9 @@
+{
+    "bronze": {
+        "path": "15-lakehouse-expansion/data/bronze/sales"
+    },
+    "silver": {
+        "path": "15-lakehouse-expansion/data/silver/sales",
+        "mode": "overwrite"
+    }
+}

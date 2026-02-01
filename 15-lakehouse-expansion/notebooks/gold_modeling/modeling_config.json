@@ -1,0 +1,11 @@
+{
+  "silver": {
+    "path": "/mnt/silver/sales/"
+  },
+  "gold": {
+    "dim_customer_path": "/mnt/gold/dim_customer/",
+    "dim_product_path": "/mnt/gold/dim_product/",
+    "fact_sales_path": "/mnt/gold/fact_sales/",
+    "mode": "overwrite"
+  }
+}
