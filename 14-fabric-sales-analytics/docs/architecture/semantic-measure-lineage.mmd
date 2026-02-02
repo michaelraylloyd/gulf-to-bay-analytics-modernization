@@ -1,0 +1,23 @@
+flowchart TD
+
+    subgraph Fact["Fact Table"]
+        F1["fact_sales"]
+    end
+
+    subgraph Measures["DAX Measures"]
+        M1["Total Sales"]
+        M2["Total Quantity"]
+        M3["Gross Margin"]
+        M4["YoY Growth"]
+    end
+
+    subgraph Visuals["Report Visuals"]
+        V1["Sales Trend"]
+        V2["Top Products"]
+        V3["Customer Segments"]
+    end
+
+    F1 --> M1 --> V1
+    F1 --> M2 --> V2
+    F1 --> M3 --> V3
+    F1 --> M4 --> V1

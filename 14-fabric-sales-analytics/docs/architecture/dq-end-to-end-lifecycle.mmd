@@ -1,0 +1,102 @@
+flowchart TD
+
+    %% ======================================================
+    %%   FABRIC SALES ANALYTICS — END‑TO‑END DQ LIFECYCLE
+    %% ======================================================
+
+    %% -------- RAW INGESTION --------
+    subgraph Bronze["Bronze Layer — Raw Ingestion"]
+        B1["Raw Sales"]
+        B2["Raw Products"]
+        B3["Raw Customers"]
+    end
+
+    %% -------- SILVER CLEANING --------
+    subgraph Silver["Silver Layer — Cleaned & Conformed"]
+        S1["sales_clean"]
+        S2["products_clean"]
+        S3["customers_clean"]
+    end
+
+    %% -------- DQ ENGINE --------
+    subgraph DQ["DQ Engine"]
+        DQ1["Load Expectation Rules<br/>expectations.json"]
+        DQ2["Row-Level Validation<br/>Null / Type / Domain / FK"]
+        DQ3["Routing Logic<br/>PASS → Clean<br/>FAIL → Exceptions"]
+        DQ4["DQ Summary Aggregation"]
+    end
+
+    %% -------- OUTPUTS --------
+    subgraph Outputs["DQ Outputs"]
+        O1["Clean Output Tables<br/>dq_pass_*"]
+        O2["Exception Tables<br/>dq_*_exceptions"]
+        O3["DQ Summary Table"]
+    end
+
+    %% -------- GOLD LAYER --------
+    subgraph Gold["Gold Layer — Star Schema"]
+        G1["fact_sales"]
+        G2["dim_product"]
+        G3["dim_customer"]
+    end
+
+    %% -------- SEMANTIC --------
+    subgraph Semantic["Semantic Model"]
+        SM["Power BI Dataset"]
+    end
+
+    %% -------- REPORTING --------
+    subgraph Reports["Reports & Dashboards"]
+        R1["Executive Dashboard"]
+        R2["Sales Performance"]
+        R3["Product Profitability"]
+    end
+
+    %% -------- OBSERVABILITY --------
+    subgraph Observability["DQ Observability"]
+        OB1["DQ Metrics Table"]
+        OB2["DQ Trends Table"]
+        OB3["Pipeline Health Table"]
+        OB4["Alerts<br/>• Exception spikes<br/>• Rule failures<br/>• SLA breaches"]
+    end
+
+    %% FLOWS: BRONZE → SILVER
+    B1 --> S1
+    B2 --> S2
+    B3 --> S3
+
+    %% SILVER → DQ ENGINE
+    S1 --> DQ1
+    S2 --> DQ1
+    S3 --> DQ1
+
+    DQ1 --> DQ2 --> DQ3
+    DQ2 --> DQ4
+
+    %% ROUTING
+    DQ3 --> O1
+    DQ3 --> O2
+    DQ4 --> O3
+
+    %% GOLD CONSUMPTION
+    O1 --> G1
+    O1 --> G2
+    O1 --> G3
+
+    %% SEMANTIC
+    G1 --> SM
+    G2 --> SM
+    G3 --> SM
+
+    %% REPORTS
+    SM --> R1
+    SM --> R2
+    SM --> R3
+
+    %% OBSERVABILITY
+    O2 --> OB1
+    O3 --> OB2
+    O3 --> OB3
+    OB1 --> OB4
+    OB2 --> OB4
+    OB3 --> OB4
