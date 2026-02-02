@@ -119,18 +119,18 @@ The ETL pipeline evolved from SSIS packages to ADF pipelines and ultimately to F
 
 ### 🔄 ETL Migration
 
-### 🔄 SSIS
+<strong>🔄 SSIS</strong>
 ![alt text](../../assets/images/portfolio-overview/SSIS.png)  
 
-### 🔄 Azure Data Factory Pipelines
+<strong>🔄 Azure Data Factory Pipelines</strong>
 ![alt text](../../assets/images/portfolio-overview/Azure_Data_Factory_Pipeline.png)
 
-### 🔄 Fabric Python Notebooks
+<strong>🔄 Fabric Python Notebooks</strong>
 ![alt text](../../assets/images/portfolio-overview/Fabric_Python_Notebook_Header.png)
 ![alt text](../../assets/images/portfolio-overview/Fabric_Python_Notebook_Code.png)
 ![alt text](../../assets/images/portfolio-overview/Fabric_Python_Notebook_Footer.png)
 
-### 🔄 Fabric Pipelines
+<strong>🔄 Fabric Pipelines</strong>
 ![alt text](../../assets/images/portfolio-overview/Fabric_Pipeline.png)
 
 ---
@@ -153,13 +153,13 @@ The semantic layer was rebuilt in both Fabric Lakehouse and Power BI, replacing 
 
 ### 📊 Semantic Modeling
 
-### 📊 SSAS
+<strong>📊 SSAS</strong>
 ![alt text](../../assets/images/portfolio-overview/SSAS.png)
 
-### 📊 Lakehouse Semantic Model
+<strong>📊 Lakehouse Semantic Model</strong>
 ![alt text](../../assets/images/portfolio-overview/Fabric_Lakehouse_Semantic_Model.png)
 
-### 📊 Power BI Semantic Model
+<strong>📊 Power BI Semantic Model</strong>
 ![alt text](../../assets/images/portfolio-overview/Power_BI_Snowflake_Schema.png)
 
 ---
@@ -199,13 +199,15 @@ A full medallion architecture was implemented to support scalable analytics and 
 
 </details>
 
-### 🏛️ Python Bronze Notebook  
+### 🏛️ Lakehouse Architecture
+
+<strong>🏛️ Python Bronze Notebook</strong>
 ![alt text](../../assets/images/portfolio-overview/Fabric_Python_Notebook_Bronze.png)
 
-### 🏛️ Python Silver Notebook  
+<strong>🏛️ Python Silver Notebook</strong>
 ![alt text](../../assets/images/portfolio-overview/Fabric_Python_Notebook_Silver.png)
 
-### 🏛️ Python Gold Notebook  
+<strong>🏛️ Python Gold Notebook</strong>
 ![alt text](../../assets/images/portfolio-overview/Fabric_Python_Notebook_Gold.png)
 
 ---
@@ -225,10 +227,11 @@ Fabric Dataflows provide reusable, GUI‑driven ingestion and transformation log
 
 </details>
 
-### 🧮 Power Query  
+### 🧮 Dataflow Highlight
+<strong>🧮 Power Query</strong>
 ![alt text](../../assets/images/portfolio-overview/Fabric_Dataflow_Power_Query.png)
 
-### 🧮 M Query 
+<strong>🧮 M Query</strong>
 ![alt text](../../assets/images/portfolio-overview/Fabric_Dataflow_M.png)
 
 ---
