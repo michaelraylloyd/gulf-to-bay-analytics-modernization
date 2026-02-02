@@ -1,0 +1,62 @@
+flowchart TD
+
+    %% ======================================================
+    %%   FABRIC SALES ANALYTICS — DQ EXCEPTION TABLE SCHEMA
+    %% ======================================================
+
+    subgraph Exceptions["DQ Exception Tables"]
+        E1["dq_sales_exceptions"]
+        E2["dq_products_exceptions"]
+        E3["dq_customers_exceptions"]
+    end
+
+    subgraph Schema["Exception Table Columns"]
+        C1["source_table<br/>STRING"]
+        C2["row_hash<br/>STRING<br/>Deterministic row fingerprint"]
+        C3["column_name<br/>STRING"]
+        C4["rule_name<br/>STRING"]
+        C5["rule_description<br/>STRING"]
+        C6["expected_value<br/>STRING"]
+        C7["actual_value<br/>STRING"]
+        C8["severity<br/>STRING (info|warn|error)"]
+        C9["run_id<br/>STRING<br/>Pipeline execution ID"]
+        C10["dq_timestamp<br/>TIMESTAMP"]
+        C11["raw_payload<br/>VARIANT / JSON<br/>Full original row"]
+    end
+
+    %% RELATIONSHIPS
+    E1 --> C1
+    E1 --> C2
+    E1 --> C3
+    E1 --> C4
+    E1 --> C5
+    E1 --> C6
+    E1 --> C7
+    E1 --> C8
+    E1 --> C9
+    E1 --> C10
+    E1 --> C11
+
+    E2 --> C1
+    E2 --> C2
+    E2 --> C3
+    E2 --> C4
+    E2 --> C5
+    E2 --> C6
+    E2 --> C7
+    E2 --> C8
+    E2 --> C9
+    E2 --> C10
+    E2 --> C11
+
+    E3 --> C1
+    E3 --> C2
+    E3 --> C3
+    E3 --> C4
+    E3 --> C5
+    E3 --> C6
+    E3 --> C7
+    E3 --> C8
+    E3 --> C9
+    E3 --> C10
+    E3 --> C11

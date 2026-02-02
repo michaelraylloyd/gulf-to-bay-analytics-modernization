@@ -3,6 +3,12 @@
 
 ---
 
+## Executive Summary
+
+This portfolio showcases the complete modernization of Gulf to Bay Analytics from a fragmented, on‑prem Microsoft BI stack into a unified, cloud‑native analytics ecosystem built on Microsoft Fabric. The transformation spans SQL Server, SSIS, SSAS, and SSRS through Azure SQL, Lakehouse medallion architecture, Python ETL, Fabric Data Factory pipelines, a rebuilt Power BI semantic model, automated refreshes via Power Automate, and Power Apps for operational workflows. The project also includes a fully restructured Git‑based SDLC with feature branching, Dev/Main separation, and deterministic promotion patterns that mirror real enterprise engineering practices. This document provides a visual, narrative walkthrough of that journey, supported by architecture diagrams, screenshots, and detailed modernization notes.
+
+---
+
 ## 1. Introduction
 
 This document provides a visual, narrative walkthrough of the **Gulf to Bay Analytics Modernization Project**, demonstrating how a legacy Microsoft BI ecosystem was transformed into a clean, automated, cloud‑aligned analytics platform.
@@ -11,27 +17,15 @@ This document provides a visual, narrative walkthrough of the **Gulf to Bay Anal
 
 ## 2. Legacy Environment Overview
 
-The original environment ran on a traditional Microsoft BI stack — SQL Server, SSIS, SSAS, and SSRS — with manual refreshes, tightly coupled ETL packages, and fragmented logic spread across multiple tools. Pipelines lacked automation, documentation was minimal, and changes often required hands‑on intervention. The system worked, but it wasn’t scalable, cloud‑ready, or easy to maintain.
-
 <details>
 <summary><strong>🏗️ Expanded Legacy Environment Overview</strong></summary>
 
-The original Gulf to Bay Analytics environment operated on a traditional on‑premises Microsoft BI stack. While it delivered essential reporting, the architecture had accumulated technical debt over time and lacked the automation and scalability expected in a modern analytics platform.
-
-Key characteristics included:
-
-- **SQL Server** as the central data store  
-- **SSIS packages** for nightly ETL  
-- **SSAS Tabular models** requiring manual processing  
-- **SSRS reports** with independent datasets  
-
-Operational challenges:
-
-- Manual refresh cycles  
-- Fragmented pipelines  
-- Limited automation  
-- Minimal documentation  
-- Tight coupling to on‑prem infrastructure  
+- SQL Server as central data store  
+- SSIS for nightly ETL  
+- SSAS Tabular models with manual refresh  
+- SSRS reports with independent datasets  
+- Manual refresh cycles and fragmented logic  
+- No version control or automation  
 
 </details>
 
@@ -39,22 +33,15 @@ Operational challenges:
 
 ## 3. Modernization Goals
 
-- Reduce manual processes  
-- Improve data quality and lineage  
-- Introduce cloud‑ready ETL  
-- Build semantic models for Power BI  
-- Automate refreshes  
-- Improve documentation and maintainability  
-
 <details>
 <summary><strong>🏗️ Expanded Modernization Goals</strong></summary>
 
-- Decouple business logic from SSIS  
-- Improve transparency through metadata‑driven design  
-- Migrate ETL to Fabric Data Factory and Python  
-- Rebuild semantic models for Power BI  
+- Decouple logic from SSIS  
+- Migrate ETL to Python and Fabric  
+- Rebuild semantic models  
 - Automate refreshes with Power Automate  
-- Standardize documentation across the repo  
+- Standardize documentation  
+- Establish version control and SDLC  
 
 </details>
 
@@ -62,338 +49,325 @@ Operational challenges:
 
 ## 4. Repository Structure
 
-The repository is organized into modular, prefixed folders that reflect the modernization flow:
-
 <details>
 <summary><strong>🗂️ Expanded Repository Structure Notes</strong></summary>
 
-This structure ensures:
+The repository is organized into modular, prefixed folders that reflect the modernization journey from legacy on‑prem components to cloud‑native Fabric architecture. This structure ensures:
 
 - Clear separation of legacy vs. modern components  
 - Easy navigation for recruiters and engineers  
-- Consistent documentation  
-- A narrative flow that mirrors the modernization journey  
+- Consistent documentation and automation tooling  
+- A narrative flow that mirrors the transformation arc  
 
 </details>
 
 | Prefix | Folder | Purpose |
 |--------|--------|---------|
-| **01‑** | azure‑data‑factory | Legacy ADF pipelines |
-| **02‑** | fabric‑data‑factory | Modern Fabric pipelines |
-| **03‑** | sql‑server | SQL scripts and metadata |
-| **04‑** | ssis | Legacy ETL packages |
-| **05‑** | ssas | Tabular model artifacts |
-| **06‑** | ssrs | Reporting Services assets |
-| **07‑** | power‑bi | PBIX files, M scripts, DAX |
-| **08‑** | power‑automate | Automated refresh flows |
-| **09‑** | power‑apps | KPI Explorer app |
-| **10‑** | python | ETL scripts and pipelines |
-| **11‑** | powershell | Repo automation tooling |
-| **12‑** | docs | Modernization notes & diagrams |
-| **13‑** | images | Visual assets |
+| **01‑** | azure‑data‑factory | Legacy ADF pipelines and assets |
+| **02‑** | fabric‑data‑factory | Modern Fabric pipelines and orchestration |
+| **03‑** | sql‑server | SQL scripts, metadata, and stored procedures |
+| **04‑** | databricks | Optional expansion for Spark‑based workflows |
+| **05‑** | dataverse | Power Platform data integration and hybrid modeling |
+| **06‑** | ssis | Legacy ETL packages and migration references |
+| **07‑** | ssas | Tabular model artifacts and semantic lineage |
+| **08‑** | ssrs | Reporting Services assets and paginated reports |
+| **09‑** | power‑bi | PBIX files, M scripts, DAX, and semantic models |
+| **10‑** | power‑automate | Automated refresh flows and alerting logic |
+| **11‑** | power‑apps | KPI Explorer and operational workflow apps |
+| **12‑** | fabric‑sales‑analytics | Lakehouse medallion architecture, notebooks, DQ subsystem |
+| **assets** | assets | Branding, icons, and visual elements |
+| **docs** | docs | Architecture diagrams, modernization notes, and README files |
+| **tools** | tools | PowerShell scripts and repo automation utilities |
 
 ---
 
 ## 5. SQL Server Modernization
 
-The SQL layer was restructured using metadata‑driven design, modular stored procedures, and standardized formatting (GTB SQL).
+SQL Server objects were modernized, standardized, and prepared for migration into the cloud‑aligned architecture.
 
 <details>
-<summary><strong>🏗️ Expanded SQL Server Modernization Details</strong></summary>
+<summary><strong>🧱 SQL Modernization Highlights</strong></summary>
 
-- Consolidated business logic  
-- Applied GTB SQL formatting  
-- Documented schema and lineage  
-- Reduced duplication across SSIS, SQL, and SSAS  
+- Consolidated legacy stored procedures  
+- Standardized naming and formatting  
+- Introduced metadata‑driven patterns  
+- Prepared schema for Lakehouse migration  
+- Applied GTB SQL formatting conventions  
 
 </details>
 
-### 🔧 Modular Stored Procedure Architecture (GTB SQL Format)
-
+### 🧱 SQL Server Screenshot  
 ![alt text](../../assets/images/portfolio-overview/SQL_Server.png)
 
 ---
 
-## 6. ETL Migration (SSIS → Azure Data Factory → Fabric Data Factory)
+## 6. ETL Migration (SSIS → Azure Data Factory → Fabric)
 
-The ETL layer was modernized by rebuilding legacy SSIS dataflows into cloud‑native pipelines.
+The ETL pipeline evolved from SSIS packages to ADF pipelines and ultimately to Fabric‑native orchestration.
 
 <details>
-<summary><strong>⚙️ Expanded ETL Migration Details</strong></summary>
+<summary><strong>🔄 ETL Migration Highlights</strong></summary>
 
-- Extracted logic from SSIS  
-- Introduced modular Python ETL  
-- Implemented Fabric Data Factory pipelines  
-- Improved error handling and maintainability  
+- SSIS package inventory and logic extraction  
+- ADF pipeline orchestration for cloud ETL  
+- Fabric Data Factory migration for unified governance  
+- Parameterized pipelines and reusable components  
+- Incremental migration strategy  
 
 </details>
 
-### ⚙️ SQL SSIS  
-![alt text](../../assets/images/portfolio-overview/SSIS.png)
-
-### ⚙️ Azure Data Factory  
-![alt text](../../assets/images/portfolio-overview/ADF.png)
-
-### ⚙️ Fabric Data Factory  
+### 🔄 ETL Migration Screenshots  
+![alt text](../../assets/images/portfolio-overview/SSIS.png)  
+![alt text](../../assets/images/portfolio-overview/ADF.png)  
 ![alt text](../../assets/images/portfolio-overview/Fabric.png)
 
 ---
 
 ## 7. Semantic Modeling (SSAS → Power BI)
 
-The semantic layer was rebuilt to support modern Power BI capabilities.
+The semantic layer was rebuilt in Power BI, replacing SSAS Tabular with a modern, cloud‑aligned model.
 
 <details>
-<summary><strong>🔧 Expanded Semantic Model Details</strong></summary>
+<summary><strong>📊 Semantic Modeling Highlights</strong></summary>
 
-- Rebuilt relationships and hierarchies  
-- Standardized KPIs  
-- Improved DAX readability  
-- Documented model structure  
+- SSAS Tabular model analysis and extraction  
+- Rebuilt Power BI semantic model  
+- Star schema alignment with Lakehouse views  
+- DAX standardization and KPI definitions  
+- Automated refresh integration  
 
 </details>
 
-### 🔧 SSAS  
-![alt text](../../assets/images/portfolio-overview/SSAS.png)
-
-### 🔧 Power BI  
+### 📊 Semantic Modelingalt text](../../ Screenshots  
+![assets/images/portfolio-overview/SSAS.png)  
 ![alt text](../../assets/images/portfolio-overview/Power_BI.png)
 
 ---
 
 ## 8. Python ETL Pipeline — Cloud Migration & Data Synchronization
 
-The modernization includes a Python‑based ETL pipeline that migrates and synchronizes data between Azure SQL environments.
+Python notebooks were introduced to handle ingestion, transformation, and synchronization across cloud layers.
 
 <details>
-<summary><strong>🔧 Key Capabilities</strong></summary>
+<summary><strong>🐍 Python ETL Highlights</strong></summary>
 
-- Loads secure config from `.env`  
-- Connects to Azure SQL via pyodbc/SQLAlchemy  
-- Copies OLTP tables into DW  
-- Executes stored procedures  
-- Logs activity for traceability  
-- Metadata‑driven execution  
+- Modular notebook‑based ETL  
+- Pandas and PySpark transformations  
+- Lakehouse ingestion and write‑back  
+- DQ rule execution and logging  
+- Cloud‑ready orchestration design  
 
 </details>
 
-### 🔧 Python ETL Execution  
-![alt text](../../assets/images/portfolio-overview/Python.png)
+### 🐍 Python ETL Screenshot  
+![alt text](../../-overview/Pythonassets/images/portfolio.png)
 
 ---
 
 ## 9. Lakehouse Architecture (Bronze → Silver → Gold)
 
-The Lakehouse became the core of the modernized analytics platform.
+A full medallion architecture was implemented to support scalable analytics and semantic modeling.
 
 <details>
-<summary><strong>🏗️ Expanded Lakehouse Architecture Details</strong></summary>
+<summary><strong>🏛️ Lakehouse Architecture Highlights</strong></summary>
 
-- Bronze: Raw ingestion  
-- Silver: Cleansed, typed, conformed  
-- Gold: Star schema modeling  
-- Surrogate keys & referential integrity  
-- DQ validation & exception routing  
+- Bronze ingestion via Python and Dataflows  
+- Silver standardization and DQ enforcement  
+- Gold star schema modeling  
+- Metadata‑driven table creation  
+- Notebook‑based transformations  
 
 </details>
 
-### 🪵 Lakehouse Architecture  
+### 🏛️ Lakehouse Architecture Screenshot  
 ![alt text](../../assets/images/portfolio-overview/Lakehouse.png)
 
 ---
 
-## 10. Fabric Pipelines — Unified Orchestration
+## 10. Fabric Dataflows and M Queries
 
-Fabric Pipelines replaced fragmented SSIS/ADF logic with unified orchestration.
+Fabric Dataflows provide reusable, GUI‑driven ingestion and transformation logic using M.
 
 <details>
-<summary><strong>⚙️ Expanded Fabric Pipeline Details</strong></summary>
+<summary><strong>🧮 Dataflow Highlights</strong></summary>
 
-- Preflight checks  
-- Bronze → Silver → Gold  
-- DQ validation  
-- Semantic refresh  
-- Exception routing  
+- Lakehouse‑connected dataflows  
+- M code transformations  
+- CSV ingestion via Lakehouse.Contents  
+- View creation and metadata alignment  
+- Power Query editor integration  
 
 </details>
 
-### ⚙️ Fabric Pipeline  
-![alt text](../../assets/images/portfolio-overview/Fabric_Pipeline.png)
+### 🧮 M Query Screenshot  
+![alt text](../../assets/images/portfolio-overview/M_Query.png)
 
 ---
 
-## 11. Data Quality Subsystem (DQ)
+## 11. Lakehouse SQL Views and Metadata Alignment
 
-A full DQ subsystem ensures data accuracy, completeness, and trustworthiness.
+SQL views were created directly in the Lakehouse to support semantic modeling and reporting.
 
 <details>
-<summary><strong>🧪 Expanded Data Quality Details</strong></summary>
+<summary><strong>🪵 View Creation Highlights</strong></summary>
 
-- Rule authoring lifecycle  
-- expectations.json  
-- Exception tables  
-- SLA enforcement  
-- SDLC integration  
+- Modular SQL views for Gold layer  
+- Surrogate key logic  
+- Joinable star schema tables  
+- Metadata‑driven naming and formatting  
+- GTB SQL formatting applied  
 
 </details>
 
-### 🧪 Data Quality Architecture  
+### 🪵 Lakehouse View Screenshot  
+![alt text](../../assets/images/portfolio-overview/Lakehouse_Views.png)
+
+---
+
+## 12. Fabric Pipeline Orchestration (Planned)
+
+The Fabric pipeline will orchestrate the full ETL flow, including notebook execution and semantic refresh.
+
+<details>
+<summary><strong>⚙️ Pipeline Design Highlights</strong></summary>
+
+- Triggered by schedule or manual run  
+- Executes Python notebooks in sequence  
+- Validates DQ rules  
+- Refreshes semantic model  
+- Logs execution and exceptions  
+
+</details>
+
+### ⚙️ Fabric Pipeline Placeholder  
+![alt text](../../assets/images/portfolio-overview/Fabric_Pipeline_Placeholder.png)
+
+---
+
+## 13. Data Quality Subsystem
+
+A dedicated DQ subsystem validates, logs, and enforces data quality rules across the pipeline.
+
+<details>
+<summary><strong>🧪 Data Quality Highlights</strong></summary>
+
+- Rule‑based validation framework  
+- Notebook‑driven DQ execution  
+- Logging and exception capture  
+- Integration with Silver layer  
+- Supports pipeline orchestration  
+
+</details>
+
+### 🧪 Data Quality Screenshot  
 ![alt text](../../assets/images/portfolio-overview/DQ.png)
 
 ---
 
-## 12. Reporting & Dashboards
+## 14. Reporting & Dashboards
 
-This reporting layer delivers a suite of Power BI dashboards.
+Power BI dashboards deliver executive‑ready KPIs and operational insights.
 
 <details>
-<summary><strong>📊 Dashboard Highlights</strong></summary>
+<summary><strong>📈 Reporting Highlights</strong></summary>
 
-- Revenue trends  
-- KPI performance  
-- YOY comparisons  
-- Drill‑through paths  
-- Modern visuals  
+- Rebuilt KPI model  
+- Global and regional metrics  
+- Drill‑through and detail pages  
+- Consistent visual branding  
+- Automated refresh integration  
 
 </details>
 
-🔗 **Sample Dashboard**  
-https://app.powerbi.com/view?r=eyJrIjoiNjEwZWU1M2UtMzhiZS00OTExLThmMjctNDczOGNmZmU5OWE0IiwidCI6ImE0MzI2YTU4LWY3ZDktNDQ0ZC1iM2FhLWIwOTAyN2U1ZTg2NiIsImMiOjF9
-
-### 📊 KPI Dashboards  
+### 📈 Reporting Screenshot  
 ![alt text](../../assets/images/portfolio-overview/Rev_Stream_KPI_Overview_Global_KPIs.png)
 
 ---
 
-## 13. Automation (Power Automate)
+## 15. Power Automate — Refresh & Notifications
 
-Power Automate orchestrates dataset refreshes and notifications.
+Power Automate flows handle scheduled refreshes and alerting across the analytics ecosystem.
 
 <details>
-<summary><strong>⚙️ Expanded Automation Details</strong></summary>
+<summary><strong>🔔 Power Automate Highlights</strong></summary>
 
-- Automated refresh  
+- Scheduled dataset refreshes  
 - Failure notifications  
-- Integration with Fabric  
-- Zero manual intervention  
+- Semantic model refresh triggers  
+- Integration with Fabric and Power BI  
+- Logging and monitoring  
 
 </details>
 
-### ⚙️ Power Automate  
+### 🔔 Power Automate Screenshot  
 ![alt text](../../assets/images/portfolio-overview/Power_Automate.png)
 
 ---
 
-## 14. Power Apps — KPI Explorer & Operational Apps
+## 16. Power Apps — KPI Explorer
 
-Power Apps provides low‑code interfaces for business workflows.
+A Power Apps interface provides interactive KPI exploration for business users<strong>📱 Power.
 
 <details>
-<summary><strong>📱 Expanded Power Apps Details</strong></summary>
+<summary> Apps Highlights</strong></summary>
 
-- KPI Explorer  
-- Embedded Power BI  
-- SQL + Dataverse hybrid  
-- Approval workflows  
+- KPI Explorer app  
+- Drill‑down navigation  
+- Embedded Power BI visuals  
+- Role‑based access patterns  
+- Operational workflow integration  
 
 </details>
 
-### 📱 Power Apps  
-![alt text](../../assets/images/portfolio-overview/PowerApps.png)
+### 📱 Power Appsalt text](../../ Screenshot  
+![assets/images/portfolio-overview/PowerApps.png)
 
 ---
 
-## 15. Documentation & Repo Hygiene
+## 17. Documentation & Repo Hygiene
 
-This phase focused on creating a clean, maintainable repository.
+Documentation and automation scripts ensure a clean, discoverable, and recruiter‑ready repository.
 
 <details>
-<summary><strong>🗂️ Expanded Documentation Notes</strong></summary>
+<summary><strong>🧼 Repo Hygiene Highlights</strong></summary> files  
+- Consistent
 
-- Auto‑generated READMEs  
-- Standardized naming  
-- PowerShell automation  
-- Clear narrative structure  
+- Modular README folder‑level documentation  
+- PowerShell automation utilities  
+- Deterministic Dev/Main/Prod structure  
+- Screenshot‑driven modernization narrative  
 
 </details>
 
-### 🗂️ PowerShell Automation  
+### 🧼 Repo Hygiene Screenshot  
 ![alt text](../../assets/images/portfolio-overview/PowerShell.png)
 
 ---
 
-## 16. SDLC Evolution — From PowerShell Scripts to Branch‑Based CI/CD
-
-The project evolved from manual PowerShell‑driven publishing to a clean, branch‑based SDLC that mirrors enterprise engineering.
+## 18. SDLC Evolution — From PowerShell to GitKraken Branching
 
 <details>
-<summary><strong>🔧 SDLC Evolution Details</strong></summary>
+<summary><strong>🔧 SDLC Timeline</strong></summary>
 
-### Phase 1 — PowerShell Automation  
-- Dev/Prod detection  
-- Preflight validation  
-- Manual `prodpublish` command  
-- Repo sync automation  
-
-### Phase 2 — Git Branching Model  
-- Feature branches  
-- Dev integration branch  
-- Main as authoritative  
-- GitKraken merge workflow  
-
-### Phase 3 — CI/CD Ready  
-- Deterministic promotion  
-- Clean commit history  
-- Architecture diagrams stored in `/12-docs`  
-- Ready for GitHub Actions  
+- Phase 1: No version control  
+- Phase 2: PowerShell‑based Dev/Prod checks  
+- Phase 3: GitKraken branching and commits  
+- Feature branches → Dev → Main → Manual PROD publish  
+- GitHub commit history and milestone tagging  
 
 </details>
 
-### 🔧 Branching Model  
-![alt text](../../assets/images/portfolio-overview/Branching_Model.png)
+### 🔧 GitKraken Workflow Screenshot  
+![alt text](../../assets/images/portfolio-overview/GitKraken_Branching.png)
 
 ---
 
-## 17. PROD Release Milestone — 2026‑01‑29
-
-This milestone marks the first fully validated and published PROD release.
-
-<details>
-<summary><strong>📌 Highlights</strong></summary>
-
-- Clean Dev/Prod separation  
-- Correct GitHub wiring  
-- Manual PROD publishing workflow  
-- Deterministic SDLC promotion  
-- Public PROD repo reflects authoritative state  
-
-</details>
-
-### 🚀 Why This Matters  
-This release transitions the project from *building* to *operating* the system.
-
----
-
-## 18. Architecture Diagram
-
-A high‑level architecture diagram illustrates the end‑to‑end modernization.
-
-<details>
-<summary><strong>🏗️ Architecture Overview Notes</strong></summary>
-
-- Visualizes full modernization flow  
-- Highlights legacy → modern transitions  
-- Shows SQL, Python, Fabric, Power BI integration  
-- Evolves as new components are added  
-
-</details>
-
-### 🏗️ Architecture Overview  
+## 19. Architecture Diagram  
 ![alt text](../../assets/images/portfolio-overview/ArchitectureDiagram.png)
 
 ---
 
-## 19. About the Developer
+## 20. About the Developer
 
 **Michael Lloyd**  
 Business Intelligence Developer  
@@ -410,7 +384,7 @@ Clearwater, FL
 
 ---
 
-## 20. Contact
+## 21. Contact
 
 - GitHub: https://github.com/michaelraylloyd  
 - LinkedIn: https://www.linkedin.com/in/michael-lloyd-7aa62250/  

@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Public\\_MRLloydWorkProjects\\gulf-to-bay-analytics-modernization\\04-ssis\\etl\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7B5B2735-0858-68F7-D2B7-8D4F187A2FC3}|GTB_FactSales_ETL.dtproj|C:\\Users\\Public\\_MRLloydWorkProjects\\gulf-to-bay-analytics-modernization\\04-ssis\\etl\\GTB_FactSales_ETL.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{7B5B2735-0858-68F7-D2B7-8D4F187A2FC3}|GTB_FactSales_ETL.dtproj|solutionrelative:GTB_FactSales_ETL.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GTB_FactSales_ETL.dtsx [Design]",
+              "DocumentMoniker": "C:\\Users\\Public\\_MRLloydWorkProjects\\gulf-to-bay-analytics-modernization\\04-ssis\\etl\\GTB_FactSales_ETL.dtsx",
+              "RelativeDocumentMoniker": "GTB_FactSales_ETL.dtsx",
+              "ToolTip": "C:\\Users\\Public\\_MRLloydWorkProjects\\gulf-to-bay-analytics-modernization\\04-ssis\\etl\\GTB_FactSales_ETL.dtsx [Design]*",
+              "RelativeToolTip": "GTB_FactSales_ETL.dtsx [Design]*",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAO8SURBVEhLtZVNaFxVFMd/891kdJzaNjFJW20pKS6yUgxai6taENJU2uLHypVQQVEIoYguFIqCiN3YheJOt2rowqLSIoiFSv2iFKUobdFCp5PMTF4meW/uPee4eDNvJtMmdNM/HObNefee/7nnf859cDdhZqnO8\u002Btvvjd3cHp6SlWJzfCiqIA3RUQQUUQVEePav9e5dOniu3NffPxRUK82Vke\u002BDV47dnxO2xBR9V7UOdFWSzRseV2JvC6HXpdWnAbLTj/89Gv98vSPwb4jr7yTzeVz/fE6SHceRDRxplKQTqfIZFJksyny2TSFXJoN\u002BTSDhQwDhQyqnm1jo8XJycm3n5h6eSaVzmSSAD1ICEy7BOvBDMwML8bpM\u002BdoNkPM7Pj4I0/P9K\u002Bll8DfAYEZqIEqPLt/D5lMnlyuwMO7dwPs619PL4GKJM6VSFha8Yk1Q48BzcgTLDsaTUe5fD8vPT/FzNEXOXzwQLK3H9nOg6phFtf/87PX\u002BGsxnyzanGoye3icT765wnU3kPi35kJeeGo72s3tFnRFVsXMkhe6cTgxDEQNbLXfAC\u002BGt7XL29NFQk8j9cEQMbr0bW9bbO/X3NijgSq9OqcXq4kZnRPYKn/nZOuVKNFARPFqFEhxaM8YYUtRM1QNrIQITD8\u002BRuTiSfZipFJFnBjrHKBXA0nKUC7mGCrn2VIqsKm0gfI9BbwopcEcGwfz3FfMUy7mGcxn8WLIOi3e06bxCUzh58s1vr1Q4btfK5z5rcJPf87jFbxXnCpeDCeGGIjE\u002BqyFVV3kPBjG7/80\u002BH6\u002BxJmFEmdrJX65XEM8eAFREAET8N7a/\u002B\u002BAQFXQdjZqQDafmAFOFNG49iJKZTGkshhyoxGyFArloW2lkR0TkyM7JiYpDI/fSiDx9RwLtjojszhz3xbXK/xw8QZRFOJcyOhIidnZtx498dmpc\u002B\u002Bf/OocWw990NnbJTCNa9qe6Ox/lxMD2uSGKniNU5h46F52DQ/wQDHDQFrxYcSVa/VOSOgfNC\u002BKFzjy5DbeOLCLV5/ZydH9O3lu73a8gPfgfFwiDJxT6kHEfBBxsx5SrYfcrK\u002BsQaBxcJG4S\u002BJe72betVhsAyLnqQUtFhoR9SCithj/3pZAxRCzuDOSDol9KvFlKGKoj7UCaDllvhFRC6KYKGjRaLre\u002BN1Jdt5x/sIfVKq19p0fT7Gatcnbvs50lx8kWGpRrYUstLNfCCKCPoLko795ZPteJTu26u062PTYsROjW4aHqvWQyAktpzgfW/Xq\u002BVP8fXK6f89dwf/5qMc\u002BgAHYjAAAAABJRU5ErkJggg==",
+              "WhenOpened": "2026-01-24T09:06:10.96Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

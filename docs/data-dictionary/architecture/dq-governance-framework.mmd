@@ -1,0 +1,68 @@
+flowchart TD
+
+    %% ======================================================
+    %%   FABRIC SALES ANALYTICS — DQ GOVERNANCE FRAMEWORK
+    %% ======================================================
+
+    %% -------- DATA OWNERSHIP --------
+    subgraph Ownership["Data Ownership"]
+        O1["Data Owner<br/>• Business accountability<br/>• Defines quality expectations"]
+        O2["Data Steward<br/>• Maintains rules<br/>• Oversees exceptions"]
+        O3["Engineering Owner<br/>• Implements rules<br/>• Maintains pipelines"]
+    end
+
+    %% -------- GOVERNANCE ARTIFACTS --------
+    subgraph Artifacts["Governance Artifacts"]
+        A1["expectations.json<br/>Rule definitions"]
+        A2["DQ Policy Document<br/>Severity, SLAs, escalation"]
+        A3["Exception Playbook<br/>How to triage & resolve"]
+        A4["Data Dictionary<br/>Column definitions & domains"]
+    end
+
+    %% -------- OPERATIONAL CONTROLS --------
+    subgraph Controls["Operational Controls"]
+        C1["Automated DQ Checks<br/>Null/Type/Domain/FK"]
+        C2["Threshold Alerts<br/>Exception volume spikes"]
+        C3["Pipeline SLAs<br/>Run duration & success"]
+        C4["Manual Review Queue<br/>Steward triage workflow"]
+    end
+
+    %% -------- OBSERVABILITY --------
+    subgraph Observability["Monitoring & Reporting"]
+        M1["DQ Dashboard<br/>Rule-level KPIs"]
+        M2["Exception Trends<br/>Historical patterns"]
+        M3["Pipeline Health<br/>SLA compliance"]
+    end
+
+    %% -------- FEEDBACK LOOP --------
+    subgraph Feedback["Continuous Improvement"]
+        F1["Rule Refinement<br/>Adjust thresholds & logic"]
+        F2["Schema Updates<br/>New columns, new rules"]
+        F3["Business Feedback<br/>Owner-driven adjustments"]
+    end
+
+    %% RELATIONSHIPS
+    O1 --> A2
+    O2 --> A1
+    O2 --> A3
+    O3 --> A1
+    O3 --> C1
+
+    A1 --> C1
+    A2 --> C2
+    A3 --> C4
+    A4 --> C1
+
+    C1 --> M1
+    C2 --> M2
+    C3 --> M3
+    C4 --> M1
+
+    M1 --> F1
+    M2 --> F2
+    M3 --> F3
+
+    F1 --> A1
+    F2 --> A4
+    F3 --> A2
+    
