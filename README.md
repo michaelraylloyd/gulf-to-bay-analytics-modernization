@@ -97,7 +97,7 @@ SQL Server objects were modernized, standardized, and prepared for migration int
 </details>
 
 ### 🧱 SQL Server  
-![alt text](../../assets/images/portfolio-overview/SQL_Server.png)
+![alt text](assets/images/portfolio-overview/SQL_Server.png)
 
 ---
 
@@ -117,13 +117,21 @@ The ETL pipeline evolved from SSIS packages to ADF pipelines and ultimately to F
 
 </details>
 
-### 🔄 ETL Migration  
-![alt text](../../assets/images/portfolio-overview/SSIS.png)  
-![alt text](../../assets/images/portfolio-overview/Azure_Data_Factory_Pipeline.png) 
-![alt text](../../assets/images/portfolio-overview/Fabric_Python_Notebook_Header.png)
-![alt text](../../assets/images/portfolio-overview/Fabric_Python_Notebook_Code.png)
-![alt text](../../assets/images/portfolio-overview/Fabric_Python_Notebook_Footer.png)
-![alt text](../../assets/images/portfolio-overview/Fabric_Pipeline.png)
+### 🔄 ETL Migration
+
+### 🔄 SSIS
+![alt text](assets/images/portfolio-overview/SSIS.png)  
+
+### 🔄 Azure Data Factory Pipelines
+![alt text](assets/images/portfolio-overview/Azure_Data_Factory_Pipeline.png)
+
+### 🔄 Fabric Python Notebooks
+![alt text](assets/images/portfolio-overview/Fabric_Python_Notebook_Header.png)
+![alt text](assets/images/portfolio-overview/Fabric_Python_Notebook_Code.png)
+![alt text](assets/images/portfolio-overview/Fabric_Python_Notebook_Footer.png)
+
+### 🔄 Fabric Pipelines
+![alt text](assets/images/portfolio-overview/Fabric_Pipeline.png)
 
 ---
 
@@ -144,9 +152,15 @@ The semantic layer was rebuilt in both Fabric Lakehouse and Power BI, replacing 
 </details>
 
 ### 📊 Semantic Modeling
-![alt text](../../assets/images/portfolio-overview/SSAS.png)
-![alt text](../../assets/images/portfolio-overview/Fabric_Lakehouse_Semantic_Model.png)
-![alt text](../../assets/images/portfolio-overview/Power_BI_Snowflake_Schema.png)
+
+### 📊 SSAS
+![alt text](assets/images/portfolio-overview/SSAS.png)
+
+### 📊 Lakehouse Semantic Model
+![alt text](assets/images/portfolio-overview/Fabric_Lakehouse_Semantic_Model.png)
+
+### 📊 Power BI Semantic Model
+![alt text](assets/images/portfolio-overview/Power_BI_Snowflake_Schema.png)
 
 ---
 
@@ -166,7 +180,7 @@ Python notebooks were introduced to handle ingestion, transformation, and synchr
 </details>
 
 ### 🐍 Python ETL  
-![alt text](../../assets/images/portfolio-overview/Python.png)
+![alt text](assets/images/portfolio-overview/Python.png)
 
 ---
 
@@ -185,10 +199,14 @@ A full medallion architecture was implemented to support scalable analytics and 
 
 </details>
 
-### 🏛️ Lakehouse Architecture  
-![alt text](../../assets/images/portfolio-overview/Fabric_Python_Notebook_Bronze.png)
-![alt text](../../assets/images/portfolio-overview/Fabric_Python_Notebook_Silver.png)
-![alt text](../../assets/images/portfolio-overview/Fabric_Python_Notebook_Gold.png)
+### 🏛️ Python Bronze Notebook  
+![alt text](assets/images/portfolio-overview/Fabric_Python_Notebook_Bronze.png)
+
+### 🏛️ Python Silver Notebook  
+![alt text](assets/images/portfolio-overview/Fabric_Python_Notebook_Silver.png)
+
+### 🏛️ Python Gold Notebook  
+![alt text](assets/images/portfolio-overview/Fabric_Python_Notebook_Gold.png)
 
 ---
 
@@ -207,9 +225,11 @@ Fabric Dataflows provide reusable, GUI‑driven ingestion and transformation log
 
 </details>
 
-### 🧮 M Query  
-![alt text](../../assets/images/portfolio-overview/Fabric_Dataflow_Power_Query.png)
-![alt text](../../assets/images/portfolio-overview/Fabric_Dataflow_M.png)
+### 🧮 Power Query  
+![alt text](assets/images/portfolio-overview/Fabric_Dataflow_Power_Query.png)
+
+### 🧮 M Query 
+![alt text](assets/images/portfolio-overview/Fabric_Dataflow_M.png)
 
 ---
 
@@ -228,8 +248,8 @@ SQL views were created directly in the Lakehouse to support semantic modeling an
 
 </details>
 
-### 🪵 Lakehouse View  
-![alt text](../../assets/images/portfolio-overview/Fabric_Lakehouse_Queries_Views.png)
+### 🪵 Lakehouse SQL Queries and Views  
+![alt text](assets/images/portfolio-overview/Fabric_Lakehouse_Queries_Views.png)
 
 ---
 
@@ -249,7 +269,7 @@ The Fabric pipeline will orchestrate the full ETL flow, including notebook execu
 </details>
 
 ### ⚙️ Fabric Pipeline  
-![alt text](../../assets/images/portfolio-overview/Fabric_Pipeline.png)
+![alt text](assets/images/portfolio-overview/Fabric_Pipeline.png)
 
 ---
 
@@ -269,7 +289,7 @@ A dedicated DQ subsystem validates, logs, and enforces data quality rules across
 </details>
 
 ### 🧪 Data Quality  
-![alt text](../../assets/images/portfolio-overview/Fabric_Python_Notebook_Silver_DQ.png)
+![alt text](assets/images/portfolio-overview/Fabric_Python_Notebook_Silver_DQ.png)
 
 ---
 
@@ -292,13 +312,20 @@ Power BI dashboards deliver executive‑ready KPIs and operational insights.
 
 <strong>Gulf-To-Bay Analytics Revenue Stream KIP Overview</strong> Available to Public at: https://app.powerbi.com/view?r=eyJrIjoiMzcyYTIzN2EtYzBjNi00MmY5LWJhY2UtZDk5MDkyZTYwNDExIiwidCI6ImE0MzI2YTU4LWY3ZDktNDQ0ZC1iM2FhLWIwOTAyN2U1ZTg2NiIsImMiOjF9
 
-![alt text](../../assets/images/portfolio-overview/Rev_Stream_KPI_Overview_Global_KPIs.png)
-![alt text](../../assets/images/portfolio-overview/Rev_Stream_KPI_Overview_Sales_KPIs.png)
-![alt text](../../assets/images/portfolio-overview/Rev_Stream_KPI_Overview_Orders_KPIs.png)
-![alt text](../../assets/images/portfolio-overview/Rev_Stream_KPI_Overview_Customers_KPIs.png)
-![alt text](../../assets/images/portfolio-overview/Rev_Stream_KPI_Overview_Details.png)
+### 📈 Revenue Stream KPI Overview - Global KPIs
+![alt text](assets/images/portfolio-overview/Rev_Stream_KPI_Overview_Global_KPIs.png)
 
-#
+### 📈 Revenue Stream KPI Overview - Sales KPIs
+![alt text](assets/images/portfolio-overview/Rev_Stream_KPI_Overview_Sales_KPIs.png)
+
+### 📈 Revenue Stream KPI Overview - Orders KPIs
+![alt text](assets/images/portfolio-overview/Rev_Stream_KPI_Overview_Orders_KPIs.png)
+
+### 📈 Revenue Stream KPI Overview - Customer KPIs
+![alt text](assets/images/portfolio-overview/Rev_Stream_KPI_Overview_Customers_KPIs.png)
+
+### 📈 Revenue Stream KPI Overview - Details
+![alt text](assets/images/portfolio-overview/Rev_Stream_KPI_Overview_Details.png)
 
 ---
 
@@ -318,7 +345,7 @@ Power Automate flows handle scheduled refreshes and alerting across the analytic
 </details>
 
 ### 🔔 Power Automate  
-![alt text](../../assets/images/portfolio-overview/Power_Automate_Refresh_Semantic_Models.png)
+![alt text](assets/images/portfolio-overview/Power_Automate_Refresh_Semantic_Models.png)
 
 ---
 
@@ -338,7 +365,7 @@ A Power Apps interface provides interactive KPI exploration for business users<s
 </details>
 
 ### 📱 Power Apps
-![alt text](../../assets/images/portfolio-overview/Power_Apps_KPI_Explorer.png)
+![alt text](assets/images/portfolio-overview/Power_Apps_KPI_Explorer.png)
 
 ---
 
@@ -358,7 +385,7 @@ Documentation and automation scripts ensure a clean, discoverable, and recruiter
 </details>
 
 ### 🧼 Repo Hygiene  
-![alt text](../../assets/images/portfolio-overview/PowerShell.png)
+![alt text](assets/images/portfolio-overview/PowerShell.png)
 
 ---
 
@@ -375,16 +402,19 @@ Documentation and automation scripts ensure a clean, discoverable, and recruiter
 
 </details>
 
-### 🔧 Git Branch Protection and GitKraken Workflows  
+### 🔧 Git Branch Protection and GitKraken Workflows
 
-![alt text](../../assets/images/portfolio-overview/Git_Feature_Branch_Protection_Header.png)
-![alt text](../../assets/images/portfolio-overview/Git_Feature_Branch_Protection_Rules.png)
-![alt text](../../assets/images/portfolio-overview/Git_Kracken_Workflow.png)
+### 🔧 Git Branch Protection Rules
+![alt text](assets/images/portfolio-overview/Git_Feature_Branch_Protection_Header.png)
+![alt text](assets/images/portfolio-overview/Git_Feature_Branch_Protection_Rules.png)
+
+### 🔧 Git Kracken Workflow
+![alt text](assets/images/portfolio-overview/Git_Kracken_Workflow.png)
 
 ---
 
 ## 19. Architecture Diagram  
-![alt text](../../assets/images/portfolio-overview/Architecture_Diagram.png)
+![alt text](assets/images/portfolio-overview/Architecture_Diagram.png)
 
 ---
 
