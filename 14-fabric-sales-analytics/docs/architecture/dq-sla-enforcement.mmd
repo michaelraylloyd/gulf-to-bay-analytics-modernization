@@ -1,0 +1,74 @@
+flowchart TD
+
+    %% ======================================================
+    %%   FABRIC SALES ANALYTICS — DQ SLA ENFORCEMENT FLOW
+    %% ======================================================
+
+    %% -------- SLA DEFINITIONS --------
+    subgraph SLA["SLA Definitions"]
+        S1["Rule-Level SLAs<br/>• Max fail %<br/>• Severity thresholds"]
+        S2["Table-Level SLAs<br/>• Exception ratio<br/>• Volume anomalies"]
+        S3["Pipeline SLAs<br/>• Max duration<br/>• Success criteria"]
+    end
+
+    %% -------- INPUTS --------
+    subgraph Inputs["DQ Inputs"]
+        I1["DQ Summary Table"]
+        I2["Exception Tables<br/>dq_*_exceptions"]
+        I3["Pipeline Metadata<br/>run_id, duration, status"]
+    end
+
+    %% -------- EVALUATION ENGINE --------
+    subgraph Eval["SLA Evaluation Engine"]
+        E1["Load SLA Rules"]
+        E2["Compute Metrics<br/>Pass %, Fail %, Severity mix"]
+        E3["Compare Against SLAs"]
+        E4["Determine Compliance<br/>Compliant / Warning / Breach"]
+    end
+
+    %% -------- ACTIONS --------
+    subgraph Actions["Enforcement Actions"]
+        A1["Compliant<br/>Proceed to Gold"]
+        A2["Warning<br/>Notify Steward"]
+        A3["Breach<br/>Block Gold Load<br/>Trigger Escalation"]
+    end
+
+    %% -------- ESCALATION --------
+    subgraph Escalation["Escalation Workflow"]
+        X1["Notify Data Steward"]
+        X2["Notify Engineering Owner"]
+        X3["Notify Business Owner"]
+        X4["Open Incident Ticket"]
+    end
+
+    %% -------- REPORTING --------
+    subgraph Reporting["SLA Reporting"]
+        R1["SLA Dashboard<br/>Compliance trends"]
+        R2["Breach Log<br/>Historical violations"]
+        R3["Pipeline SLA Report"]
+    end
+
+    %% FLOWS
+    S1 --> E1
+    S2 --> E1
+    S3 --> E1
+
+    I1 --> E2
+    I2 --> E2
+    I3 --> E2
+
+    E1 --> E2 --> E3 --> E4
+
+    E4 --> A1
+    E4 --> A2
+    E4 --> A3
+
+    A2 --> X1
+    A3 --> X1
+    A3 --> X2
+    A3 --> X3
+    A3 --> X4
+
+    E4 --> R1
+    A3 --> R2
+    I3 --> R3

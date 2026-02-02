@@ -1,0 +1,15 @@
+flowchart TD
+
+    subgraph Dimensions["Dimensions"]
+        D1["dim_product"]
+        D2["dim_customer"]
+        D3["dim_date"]
+    end
+
+    subgraph Fact["Fact Table"]
+        F1["fact_sales"]
+    end
+
+    D1 --> F1
+    D2 --> F1
+    D3 --> F1

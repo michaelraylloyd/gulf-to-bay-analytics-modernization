@@ -1,0 +1,54 @@
+flowchart TD
+
+    %% ============================
+    %%   FABRIC SALES ANALYTICS
+    %%   MEDALLION ARCHITECTURE
+    %% ============================
+
+    subgraph Bronze["Bronze Layer — Raw Ingestion"]
+        B1["Sales CSV (Raw)"]
+        B2["Products CSV (Raw)"]
+        B3["Customers CSV (Raw)"]
+        B4["Ingestion Notebook<br/>• Read raw files<br/>• Normalize columns<br/>• Write Bronze tables"]
+    end
+
+    subgraph Silver["Silver Layer — Cleaned & Conformed"]
+        S1["sales_clean"]
+        S2["products_clean"]
+        S3["customers_clean"]
+        S4["Silver Notebook<br/>• Type enforcement<br/>• Null normalization<br/>• Referential checks"]
+    end
+
+    subgraph Gold["Gold Layer — Star Schema"]
+        G1["dim_product"]
+        G2["dim_customer"]
+        G3["fact_sales"]
+        G4["Gold Modeling Notebook<br/>• Surrogate keys<br/>• Slowly changing dims<br/>• KPI-ready fact table"]
+    end
+
+    subgraph Semantic["Semantic Model"]
+        SM["Power BI Model<br/>• Measures<br/>• Relationships<br/>• KPI definitions"]
+    end
+
+    subgraph Reports["Reports & Dashboards"]
+        R1["Executive Dashboard"]
+        R2["Sales Performance Report"]
+        R3["Product Profitability"]
+    end
+
+    %% FLOWS
+    B1 --> B4 --> S1
+    B2 --> B4 --> S2
+    B3 --> B4 --> S3
+
+    S1 --> S4 --> G3
+    S2 --> S4 --> G1
+    S3 --> S4 --> G2
+
+    G1 --> SM
+    G2 --> SM
+    G3 --> SM
+
+    SM --> R1
+    SM --> R2
+    SM --> R3

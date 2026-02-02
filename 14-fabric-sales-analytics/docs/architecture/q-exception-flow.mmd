@@ -1,0 +1,53 @@
+flowchart TD
+
+    %% ============================================
+    %%   FABRIC SALES ANALYTICS — DQ EXCEPTION FLOW
+    %% ============================================
+
+    subgraph Bronze["Bronze Layer — Raw Ingestion"]
+        B1["Raw Sales"]
+        B2["Raw Products"]
+        B3["Raw Customers"]
+    end
+
+    subgraph DQ["Data Quality Validation"]
+        DQ1["DQ Runner Notebook<br/>• Load Silver inputs<br/>• Apply expectations JSON<br/>• Validate rows"]
+        DQ2["Expectation Rules<br/>expectations.json"]
+        DQ3["Row-Level Validation<br/>• Null checks<br/>• Type checks<br/>• Domain checks<br/>• FK checks"]
+    end
+
+    subgraph Routes["Routing Logic"]
+        R1["PASS<br/>Row meets all expectations"]
+        R2["FAIL<br/>Row violates ≥1 expectation"]
+    end
+
+    subgraph Outputs["DQ Outputs"]
+        O1["Clean Output Tables<br/>(Silver → Gold-ready)"]
+        O2["Exception Tables<br/>Permanent, queryable<br/>• dq_sales_exceptions<br/>• dq_products_exceptions<br/>• dq_customers_exceptions"]
+        O3["DQ Summary Table<br/>• Rule counts<br/>• Pass/fail stats<br/>• Timestamp"]
+    end
+
+    subgraph Gold["Gold Layer"]
+        G1["fact_sales"]
+        G2["dim_product"]
+        G3["dim_customer"]
+    end
+
+    %% FLOWS
+    B1 --> DQ1
+    B2 --> DQ1
+    B3 --> DQ1
+
+    DQ2 --> DQ1
+    DQ1 --> DQ3
+
+    DQ3 --> R1
+    DQ3 --> R2
+
+    R1 --> O1
+    R2 --> O2
+    DQ1 --> O3
+
+    O1 --> G1
+    O1 --> G2
+    O1 --> G3
