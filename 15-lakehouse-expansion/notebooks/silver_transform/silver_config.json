@@ -1,8 +1,0 @@
-{
-  "source": {
-    "path": "15-lakehouse-expansion/data/bronze/sales/part-00000.parquet"
-  },
-  "target": {
-    "path": "15-lakehouse-expansion/data/silver/sales"
-  }
-}

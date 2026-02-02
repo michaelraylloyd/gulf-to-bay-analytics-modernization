@@ -1,0 +1,17 @@
+flowchart TD
+
+    subgraph Dev["Dev Workspace"]
+        D1["Lakehouse (Dev)"]
+        D2["Pipelines (Dev)"]
+        D3["Semantic Model (Dev)"]
+    end
+
+    subgraph Prod["Prod Workspace"]
+        P1["Lakehouse (Prod)"]
+        P2["Pipelines (Prod)"]
+        P3["Semantic Model (Prod)"]
+    end
+
+    D1 --> P1
+    D2 --> P2
+    D3 --> P3

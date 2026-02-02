@@ -1,0 +1,23 @@
+flowchart TD
+
+    subgraph Silver["Silver Inputs"]
+        S1["products_clean"]
+        S2["customers_clean"]
+        S3["sales_clean"]
+    end
+
+    subgraph SK["Surrogate Key Generation"]
+        K1["Generate Product SK"]
+        K2["Generate Customer SK"]
+        K3["Map SKs into fact_sales"]
+    end
+
+    subgraph Gold["Gold Tables"]
+        G1["dim_product"]
+        G2["dim_customer"]
+        G3["fact_sales"]
+    end
+
+    S1 --> K1 --> G1
+    S2 --> K2 --> G2
+    S3 --> K3 --> G3
