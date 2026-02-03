@@ -9,7 +9,7 @@ select
     , CAST(DATEPART(YEAR, DATEADD(year, 12, fis.OrderDate)) AS varchar(4))
         + ' - Q'
         + CAST(DATEPART(QUARTER, DATEADD(year, 12, fis.OrderDate)) AS varchar(1)) AS 'OrderYearQuarter'
-    , dateadd(year, 12, OrderDate) as OrderDate
+    , dateadd(year, 12, fis.OrderDate) as OrderDate
     , fis.OrderDateKey
     , fis.OrderQuantity
     , fis.ProductKey
@@ -19,10 +19,19 @@ select
     , fis.SalesOrderLineNumber
     , fis.SalesOrderNumber
     , fis.TotalProductCost
-    , cast(dateadd(year, 12, fis.ShipDate) as date)     as 'ShipDate' --ML Note:  Bring ShipDate up to current times, since this it is 2026 at the time this was written.
-    , cast(dateadd(year, 12, fis.DueDate) as date)      as 'DueDate' --ML Note:  Bring DueDate up to current times, since this it is 2026 at the time this was written.
+    , dateadd(year, 12, fis.ShipDate)  as 'ShipDate' --ML Note:  Bring ShipDate up to current times, since this it is 2026 at the time this was written.
+    , dateadd(year, 12, fis.DueDate) as 'DueDate' --ML Note:  Bring DueDate up to current times, since this it is 2026 at the time this was written.
 
-from dbo.FactInternetSales fis
+    -- Enrichment fields
+    , MissingKeyID               
+    , SalesOrderID               
+    , ProductID                  
+    , ProductSubcategoryKey      
+    , ProductCategoryKey         
+    , GeographyKey               
+
+from
+    ml.FactInternetSalesFixed fis
 where
-    fis.OrderDate >= '2011'
-    and fis.OrderDate < '2014'
+    year(fis.OrderDate) >= '2011'
+    and year(fis.OrderDate) < '2014'

@@ -160,7 +160,7 @@ The semantic layer was rebuilt in both Fabric Lakehouse and Power BI, replacing 
 ![alt text](../../assets/images/portfolio-overview/Fabric_Lakehouse_Semantic_Model.png)
 
 <strong>📊 Power BI Semantic Model</strong>
-![alt text](../../assets/images/portfolio-overview/Power_BI_Snowflake_Schema.png)
+![alt text](../../assets/images/portfolio-overview/Power_BI_Star_Schema.png)
 
 ---
 
@@ -304,7 +304,7 @@ Power BI dashboards deliver executive‑ready KPIs and operational insights.
 <summary><strong>📈 Reporting Highlights</strong></summary>
 
 - Rebuilt KPI model  
-- Global and regional metrics  
+- Global and regional DAX metrics  
 - Drill‑through and detail pages  
 - Consistent visual branding  
 - Automated refresh integration  
@@ -315,20 +315,23 @@ Power BI dashboards deliver executive‑ready KPIs and operational insights.
 
 <strong>Gulf-To-Bay Analytics Revenue Stream KIP Overview</strong> Available to Public at: https://app.powerbi.com/view?r=eyJrIjoiMzcyYTIzN2EtYzBjNi00MmY5LWJhY2UtZDk5MDkyZTYwNDExIiwidCI6ImE0MzI2YTU4LWY3ZDktNDQ0ZC1iM2FhLWIwOTAyN2U1ZTg2NiIsImMiOjF9
 
-### 📈 Revenue Stream KPI Overview - Global KPIs
+<strong>📈 Revenue Stream KPI Overview - Global KPIs</strong>
 [![alt text](../../assets/images/portfolio-overview/Rev_Stream_KPI_Overview_Global_KPIs.png)](https://app.powerbi.com/view?r=eyJrIjoiMzcyYTIzN2EtYzBjNi00MmY5LWJhY2UtZDk5MDkyZTYwNDExIiwidCI6ImE0MzI2YTU4LWY3ZDktNDQ0ZC1iM2FhLWIwOTAyN2U1ZTg2NiIsImMiOjF9)
 
-### 📈 Revenue Stream KPI Overview - Sales KPIs
+<strong>📈 Revenue Stream KPI Overview - Sales KPIs</strong>
 [![alt text](../../assets/images/portfolio-overview/Rev_Stream_KPI_Overview_Sales_KPIs.png)](https://app.powerbi.com/view?r=eyJrIjoiMzcyYTIzN2EtYzBjNi00MmY5LWJhY2UtZDk5MDkyZTYwNDExIiwidCI6ImE0MzI2YTU4LWY3ZDktNDQ0ZC1iM2FhLWIwOTAyN2U1ZTg2NiIsImMiOjF9)
 
-### 📈 Revenue Stream KPI Overview - Orders KPIs
+<strong>📈 Revenue Stream KPI Overview - Orders KPIs</strong>
 [![alt text](../../assets/images/portfolio-overview/Rev_Stream_KPI_Overview_Orders_KPIs.png)](https://app.powerbi.com/view?r=eyJrIjoiMzcyYTIzN2EtYzBjNi00MmY5LWJhY2UtZDk5MDkyZTYwNDExIiwidCI6ImE0MzI2YTU4LWY3ZDktNDQ0ZC1iM2FhLWIwOTAyN2U1ZTg2NiIsImMiOjF9)
 
-### 📈 Revenue Stream KPI Overview - Customer KPIs
+<strong>📈 Revenue Stream KPI Overview - Customer KPIs</strong>
 [![alt text](../../assets/images/portfolio-overview/Rev_Stream_KPI_Overview_Customers_KPIs.png)](https://app.powerbi.com/view?r=eyJrIjoiMzcyYTIzN2EtYzBjNi00MmY5LWJhY2UtZDk5MDkyZTYwNDExIiwidCI6ImE0MzI2YTU4LWY3ZDktNDQ0ZC1iM2FhLWIwOTAyN2U1ZTg2NiIsImMiOjF9)
 
-### 📈 Revenue Stream KPI Overview - Details
+<strong>📈 Revenue Stream KPI Overview - Details</strong>
 [![alt text](../../assets/images/portfolio-overview/Rev_Stream_KPI_Overview_Details.png)](https://app.powerbi.com/view?r=eyJrIjoiMzcyYTIzN2EtYzBjNi00MmY5LWJhY2UtZDk5MDkyZTYwNDExIiwidCI6ImE0MzI2YTU4LWY3ZDktNDQ0ZC1iM2FhLWIwOTAyN2U1ZTg2NiIsImMiOjF9)
+
+<strong>📈 DAX</strong>
+![alt text](../../assets/images/portfolio-overview/Power_BI_DAX.png)
 
 ---
 
