@@ -316,19 +316,19 @@ Power BI dashboards deliver executive‑ready KPIs and operational insights.
 <strong>Gulf-To-Bay Analytics Revenue Stream KIP Overview</strong> Available to Public at: https://app.powerbi.com/view?r=eyJrIjoiMzcyYTIzN2EtYzBjNi00MmY5LWJhY2UtZDk5MDkyZTYwNDExIiwidCI6ImE0MzI2YTU4LWY3ZDktNDQ0ZC1iM2FhLWIwOTAyN2U1ZTg2NiIsImMiOjF9
 
 ### 📈 Revenue Stream KPI Overview - Global KPIs
-![alt text](../../assets/images/portfolio-overview/Rev_Stream_KPI_Overview_Global_KPIs.png)
+[![alt text](../../assets/images/portfolio-overview/Rev_Stream_KPI_Overview_Global_KPIs.png)](https://app.powerbi.com/view?r=eyJrIjoiMzcyYTIzN2EtYzBjNi00MmY5LWJhY2UtZDk5MDkyZTYwNDExIiwidCI6ImE0MzI2YTU4LWY3ZDktNDQ0ZC1iM2FhLWIwOTAyN2U1ZTg2NiIsImMiOjF9)
 
 ### 📈 Revenue Stream KPI Overview - Sales KPIs
-![alt text](../../assets/images/portfolio-overview/Rev_Stream_KPI_Overview_Sales_KPIs.png)
+[![alt text](../../assets/images/portfolio-overview/Rev_Stream_KPI_Overview_Sales_KPIs.png)](https://app.powerbi.com/view?r=eyJrIjoiMzcyYTIzN2EtYzBjNi00MmY5LWJhY2UtZDk5MDkyZTYwNDExIiwidCI6ImE0MzI2YTU4LWY3ZDktNDQ0ZC1iM2FhLWIwOTAyN2U1ZTg2NiIsImMiOjF9)
 
 ### 📈 Revenue Stream KPI Overview - Orders KPIs
-![alt text](../../assets/images/portfolio-overview/Rev_Stream_KPI_Overview_Orders_KPIs.png)
+[![alt text](../../assets/images/portfolio-overview/Rev_Stream_KPI_Overview_Orders_KPIs.png)](https://app.powerbi.com/view?r=eyJrIjoiMzcyYTIzN2EtYzBjNi00MmY5LWJhY2UtZDk5MDkyZTYwNDExIiwidCI6ImE0MzI2YTU4LWY3ZDktNDQ0ZC1iM2FhLWIwOTAyN2U1ZTg2NiIsImMiOjF9)
 
 ### 📈 Revenue Stream KPI Overview - Customer KPIs
-![alt text](../../assets/images/portfolio-overview/Rev_Stream_KPI_Overview_Customers_KPIs.png)
+[![alt text](../../assets/images/portfolio-overview/Rev_Stream_KPI_Overview_Customers_KPIs.png)](https://app.powerbi.com/view?r=eyJrIjoiMzcyYTIzN2EtYzBjNi00MmY5LWJhY2UtZDk5MDkyZTYwNDExIiwidCI6ImE0MzI2YTU4LWY3ZDktNDQ0ZC1iM2FhLWIwOTAyN2U1ZTg2NiIsImMiOjF9)
 
 ### 📈 Revenue Stream KPI Overview - Details
-![alt text](../../assets/images/portfolio-overview/Rev_Stream_KPI_Overview_Details.png)
+[![alt text](../../assets/images/portfolio-overview/Rev_Stream_KPI_Overview_Details.png)](https://app.powerbi.com/view?r=eyJrIjoiMzcyYTIzN2EtYzBjNi00MmY5LWJhY2UtZDk5MDkyZTYwNDExIiwidCI6ImE0MzI2YTU4LWY3ZDktNDQ0ZC1iM2FhLWIwOTAyN2U1ZTg2NiIsImMiOjF9)
 
 ---
 
