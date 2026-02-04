@@ -1,0 +1,121 @@
+{
+    "name": "gold-sales-pipeline",
+    "objectId": "5ae6aaaa-7c09-4000-8a4c-5bec892dd20b",
+    "properties": {
+        "description": "End-to-end orchestration for Sales Analytics: Silver refresh → Gold star schema build → Gold validation + logging.",
+        "activities": [
+            {
+                "name": "silver_transform_sales",
+                "type": "TridentNotebook",
+                "dependsOn": [],
+                "policy": {
+                    "timeout": "0.12:00:00",
+                    "retry": 0,
+                    "retryIntervalInSeconds": 30,
+                    "secureOutput": false,
+                    "secureInput": false
+                },
+                "typeProperties": {
+                    "notebookId": "ced5d3e4-f3aa-4ba2-9e01-0e6cad060338",
+                    "workspaceId": "ec08f9a7-88d7-41b1-853d-1cc65782b70c"
+                }
+            },
+            {
+                "name": "gold_model_sales",
+                "type": "TridentNotebook",
+                "dependsOn": [
+                    {
+                        "activity": "let_spark_reinitialize",
+                        "dependencyConditions": [
+                            "Succeeded"
+                        ]
+                    }
+                ],
+                "policy": {
+                    "timeout": "0.12:00:00",
+                    "retry": 0,
+                    "retryIntervalInSeconds": 30,
+                    "secureOutput": false,
+                    "secureInput": false
+                },
+                "typeProperties": {
+                    "notebookId": "c3a3789e-1b2f-4f27-8ccf-932a73dfd6e6",
+                    "workspaceId": "ec08f9a7-88d7-41b1-853d-1cc65782b70c"
+                }
+            },
+            {
+                "name": "gold_validation_log",
+                "type": "TridentNotebook",
+                "dependsOn": [
+                    {
+                        "activity": "let_spark_reinitialize_1",
+                        "dependencyConditions": [
+                            "Succeeded"
+                        ]
+                    }
+                ],
+                "policy": {
+                    "timeout": "0.12:00:00",
+                    "retry": 0,
+                    "retryIntervalInSeconds": 30,
+                    "secureOutput": false,
+                    "secureInput": false
+                },
+                "typeProperties": {
+                    "notebookId": "6a0c5729-2e1b-4a5c-ad9f-8f156cc745cd",
+                    "workspaceId": "ec08f9a7-88d7-41b1-853d-1cc65782b70c"
+                }
+            },
+            {
+                "name": "let_spark_reinitialize",
+                "type": "Wait",
+                "dependsOn": [
+                    {
+                        "activity": "silver_transform_sales",
+                        "dependencyConditions": [
+                            "Succeeded"
+                        ]
+                    }
+                ],
+                "typeProperties": {
+                    "waitTimeInSeconds": 30
+                }
+            },
+            {
+                "name": "let_spark_reinitialize_1",
+                "type": "Wait",
+                "dependsOn": [
+                    {
+                        "activity": "gold_model_sales",
+                        "dependencyConditions": [
+                            "Succeeded"
+                        ]
+                    }
+                ],
+                "typeProperties": {
+                    "waitTimeInSeconds": 30
+                }
+            },
+            {
+                "name": "let_spark_reinitialize_2",
+                "type": "Wait",
+                "dependsOn": [
+                    {
+                        "activity": "gold_validation_log",
+                        "dependencyConditions": [
+                            "Succeeded"
+                        ]
+                    }
+                ],
+                "typeProperties": {
+                    "waitTimeInSeconds": 30
+                }
+            }
+        ],
+        "folder": {
+            "name": "gold"
+        },
+        "lastModifiedByObjectId": "23d76db4-a096-40e5-94c4-28048d97a39f",
+        "lastPublishTime": "2026-02-04T17:28:50Z"
+    }
+}
