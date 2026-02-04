@@ -63,21 +63,20 @@ The repository is organized into modular, prefixed folders that reflect the mode
 
 | Prefix | Folder | Purpose |
 |--------|--------|---------|
-| **01‑** | azure‑data‑factory | Legacy ADF pipelines and assets |
-| **02‑** | fabric‑data‑factory | Modern Fabric pipelines and orchestration |
-| **03‑** | sql‑server | SQL scripts, metadata, and stored procedures |
-| **04‑** | databricks | Optional expansion for Spark‑based workflows |
-| **05‑** | dataverse | Power Platform data integration and hybrid modeling |
-| **06‑** | ssis | Legacy ETL packages and migration references |
-| **07‑** | ssas | Tabular model artifacts and semantic lineage |
-| **08‑** | ssrs | Reporting Services assets and paginated reports |
-| **09‑** | power‑bi | PBIX files, M scripts, DAX, and semantic models |
-| **10‑** | power‑automate | Automated refresh flows and alerting logic |
-| **11‑** | power‑apps | KPI Explorer and operational workflow apps |
-| **12‑** | fabric‑sales‑analytics | Lakehouse medallion architecture, notebooks, DQ subsystem |
-| **assets** | assets | Branding, icons, and visual elements |
-| **docs** | docs | Architecture diagrams, modernization notes, and README files |
-| **tools** | tools | PowerShell scripts and repo automation utilities |
+| **01‑** | sql‑server | SQL scripts, metadata, stored procedures, and legacy schema assets |
+| **02‑** | ssis | Legacy SSIS ETL packages and migration references |
+| **03‑** | ssas | Tabular model artifacts, semantic definitions, and lineage |
+| **04‑** | ssrs | Reporting Services assets and paginated report definitions |
+| **05‑** | azure‑data‑factory‑expansion | Legacy ADF pipelines, mappings, and modernization notes |
+| **06‑** | fabric‑lakehouse‑modernization | Full Fabric medallion architecture (Bronze/Silver/Gold), notebooks, pipelines, and DQ subsystem |
+| **07‑** | power‑bi | PBIX files, M scripts, DAX, semantic models, and report assets |
+| **08‑** | power‑automate | Automated refresh flows, orchestration logic, and operational alerts |
+| **09‑** | power‑apps | KPI Explorer and operational workflow applications |
+| **10‑** | databricks‑coming‑soon | Placeholder for Spark‑based workflows and future expansion |
+| **11‑** | dataverse‑coming‑soon | Placeholder for Power Platform data integration and hybrid modeling |
+| **assets** | assets | Branding, icons, screenshots, and visual elements |
+| **docs** | docs | Architecture diagrams, modernization notes, READMEs, and narrative documentation |
+| **tools** | tools | PowerShell automation scripts, repo utilities, and lock‑resolution helpers |
 
 ---
 
