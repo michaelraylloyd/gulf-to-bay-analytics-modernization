@@ -72,7 +72,7 @@ The repository is organized into modular, prefixed folders that reflect the mode
 | **07‑** | power‑bi | PBIX files, M scripts, DAX, semantic models, and report assets |
 | **08‑** | power‑automate | Automated refresh flows, orchestration logic, and operational alerts |
 | **09‑** | power‑apps | KPI Explorer and operational workflow applications |
-| **10‑** | databricks‑coming‑soon | Placeholder for Spark‑based workflows and future expansion |
+| **10‑** | databricks | Placeholder for Spark‑based workflows and future expansion |
 | **11‑** | dataverse‑coming‑soon | Placeholder for Power Platform data integration and hybrid modeling |
 | **assets** | assets | Branding, icons, screenshots, and visual elements |
 | **docs** | docs | Architecture diagrams, modernization notes, READMEs, and narrative documentation |
