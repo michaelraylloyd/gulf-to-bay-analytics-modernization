@@ -1,24 +1,24 @@
-﻿# Gtb tabular model
+﻿# GTB Tabular Model
 
 This folder is part of the Gulf to Bay Analytics modernization project.  
-It contains assets, scripts, or resources related to **Gtb tabular model**, aligned with the overall goal of creating a clean, automated, cloud‑ready analytics ecosystem.
+It contains assets, scripts, or resources related to the **GTB Tabular Model**, aligned with the overall goal of creating a clean, automated, cloud‑ready analytics ecosystem.
 
 ## Purpose
 
-This folder contributes to the modernization effort by organizing work related to **Gtb tabular model** in a clear, maintainable structure.
+This folder contributes to the modernization effort by organizing work related to **semantic modeling, table definitions, relationships, and business logic** in a clear, maintainable structure.
 
 ## Contents
 
 This folder may include:
-- Source files
-- Scripts
-- Configuration
-- Supporting assets
+- Tabular model project files (`.sln`, `.smproj`)  
+- Model definitions (`Model.bim`)  
+- Layout metadata  
+- Supporting assets  
 
 ## Modernization Context
 
 As part of the end‑to‑end modernization, this folder helps ensure:
-- Clean separation of responsibilities
-- Improved maintainability
-- Consistent documentation
-- Recruiter‑ready project organization
+- Clean separation of semantic layer components  
+- Improved maintainability  
+- Consistent documentation  
+- Recruiter‑ready project organization  

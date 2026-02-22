@@ -1,0 +1,77 @@
+expression DimCustomerOnPrem =
+		let
+		    Source = Sql.Database("DESKTOP-JIA1LJ1\SQLEXPRESS", "AdventureWorksDW2019", [Query="--DimCustomer table definition in tabular model. I'm only pulling in the fields I need.#(lf)#(lf)select#(lf)#(tab)dc.CustomerKey#(lf)#(tab), dc.GeographyKey --ML Note:  1/18/2022 we'll add this to the fact table later.#(lf)#(tab), dc.CustomerAlternateKey#(lf)#(tab), dc.FirstName#(lf)#(tab), dc.MiddleName#(lf)#(tab), dc.LastName#(lf)#(tab), dc.Gender#(lf)from#(lf)dbo.DimCustomer dc"])
+		in
+		    Source
+	lineageTag: e41058f4-2883-447e-b846-3281267385cb
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression DimDateOnPrem =
+		let
+		    Source = Sql.Database("DESKTOP-JIA1LJ1\SQLEXPRESS", "AdventureWorksDW2019", [Query="--DimDate table definition in tabular model. I'm only pulling in the fields I need.#(lf)#(lf)select#(lf)#(tab)dd.DateKey#(lf)#(tab), cast(dd.FullDateAlternateKey as date)#(tab)as 'Date'#(lf)#(tab), dd.CalendarYear#(lf)#(tab), dd.CalendarQuarter#(lf)#(tab), dd.EnglishMonthName#(tab)#(tab)#(tab)#(tab)#(tab)as 'Month'#(lf)from dbo.DimDate dd#(lf)where dd.FullDateAlternateKey between '2011' and '2014'"])
+		in
+		    Source
+	lineageTag: b4e5b1fc-2f7a-40b4-9de3-bcf65136e2ed
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression DimGeographyOnPrem =
+		let
+		    Source = Sql.Database("DESKTOP-JIA1LJ1\SQLEXPRESS", "AdventureWorksDW2019", [Query="--DimGeography table definition in tabular model. I'm only pulling in the fields I need.#(lf)#(lf)select#(lf)#(tab)dg.GeographyKey#(lf)#(tab), case#(lf)#(tab)#(tab)when dg.EnglishCountryRegionName = 'Australia'#(tab)#(tab)then 'Australia'#(lf)#(tab)#(tab)when dg.EnglishCountryRegionName = 'Canada'#(tab)#(tab)#(tab)then 'North America'#(lf)#(tab)#(tab)when dg.EnglishCountryRegionName = 'France'#(tab)#(tab)#(tab)then 'Europe'#(lf)#(tab)#(tab)when dg.EnglishCountryRegionName = 'Germany'#(tab)#(tab)then 'Europe'#(lf)#(tab)#(tab)when dg.EnglishCountryRegionName = 'United Kingdom'#(tab)then 'Europe'#(lf)#(tab)#(tab)when dg.EnglishCountryRegionName = 'United States'#(tab)then 'North America'#(lf)#(tab)#(tab)else null#(lf)#(tab)end#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)#(tab)as 'Continent'#(lf)#(tab), dg.EnglishCountryRegionName#(tab)as 'Country'#(lf)#(tab), dg.StateProvinceName#(tab)#(tab)#(tab)as 'State Province'#(lf)#(tab), dg.City#(lf)from dbo.DimGeography dg#(lf)"])
+		in
+		    Source
+	lineageTag: 1a9146ab-0013-45d6-b4bc-95ad8e0960ac
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression DimProductOnPrem =
+		let
+		    Source = Sql.Database("DESKTOP-JIA1LJ1\SQLEXPRESS", "AdventureWorksDW2019", [Query="--DimProduct table definition in tabular model. I'm only pulling in the fields I need.#(lf)#(lf)select#(lf)#(tab)dp.ProductKey#(lf)#(tab), dp.ProductSubcategoryKey --ML Note:  1/18/2022 we'll add this to the fact table later.#(lf)#(tab), dp.Class#(lf)#(tab), dp.Style#(lf)#(tab), dp.ModelName#(lf)from dbo.DimProduct dp"])
+		in
+		    Source
+	lineageTag: 24904bd1-5ad7-472e-8bb4-3f33f387814d
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression DimProductCategoryOnPrem =
+		let
+		    Source = Sql.Database("DESKTOP-JIA1LJ1\SQLEXPRESS", "AdventureWorksDW2019", [Query="--DimProductCategory table definition in tabular model. I'm only pulling in the fields I need.#(lf)#(lf)select#(lf)#(tab)dpc.ProductCategoryKey#(lf)#(tab), dpc.EnglishProductCategoryName as 'Category'#(lf)from dbo.DimProductCategory dpc"])
+		in
+		    Source
+	lineageTag: 51efa199-bede-4bc7-a8fb-5f83114c8996
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression DimProductSubCategoryOnPrem =
+		let
+		    Source = Sql.Database("DESKTOP-JIA1LJ1\SQLEXPRESS", "AdventureWorksDW2019", [Query="--DimProductSubCategory table definition in tabular model. I'm only pulling in the fields I need.#(lf)#(lf)select#(lf)#(tab)dpsc.ProductCategoryKey --ML Note:  1/18/2022 we'll add this to the fact table later.#(lf)#(tab), dpsc.ProductSubcategoryKey#(lf)#(tab), dpsc.EnglishProductSubcategoryName as 'Subcategory'#(lf)from dbo.DimProductSubcategory dpsc#(lf)"])
+		in
+		    Source
+	lineageTag: c9235bda-d185-4c20-ba5a-c55bfe192b0a
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression FactSalesOnPrem =
+		let
+		    Source = Sql.Database("DESKTOP-JIA1LJ1\SQLEXPRESS", "AdventureWorksDW2019", [Query="--FactSales table definition in tabular model. I'm only pulling in the fields I need.#(lf)#(lf)select#(lf)    'FactSales'                     as 'Query'#(lf)    , fis.CarrierTrackingNumber#(lf)    , fis.CustomerKey#(lf)    , fis.CurrencyKey#(lf)    , fis.CustomerPONumber#(lf)    , fis.DiscountAmount#(lf)    , cast(dateadd(year, 12, fis.OrderDate) as date)  as 'OrderDate' --ML Note:  Bring OrderDate up to current times, since this it is 2026 at the time this was written.#(lf)    , concat(year(dateadd(year, 12, fis.OrderDate)), ', Q', datepart(quarter, fis.OrderDate)) as OrderYearQuarter#(lf)    , fis.OrderDateKey#(lf)    , fis.OrderQuantity#(lf)    , fis.ProductKey#(lf)    , fis.ProductStandardCost#(lf)    , fis.PromotionKey#(lf)    , fis.SalesAmount#(lf)    , fis.SalesOrderLineNumber#(lf)    , fis.SalesOrderNumber#(lf)    , 'Internet'                    as 'SalesType'#(lf)from dbo.FactInternetSales fis#(lf)where#(lf)    fis.OrderDate >= '2011'#(lf)    and fis.OrderDate < '2014'"])
+		in
+		    Source
+	lineageTag: fcacc614-1824-4efc-8637-afe0903082e6
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,24 +1,25 @@
-﻿# Database elements
+﻿# Database Elements
 
 This folder is part of the Gulf to Bay Analytics modernization project.  
-It contains assets, scripts, or resources related to **Database elements**, aligned with the overall goal of creating a clean, automated, cloud‑ready analytics ecosystem.
+It contains assets, scripts, or resources related to **database elements**, aligned with the overall goal of creating a clean, automated, cloud‑ready analytics ecosystem.
 
 ## Purpose
 
-This folder contributes to the modernization effort by organizing work related to **Database elements** in a clear, maintainable structure.
+This folder contributes to the modernization effort by organizing work related to **diagnostics, metadata exploration, indexing, and fact‑table utilities** in a clear, maintainable structure.
 
 ## Contents
 
 This folder may include:
-- Source files
-- Scripts
-- Configuration
-- Supporting assets
+- Stored procedures  
+- Diagnostic scripts  
+- Metadata utilities  
+- Fact table rebuild and validation scripts  
+- Supporting assets  
 
 ## Modernization Context
 
 As part of the end‑to‑end modernization, this folder helps ensure:
-- Clean separation of responsibilities
-- Improved maintainability
-- Consistent documentation
-- Recruiter‑ready project organization
+- Clean separation of operational SQL components  
+- Improved maintainability  
+- Consistent documentation  
+- Recruiter‑ready project organization  

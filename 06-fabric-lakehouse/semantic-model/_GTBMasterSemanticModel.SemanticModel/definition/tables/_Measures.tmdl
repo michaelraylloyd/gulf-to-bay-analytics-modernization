@@ -1,0 +1,403 @@
+table _Measures
+	lineageTag: a02584c4-baa0-455b-99a1-e6aaff8486af
+
+	measure 'Average Order Value' = ```
+			
+			DIVIDE([Total Sales], [Total Orders])
+			
+			```
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: 4ab6c9d1-f16c-411c-93c0-edc654c629f3
+
+	measure 'Customers Goal' = 20000
+		formatString: #,0
+		lineageTag: 9c87321f-85a6-4075-868d-6dd7599f64d5
+
+	measure 'Gross Margin' =
+			
+			[Total Sales] - [Total Product Cost]
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: b44502f8-0ead-4d33-a166-b18250077ffa
+
+	measure 'Gross Margin %' =
+			
+			DIVIDE([Gross Margin], [Total Sales])
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: f532ca3d-26df-4b4c-958f-c64710ba3b58
+
+	measure 'Gross Margin LY' = ```
+			
+			CALCULATE([Gross Margin], DATEADD('DimDate'[Date], -1, YEAR))
+			
+			```
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: c16d05c4-d11b-4cfc-b350-b870c5fa07ec
+
+	measure 'Net Sales' = ```
+			
+			[Total Sales] - [Total Discounts]
+			
+			```
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: 94aa5627-a146-451f-8608-c43463564a02
+
+	measure 'Orders Goal' = 30000
+		formatString: #,0
+		lineageTag: de54ab38-c9ca-498b-b444-3b499d1b6d9e
+
+	measure 'Customers % to Goal' = [Total Customers] / 20000
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: fe406b07-2a1d-49a5-ad19-4f685719cb4e
+
+	measure 'Orders % to Goal' =
+			
+			DIVIDE ( [Total Orders], [Orders Goal] )
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: a6113e2a-42c1-4450-9cac-58849db76d39
+
+	measure 'Sales % to Goal' =
+			
+			DIVIDE([Total Sales], [Sales Goal])
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 54f1b5a9-ce14-424e-aa57-c79c4a79a4e4
+
+	measure 'Sales per Customer' = ```
+			
+			DIVIDE([Total Sales], [Total Customers])
+			
+			```
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: ec5dea27-a142-413b-89eb-8fadea1d688f
+
+	measure 'Sales per Day' =
+			
+			DIVIDE(
+			    [Total Sales],
+			    DISTINCTCOUNT('DimDate'[Date])
+			)
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: 0722b4f4-c9a1-422c-bd51-e6126b36c1ec
+
+	measure 'Sales YoY Variance' =
+			
+			[Total Sales] - [Total Sales LY]
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: 4ee779b5-6e23-44d7-8e9e-a740b27ea928
+
+	measure 'Sales Goal' = 35000000
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: 056ca290-72bd-4d3a-833c-6fd6c2c6430e
+
+	measure 'Total Customers' = ```
+			
+			DISTINCTCOUNT(FactInternetSales[CustomerKey])
+			
+			```
+		formatString: #,0
+		lineageTag: f8381853-cdca-4e22-b058-5acbcf76cb66
+
+	measure 'Total Discounts' = ```
+			
+			SUM(FactInternetSales[DiscountAmount])
+			
+			```
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: 03678d50-b436-4cf1-9ba5-12125d5e9e91
+
+	measure 'Total Orders' =
+			
+			DISTINCTCOUNT ( FactInternetSales[SalesOrderNumber] )
+		formatString: #,0
+		lineageTag: b8935caa-dae2-4b2b-a26e-f2885eae22fe
+
+	measure 'Total Product Cost' = ```
+			
+			SUM(FactInternetSales[TotalProductCost])
+			
+			```
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: db0b1b18-99ec-43ac-b6a2-d8308b8d5362
+
+	measure 'Total Sales' = SUM(FactInternetSales[SalesAmount])
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: 7217de09-8878-4b35-a2de-657d46e683e3
+
+	measure 'Total Sales LY' =
+			
+			CALCULATE([Total Sales], DATEADD('DimDate'[Date], -1, YEAR))
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: 76dfb905-efc3-4d22-b577-54e6e9e453fe
+
+	measure 'Sales YoY %' =
+			
+			DIVIDE([Sales YoY Variance], [Total Sales LY])
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 2a1e97c9-95ba-49c2-af64-cd238d52ac9e
+
+	measure 'Sales Mix %' =
+			
+			DIVIDE(
+			    [Total Sales],
+			    CALCULATE([Total Sales], ALL('DimProduct'))
+			)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 1da58e00-a00d-4f56-8b26-300d266eab31
+
+	measure 'Total Orders LY' = ```
+			
+			CALCULATE ( [Total Orders], DATEADD ( DimDate[Date], -1, YEAR ) )
+			
+			```
+		formatString: #,0
+		lineageTag: e7be7219-911d-4bf9-814d-9500043d4baa
+
+	measure 'Orders YoY %' = ```
+			
+			DIVIDE ( [Total Orders] - [Total Orders LY], [Total Orders LY] )
+			
+			```
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 10a1a20d-df3d-4aff-8eab-96f708e71f80
+
+	measure 'Average Order Size' =
+			
+			DIVIDE (
+			    SUM ( FactInternetSales[OrderQuantity] ),
+			    [Total Orders]
+			)
+		formatString: 0.0
+		lineageTag: 4d2d0008-4d3f-4f08-8d38-adeae22b831d
+
+	measure 'On-Time Fulfillment %' =
+			
+			VAR OnTimeOrders =
+			    CALCULATE (
+			        DISTINCTCOUNT ( FactInternetSales[SalesOrderNumber] ),
+			        FactInternetSales[ShipDate] <= FactInternetSales[DueDate]
+			    )
+			
+			RETURN
+			DIVIDE ( OnTimeOrders, [Total Orders] )
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: a4870243-c9ca-4a3c-8e1f-1feb8c329e78
+
+	measure 'Orders Goal Variance' =
+			
+			[Total Orders] - [Orders Goal]
+		formatString: #,0
+		lineageTag: ca05e58d-0f64-419b-af1d-8663aa2b44ae
+
+	measure 'Orders Goal Variance %' =
+			
+			DIVIDE (
+			    [Total Orders] - [Orders Goal],
+			    [Orders Goal]
+			)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 247683a0-9b3f-4f6f-a240-7957009c77e8
+
+	measure 'Returned Orders' =
+			
+			CALCULATE (
+			    DISTINCTCOUNT ( FactInternetSales[SalesOrderNumber] ),
+			    FactInternetSales[OrderQuantity] < 0
+			)
+		formatString: #,0
+		lineageTag: 5fd06a19-b04b-4bee-bda1-af91beedab4d
+
+	measure 'Return Rate %' = ```
+			
+			DIVIDE ( [Returned Orders] , [Total Orders] )
+			
+			```
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 8a90911a-9df9-4a39-8136-fe041959edd7
+
+	measure 'Customer First Purchase Date' =
+			
+			CALCULATE (
+			    MIN ( FactInternetSales[OrderDate] ),
+			    ALLEXCEPT ( FactInternetSales, FactInternetSales[CustomerKey] )
+			)
+		formatString: Short Date
+		lineageTag: 663b58fa-a474-4d77-ab60-db44c2664ae3
+
+	measure 'New Customers' =
+			
+			CALCULATE (
+			    DISTINCTCOUNT ( FactInternetSales[CustomerKey] ),
+			    FILTER (
+			        VALUES ( FactInternetSales[CustomerKey] ),
+			        [Customer First Purchase Date] >= MIN ( DimDate[Date] )
+			            && [Customer First Purchase Date] <= MAX ( DimDate[Date] )
+			    )
+			)
+		formatString: #,0
+		lineageTag: 11ab1371-ce34-49fd-9d20-13a503095653
+
+	measure 'Repeat Customer Rate %' =
+			
+			DIVIDE ( [Repeat Customers], [Total Customers] )
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 429ab7cc-b917-43af-9aa1-f0e6583950ab
+
+	measure 'Average Revenue per Customer' =
+			
+			DIVIDE (
+			    SUM ( FactInternetSales[SalesAmount] ),
+			    [Total Customers]
+			)
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: ac0be3e7-f0e1-4c94-bfdc-531f81423159
+
+	measure 'Revenue per Customer' =
+			
+			DIVIDE (
+			    SUM ( FactInternetSales[SalesAmount] ),
+			    DISTINCTCOUNT ( FactInternetSales[CustomerKey] )
+			)
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: 25ba99cb-b15f-4818-80eb-6bf6991e42e1
+
+	measure 'Customer Lifetime Value' =
+			
+			[Revenue per Customer] * 12
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: 92330167-bdd2-4017-92af-51ff0f90d963
+
+	measure 'Repeat Customers' =
+			
+			CALCULATE (
+			    DISTINCTCOUNT ( FactInternetSales[CustomerKey] ),
+			    FILTER (
+			        VALUES ( FactInternetSales[CustomerKey] ),
+			        CALCULATE (
+			            COUNTROWS ( FactInternetSales ),
+			            ALLEXCEPT ( FactInternetSales, FactInternetSales[CustomerKey] )
+			        ) > 1
+			    )
+			)
+		formatString: #,0
+		lineageTag: 94ee0227-3183-402d-b3d1-cdd6d706679f
+
+	measure 'Top Category' =
+			
+			CALCULATE(
+			    FIRSTNONBLANK( 'DimProductCategory'[Category], 1 ),
+			    TOPN(
+			        1,
+			        SUMMARIZE(
+			            'DimProductCategory',
+			            'DimProductCategory'[Category],
+			            "Sales", [Total Sales]
+			        ),
+			        [Sales],
+			        DESC
+			    )
+			)
+		lineageTag: 68a9a6f1-5866-411b-b237-6fce8ca2278d
+
+	measure 'Dynamic Subtitle Customers' =
+			
+			VAR Pct =
+			    FORMAT( [Customers % to Goal], "0%" )
+			
+			VAR Category =
+			    [Top Category]
+			
+			RETURN
+			"Customers are " & Pct & " to goal, led by " & LOWER(Category) & " customers."
+		lineageTag: 7fe10cd7-6661-402d-89e2-d43c16e6c164
+
+	measure 'Dynamic Subtitle Orders' =
+			
+			VAR Pct =
+			    FORMAT( [Orders % to Goal], "0%" )
+			
+			VAR Category =
+			    [Top Category]
+			
+			RETURN
+			"Orders are " & Pct & " to goal, led by " & LOWER(Category) & " orders."
+		lineageTag: 488639de-e11e-4a0b-bb18-7e5a6ea2a74d
+
+	measure 'Dynamic Subtitle Sales' =
+			
+			VAR Pct =
+			    FORMAT( [Sales % to Goal], "0%" )
+			
+			VAR Category =
+			    [Top Category]
+			
+			RETURN
+			"Sales are " & Pct & " to goal, led by " & LOWER(Category) & " sales."
+		lineageTag: 3bf47dba-5d3a-4a72-9b1d-770d122e8f60
+
+	measure 'Dynamic Subtitle Sales Geography' =
+			
+			VAR GeoNameRaw =
+			    SELECTEDVALUE( DimGeography[Continent],
+			        SELECTEDVALUE( DimGeography[Country],
+			            SELECTEDVALUE( DimGeography[State Province],
+			                SELECTEDVALUE( DimGeography[City], BLANK() )
+			            )
+			        )
+			    )
+			
+			VAR GeoName =
+			    IF( ISBLANK( GeoNameRaw ), "(global)", GeoNameRaw )
+			
+			VAR PctOfSales =
+			    DIVIDE(
+			        [Total Sales],
+			        CALCULATE( [Total Sales], ALL( DimGeography ) )
+			    )
+			
+			VAR PctFormatted =
+			    FORMAT( PctOfSales, "0%" )
+			
+			RETURN
+			PctFormatted & " of all sales are attributed to " & GeoName & "."
+		lineageTag: a1abeaab-2c8f-4f2d-9c4b-84dc5c469191
+
+	measure 'Dynamic Title Customers to Goal' =
+			
+			VAR Pct =
+			    FORMAT( [Customers % to Goal], "0%" )
+			RETURN
+			"Customers " & Pct & " to Goal"
+		lineageTag: e9262c43-5ea2-4411-9c7e-c421817c0e50
+
+	measure 'Dynamic Title Orders to Goal' =
+			
+			VAR Pct =
+			    FORMAT( [Orders % to Goal], "0%" )
+			RETURN
+			"Orders " & Pct & " to Goal"
+		lineageTag: 9631b567-d42b-4e52-9d7a-c343a369eaf7
+
+	measure 'Dynamic Title Sales to Goal' =
+			
+			VAR Pct =
+			    FORMAT( [Sales % to Goal], "0%" )
+			RETURN
+			"Sales " & Pct & " to Goal"
+		lineageTag: 5fc9049e-0d31-419b-bec5-ecb083b43aab
+
+	measure 'Misc Measures' = "(Below)"
+		lineageTag: 1dc63112-2bd8-443a-bab5-384d1bad6631
+
+	partition _Measures = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Column1"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

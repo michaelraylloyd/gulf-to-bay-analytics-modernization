@@ -1,24 +1,27 @@
-﻿# Ssis
+﻿# 🔄 SSIS
 
 This folder is part of the Gulf to Bay Analytics modernization project.  
-It contains assets, scripts, or resources related to **Ssis**, aligned with the overall goal of creating a clean, automated, cloud‑ready analytics ecosystem.
+It contains assets, scripts, or resources related to **SQL Server Integration Services (SSIS)**, aligned with the overall goal of creating a clean, automated, cloud‑ready analytics ecosystem.
 
 ## Purpose
 
-This folder contributes to the modernization effort by organizing work related to **Ssis** in a clear, maintainable structure.
+This folder contributes to the modernization effort by organizing work related to **ETL orchestration and data movement** in a clear, maintainable structure.
 
 ## Contents
 
 This folder may include:
-- Source files
-- Scripts
-- Configuration
-- Supporting assets
+- SSIS project files  
+- ETL packages  
+- Configuration files  
+- Supporting assets  
 
 ## Modernization Context
 
 As part of the end‑to‑end modernization, this folder helps ensure:
-- Clean separation of responsibilities
-- Improved maintainability
-- Consistent documentation
-- Recruiter‑ready project organization
+- Clean separation of ETL responsibilities  
+- Improved maintainability  
+- Consistent documentation  
+- Recruiter‑ready project organization  
+
+### 🔄 SSIS
+![alt text](../assets/images/portfolio-overview/SSIS.png) 

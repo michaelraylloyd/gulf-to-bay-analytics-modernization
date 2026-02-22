@@ -1,0 +1,39 @@
+table DimProductCategory
+	lineageTag: 2250542c-b6e5-4b79-ad4f-8756f83b56c6
+
+	column ProductCategoryKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 123d8e6f-1da3-495e-b248-4301e90367ab
+		summarizeBy: none
+		sourceColumn: ProductCategoryKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category
+		dataType: string
+		lineageTag: 6478640d-cb1d-4cdb-ba78-4687c482443b
+		summarizeBy: none
+		sourceColumn: Category
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimProductCategory = m
+		mode: import
+		source =
+				let
+				    Source = PowerPlatform.Dataflows([]),
+				    Workspaces = Source{[Id="Workspaces"]}[Data],
+				    #"ec08f9a7-88d7-41b1-853d-1cc65782b70c" = Workspaces{[workspaceId="ec08f9a7-88d7-41b1-853d-1cc65782b70c"]}[Data],
+				    #"c97765d7-f503-45ca-ac86-0300e15a751b" = #"ec08f9a7-88d7-41b1-853d-1cc65782b70c"{[dataflowId="c97765d7-f503-45ca-ac86-0300e15a751b"]}[Data],
+				    DimProductCategory_ = #"c97765d7-f503-45ca-ac86-0300e15a751b"{[entity="DimProductCategory",version=""]}[Data]
+				in
+				    DimProductCategory_
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
