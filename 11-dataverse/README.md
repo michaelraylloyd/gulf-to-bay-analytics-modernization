@@ -1,68 +1,26 @@
-# Dataverse — Operational Data Layer (Coming Online)
+# 🟣🗄️ Dataverse
 
-This folder represents the starting point for the Dataverse portion of the Gulf to Bay modernization project.  
-Dataverse serves as the **operational data layer** of the Microsoft Power Platform, providing structured, governed storage for Power Apps, Power Automate flows, and business processes.
-
-This directory is intentionally lightweight. As the Dataverse implementation grows, additional components will be added in a controlled, solution‑driven way.
-
----
+This folder is part of the Gulf to Bay Analytics modernization project.  
+It contains assets, scripts, or resources related to **Microsoft Dataverse**, aligned with the overall goal of creating a clean, automated, cloud‑ready analytics ecosystem.
 
 ## Purpose
 
-Dataverse complements the analytical Lakehouse layers (Fabric and Databricks) by providing:
+This folder contributes to the modernization effort by organizing work related to **data modeling, table structures, and solution packaging** in a clear, maintainable structure.
 
-- A secure, relational data store for operational apps  
-- Native integration with Power Apps and Power Automate  
-- Business rules, validation, and row‑level security  
-- Solution packaging for proper ALM and deployment  
-- A governed alternative to SharePoint lists and Excel‑based processes  
+## Contents
 
-This folder will eventually contain the artifacts that define the Dataverse data model and its supporting solutions.
+This folder may include:
+- Dataverse solutions  
+- Table definitions  
+- Supporting assets  
 
----
+## Modernization Context
 
-## Folder Structure
+As part of the end‑to‑end modernization, this folder helps ensure:
+- Clean separation of Dataverse components  
+- Improved maintainability  
+- Consistent documentation  
+- Recruiter‑ready project organization  
 
-### `solutions/`
-A placeholder for Dataverse **Solutions**, the packaging unit used for:
-
-- Tables  
-- Relationships  
-- Business rules  
-- Power Apps  
-- Power Automate flows  
-- Security roles  
-
-Nothing is committed yet. This folder will grow as the Dataverse environment is built out.
-
-### `tables/`
-A placeholder for table definitions, schema documentation, and metadata exports.  
-This will eventually include:
-
-- Table schemas  
-- Column definitions  
-- Relationship diagrams  
-- Data model notes  
-
----
-
-## How Dataverse Fits Into the Modernization Arc
-
-Dataverse represents the **operational** side of the modernization story:
-
-- **Operational data** → Dataverse  
-- **Analytical data** → Fabric Lakehouse, Databricks Lakehouse  
-- **Source systems** → SQL Server, Azure SQL  
-- **BI & reporting** → Power BI  
-
-This structure allows the Gulf to Bay ecosystem to support both:
-
-- **Business applications** (Power Apps + Power Automate)  
-- **Enterprise analytics** (Fabric + Databricks)  
-
----
-
-## Current Status
-
-This folder is a scaffold.  
-As Dataverse components are created, they will be added here in a structured, solution‑driven manner.
+### 🟪📁 Dataverse Table - Equipment Requests
+![alt text](../assets/images/portfolio-overview/Dataverse_Table_EquipmentRequests.png)

@@ -5,7 +5,7 @@
 
 ## Executive Summary
 
-This portfolio showcases the complete modernization of Gulf to Bay Analytics from a fragmented, on‑prem Microsoft BI stack into a unified, cloud‑native analytics ecosystem built on Microsoft Fabric. The transformation spans SQL Server, SSIS, SSAS, and SSRS through Azure SQL, Lakehouse medallion architecture, Python ETL, Fabric Data Factory pipelines, a rebuilt Power BI semantic model, automated refreshes via Power Automate, and Power Apps for operational workflows. The project also includes a fully restructured Git‑based SDLC with feature branching, Dev/Main separation, and deterministic promotion patterns that mirror real enterprise engineering practices. This document provides a visual, narrative walkthrough of that journey, supported by architecture diagrams, screenshots, and detailed modernization notes.
+This portfolio presents the end‑to‑end modernization of Gulf to Bay Analytics from a fragmented, on‑premises Microsoft BI stack into a unified, cloud‑native analytics ecosystem built on Microsoft Fabric. The transformation spans SQL Server, SSIS, SSAS, and SSRS through Azure SQL, Fabric Lakehouse medallion architecture, Python‑based ETL, Fabric Data Factory pipelines, Databricks notebooks, Eventstream‑to‑Eventhouse real‑time ingestion, and a rebuilt Power BI semantic model. Operational workflows are delivered through Power Apps and Dataverse, with automated refresh and orchestration handled by Power Automate. The modernization is anchored by a fully restructured Git‑based SDLC featuring feature branching, Dev/Main separation, Fabric workspace source control, and deterministic promotion patterns that mirror enterprise engineering standards. This document provides a visual, narrative walkthrough of that journey, supported by architecture diagrams, screenshots, and detailed modernization notes.
 
 ---
 
@@ -63,17 +63,18 @@ The repository is organized into modular, prefixed folders that reflect the mode
 
 | Prefix | Folder | Purpose |
 |--------|--------|---------|
-| **01‑** | sql‑server | SQL scripts, metadata, stored procedures, and legacy schema assets |
+| **01‑** | sql-server | SQL scripts, metadata, stored procedures, and legacy schema assets |
 | **02‑** | ssis | Legacy SSIS ETL packages and migration references |
 | **03‑** | ssas | Tabular model artifacts, semantic definitions, and lineage |
 | **04‑** | ssrs | Reporting Services assets and paginated report definitions |
-| **05‑** | azure‑data‑factory‑expansion | Legacy ADF pipelines, mappings, and modernization notes |
-| **06‑** | fabric‑lakehouse‑modernization | Full Fabric medallion architecture (Bronze/Silver/Gold), notebooks, pipelines, and DQ subsystem |
-| **07‑** | power‑bi | PBIX files, M scripts, DAX, semantic models, and report assets |
-| **08‑** | power‑automate | Automated refresh flows, orchestration logic, and operational alerts |
-| **09‑** | power‑apps | KPI Explorer and operational workflow applications |
-| **10‑** | databricks | Placeholder for Spark‑based workflows and future expansion |
-| **11‑** | dataverse‑coming‑soon | Placeholder for Power Platform data integration and hybrid modeling |
+| **05‑** | azure-data-factory | Legacy ADF pipelines, mappings, and modernization notes |
+| **06‑** | fabric-lakehouse | Full Fabric medallion architecture (Bronze/Silver/Gold), notebooks, pipelines, semantic model, and DQ subsystem |
+| **07‑** | databricks | Spark notebooks, workflows, and future expansion for Lakehouse compute |
+| **08‑** | power-bi | PBIX files, M scripts, DAX, semantic models, and report assets |
+| **09‑** | power-automate | Automated refresh flows, orchestration logic, and operational alerts |
+| **10‑** | power-apps | KPI Explorer, Equipment Requests, and operational workflow applications |
+| **11‑** | dataverse | Dataverse tables, solutions, and Power Platform data integration |
+| **12‑** | eventhouse | Eventstream ingestion, KQL database, real‑time telemetry, and streaming analytics |
 | **assets** | assets | Branding, icons, screenshots, and visual elements |
 | **docs** | docs | Architecture diagrams, modernization notes, READMEs, and narrative documentation |
 | **tools** | tools | PowerShell automation scripts, repo utilities, and lock‑resolution helpers |
@@ -302,6 +303,7 @@ Power BI dashboards deliver executive‑ready KPIs and operational insights.
 <details>
 <summary><strong>📈 Reporting Highlights</strong></summary>
 
+- SSRS paginated reporting
 - Rebuilt KPI model  
 - Global and regional DAX metrics  
 - Drill‑through and detail pages  
@@ -309,6 +311,9 @@ Power BI dashboards deliver executive‑ready KPIs and operational insights.
 - Automated refresh integration  
 
 </details>
+
+### 📈 SSRS Paginated Report
+![alt text](../assets/images/portfolio-overview/SSRS.png)
 
 ### 📈 Power BI Revenue Stream KPI Overview
 
@@ -354,27 +359,75 @@ Power Automate flows handle scheduled refreshes and alerting across the analytic
 
 ---
 
-## 16. Power Apps — KPI Explorer
+## 16. Power Apps
 
 A Power Apps interface provides interactive KPI exploration for business users<strong>📱 Power.
 
 <details>
-<summary> Apps Highlights</strong></summary>
+<summary><strong>Apps Highlights</strong></summary>
 
-- KPI Explorer app  
-- Drill‑down navigation  
-- Embedded Power BI visuals  
-- Role‑based access patterns  
-- Operational workflow integration  
+- KPI Explorer app
+  - Drill‑down navigation
+  - Embedded Power BI visuals
+  - Role‑based access patterns
+  - Operational workflow integration
+
+- Equipment Request app
+  - Data intake to Dataverse table
+  - Role‑based access and approval routing
+  - Quick‑access page for approvers
+  - Embedded Power BI dashboard and details
 
 </details>
 
+
 ### 📱 Power Apps
+
+<strong>KPI Explorer</strong>
 ![alt text](../assets/images/portfolio-overview/Power_Apps_KPI_Explorer.png)
+
+<strong>Equipment Requests - Pending Approval</strong>
+![alt text](../assets/images/portfolio-overview/Power_Apps_Equipment_Requests_Pending_Approval.png)
+
+<strong>Equipment Requests - Edit</strong>
+![alt text](../assets/images/portfolio-overview/Power_Apps_Equipment_Requests_Edit.png)
+
+<strong>Equipment Requests - Dashboard</strong>
+![alt text](../assets/images/portfolio-overview/Power_Apps_Equipment_Requests_Dashboard.png)
+
+<strong>Equipment Requests - Details</strong>
+![alt text](../assets/images/portfolio-overview/Power_Apps_Equipment_Requests_Details.png)
+
+### 🟪📁 Dataverse Table - Equipment Requests
+![alt text](../assets/images/portfolio-overview/Dataverse_Table_EquipmentRequests.png)
 
 ---
 
-## 17. Documentation & Repo Hygiene
+## 17. Eventhouse
+
+Eventhouse provides the real‑time analytics layer within the modernization ecosystem, enabling continuous ingestion, storage, and querying of streaming data. In this project, an Eventstream pipeline writes live S&P 500 market data into the Eventhouse database, making it immediately available for KQL‑based validation, profiling, and downstream analytics.
+
+<details>
+<summary><strong>Eventhouse Highlights</strong></summary>
+
+- Real‑time ingestion through Eventstream  
+- Continuous writes to the **Sp500Stocks** table  
+- KQL‑based exploration and validation  
+- Support for time‑series analytics and anomaly detection  
+- Integration with downstream Fabric components  
+- Foundation for dashboards, alerting, and automated insights  
+
+</details>
+
+### 📡 Eventhouse - S&P 500 Eventstream
+![alt text](../assets/images/portfolio-overview/Fabric_Eventhouse_Eventstream.png)
+
+### 📡 Eventhouse - KQL Database
+![alt text](../assets/images/portfolio-overview/Fabric_Eventhouse_KQL_Database.png)
+
+---
+
+## 18. Documentation & Repo Hygiene
 
 Documentation and automation scripts ensure a clean, discoverable, and recruiter‑ready repository.
 
@@ -394,16 +447,22 @@ Documentation and automation scripts ensure a clean, discoverable, and recruiter
 
 ---
 
-## 18. SDLC Evolution — From PowerShell to GitKraken Branching
+## 19. SDLC Evolution — Introducing Fabric Workspace Source Control
+
+Fabric’s built‑in Git integration extends the modernization SDLC into the analytics workspace itself, allowing Lakehouses, Eventhouses, Pipelines, Notebooks, and Power BI artifacts to participate in the same branch‑based workflow used across the rest of the repo. Source control now provides full visibility into workspace changes, commit history, and promotion patterns across feature, dev, and main branches.
 
 <details>
 <summary><strong>🔧 SDLC Timeline</strong></summary>
 
 - Phase 1: No version control  
 - Phase 2: PowerShell‑based Dev/Prod checks  
-- Phase 3: GitKraken branching and commits  
-- Feature branches → Dev → Main → Manual PROD publish  
-- GitHub commit history and milestone tagging  
+- Phase 3: GitKraken branching and commit discipline  
+- Phase 4: Fabric Workspace Git integration  
+  - Workspace items tracked directly in Git  
+  - Branch‑based development inside Fabric  
+  - Commit, diff, and merge visibility for notebooks, pipelines, and Eventhouse assets  
+  - Real‑time sync of workspace changes to feature → dev → main  
+  - Source‑controlled Eventstream, Eventhouse, and Lakehouse definitions  
 
 </details>
 
@@ -416,14 +475,17 @@ Documentation and automation scripts ensure a clean, discoverable, and recruiter
 ### 🔧 Git Kracken Workflow
 ![alt text](../assets/images/portfolio-overview/Git_Kracken_Workflow.png)
 
+### 🔧 Fabric Workspace Source Control
+![alt text](../assets/images/portfolio-overview/Fabric_Workspace_Source_Control.png)
+
 ---
 
-## 19. Architecture Diagram  
+## 20. Architecture Diagram  
 ![alt text](../assets/images/portfolio-overview/Architecture_Diagram.png)
 
 ---
 
-## 20. About the Developer
+## 21. About the Developer
 
 **Michael Lloyd**  
 Business Intelligence Developer  
@@ -440,7 +502,7 @@ Clearwater, FL
 
 ---
 
-## 21. Contact
+## 22. Contact
 
 - GitHub: https://github.com/michaelraylloyd  
 - LinkedIn: https://www.linkedin.com/in/michael-lloyd-7aa62250/  

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "_GTBMasterSemanticModel"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "3975cd84-cce2-8f5f-449c-c83d0f4ae503"
+  }
+}

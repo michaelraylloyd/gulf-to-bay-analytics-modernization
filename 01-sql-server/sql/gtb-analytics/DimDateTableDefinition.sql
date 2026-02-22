@@ -2,7 +2,7 @@
 
 select
 	dd.DateKey
-	, cast(dd.FullDateAlternateKey as date)	as 'Date'
+	, dateadd(year, 12, cast(dd.FullDateAlternateKey as date)) as 'Date' --ML Note:  Bring Date up to current times, since this it is 2026 at the time this was written.
 	, dd.CalendarYear
 	, dd.CalendarQuarter
 	, dd.EnglishMonthName					as 'Month'

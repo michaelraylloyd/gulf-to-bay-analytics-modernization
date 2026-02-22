@@ -1,0 +1,71 @@
+table DimDate
+	lineageTag: 53a79bd4-a947-4fdb-ac2d-1b7d3ee81630
+
+	column DateKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: f1dc81be-dbbd-4659-9565-9749da265f7c
+		summarizeBy: none
+		sourceColumn: DateKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalendarYear
+		dataType: int64
+		formatString: 0
+		lineageTag: 949c950a-603a-4a1d-981f-285afee52fd5
+		summarizeBy: sum
+		sourceColumn: CalendarYear
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalendarQuarter
+		dataType: int64
+		formatString: 0
+		lineageTag: 765fdc24-46f7-4aa8-9e56-74cb0dade9a2
+		summarizeBy: sum
+		sourceColumn: CalendarQuarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: f7d9faec-a55b-40e2-8a7d-f48488ef4e5a
+		summarizeBy: none
+		sourceColumn: Date
+
+		variation Variation
+			isDefault
+			relationship: 8b0c565c-e248-40fc-be38-433c42b2747a
+			defaultHierarchy: LocalDateTable_8ab0329a-15ec-4854-b8e8-809ce8d063b7.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: string
+		lineageTag: 33223493-eab3-43e6-9c0d-d4389f62a16e
+		summarizeBy: none
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimDate = m
+		mode: import
+		source =
+				let
+				    Source = PowerPlatform.Dataflows([]),
+				    Workspaces = Source{[Id="Workspaces"]}[Data],
+				    #"ec08f9a7-88d7-41b1-853d-1cc65782b70c" = Workspaces{[workspaceId="ec08f9a7-88d7-41b1-853d-1cc65782b70c"]}[Data],
+				    #"c97765d7-f503-45ca-ac86-0300e15a751b" = #"ec08f9a7-88d7-41b1-853d-1cc65782b70c"{[dataflowId="c97765d7-f503-45ca-ac86-0300e15a751b"]}[Data],
+				    DimDate_ = #"c97765d7-f503-45ca-ac86-0300e15a751b"{[entity="DimDate",version=""]}[Data]
+				in
+				    DimDate_
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
