@@ -1,0 +1,30 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		fastCombine
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["DimCustomer","DimDate","DimGeography","DimProduct","DimProductCategory","DimProductSubCategory","FactInternetSales","DimCustomerOnPrem","DimDateOnPrem","DimGeographyOnPrem","DimProductOnPrem","DimProductCategoryOnPrem","DimProductSubCategoryOnPrem","FactSalesOnPrem","_Measures"]
+
+ref table DateTableTemplate_15f5a94d-d371-4b01-bcdc-3f232eebb31f
+ref table DimCustomer
+ref table DimDate
+ref table DimGeography
+ref table DimProduct
+ref table DimProductCategory
+ref table DimProductSubCategory
+ref table FactInternetSales
+ref table LocalDateTable_8ab0329a-15ec-4854-b8e8-809ce8d063b7
+ref table _Measures
+ref table LocalDateTable_1fd400a0-cbcd-4da4-8ec6-c10c6b4806aa
+ref table LocalDateTable_52ca0ab1-9f03-4c19-8cb8-a5e9d53ef44c
+ref table LocalDateTable_bf64f5e1-f655-41c6-89c2-67f3a3a13814
+ref table AllKPIRows
+
+ref cultureInfo en-US
+

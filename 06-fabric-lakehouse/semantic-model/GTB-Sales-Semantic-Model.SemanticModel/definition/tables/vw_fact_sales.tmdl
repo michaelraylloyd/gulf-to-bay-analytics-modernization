@@ -1,0 +1,113 @@
+table vw_fact_sales
+	lineageTag: a5d2efa5-0d8d-4446-9b8d-0679c2da09d2
+	sourceLineageTag: [dbo].[vw_fact_sales]
+
+	column sales_key
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: dd427fec-a612-407f-ad6f-23549e41afd4
+		sourceLineageTag: sales_key
+		summarizeBy: sum
+		sourceColumn: sales_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e21bbcbb-a7ec-4764-b456-44d3973174d2
+		sourceLineageTag: order_id
+		summarizeBy: none
+		sourceColumn: order_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_date
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 77ed3865-316e-4c6f-9ee6-1d32734c7a63
+		sourceLineageTag: order_date
+		summarizeBy: none
+		sourceColumn: order_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column customer_key
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: fdc45b54-c2d4-4f66-9b08-8472701689d8
+		sourceLineageTag: customer_key
+		summarizeBy: none
+		sourceColumn: customer_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_key
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 645e22a0-7b19-4610-8d5b-5046e25681db
+		sourceLineageTag: product_key
+		summarizeBy: none
+		sourceColumn: product_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column quantity
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 12e80fab-a5d9-480d-813b-2ac345480ca3
+		sourceLineageTag: quantity
+		summarizeBy: sum
+		sourceColumn: quantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column unit_price
+		dataType: double
+		sourceProviderType: real
+		lineageTag: 2e7172fc-2b2e-4022-8dcc-039b3f41d189
+		sourceLineageTag: unit_price
+		summarizeBy: sum
+		sourceColumn: unit_price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column discount
+		dataType: double
+		sourceProviderType: real
+		lineageTag: 65f15a37-620d-4138-95d3-b98a5c5337f3
+		sourceLineageTag: discount
+		summarizeBy: sum
+		sourceColumn: discount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column line_total
+		dataType: double
+		sourceProviderType: real
+		lineageTag: b7fcfa70-8f82-4ecf-a4f0-9072092c0fe1
+		sourceLineageTag: line_total
+		summarizeBy: sum
+		sourceColumn: line_total
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition vw_fact_sales = entity
+		mode: directLake
+		source
+			entityName: vw_fact_sales
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,114 @@
+table vw_dim_customer
+	lineageTag: 9886c5e3-be4e-4a25-b7d8-1b5e6a6a0b3a
+	sourceLineageTag: [dbo].[vw_dim_customer]
+
+	column customer_key
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: da01744c-7bd2-4a0b-95c5-996bb6b4d311
+		sourceLineageTag: customer_key
+		summarizeBy: none
+		sourceColumn: customer_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column customer_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 4d9bac81-400c-4c44-a8da-57fd95013f32
+		sourceLineageTag: customer_id
+		summarizeBy: none
+		sourceColumn: customer_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column first_name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ca1f62f0-4306-4605-9c00-ce430c6a6957
+		sourceLineageTag: first_name
+		summarizeBy: none
+		sourceColumn: first_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column last_name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 7cededf9-4802-4e13-8351-5df0823ff679
+		sourceLineageTag: last_name
+		summarizeBy: none
+		sourceColumn: last_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column address_line_1
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3894fa01-012a-427a-8976-700b55b157d7
+		sourceLineageTag: address_line_1
+		summarizeBy: none
+		sourceColumn: address_line_1
+
+		annotation SummarizationSetBy = Automatic
+
+	column address_line_2
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c259647f-033a-44fa-aecc-5105c3db0bc1
+		sourceLineageTag: address_line_2
+		summarizeBy: none
+		sourceColumn: address_line_2
+
+		annotation SummarizationSetBy = Automatic
+
+	column city
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d154395b-264f-43dd-aeee-5f1c36674369
+		sourceLineageTag: city
+		summarizeBy: none
+		sourceColumn: city
+
+		annotation SummarizationSetBy = Automatic
+
+	column state_province
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 85e052a6-389f-47bb-a7f4-b9e0ea719d28
+		sourceLineageTag: state_province
+		summarizeBy: none
+		sourceColumn: state_province
+
+		annotation SummarizationSetBy = Automatic
+
+	column country
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 5fc25cc7-117b-4437-9735-5e60dc460d5c
+		sourceLineageTag: country
+		summarizeBy: none
+		sourceColumn: country
+
+		annotation SummarizationSetBy = Automatic
+
+	column postal_code
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a4f52ec3-d287-44b4-8e94-c4f1b716b74f
+		sourceLineageTag: postal_code
+		summarizeBy: none
+		sourceColumn: postal_code
+
+		annotation SummarizationSetBy = Automatic
+
+	partition vw_dim_customer = entity
+		mode: directLake
+		source
+			entityName: vw_dim_customer
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

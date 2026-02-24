@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "GTBAnalyticsKPIOverview"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "7cc866b5-0fcf-a1f9-4ac1-a2f87fa12170"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "3589fbf4-3af6-a2b3-4646-83886ea4a249",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "parameters": {
+            "pipeline_name": {
+              "value": "@pipeline().PipelineName",
+              "type": "string"
+            },
+            "notebook_name": {
+              "value": {
+                "value": "us_census_fl_county_population",
+                "type": "Expression"
+              },
+              "type": "string"
+            },
+            "pipeline_run_id": {
+              "value": "@pipeline().RunId",
+              "type": "string"
+            }
+          }
+        },
+        "policy": {
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "us_census_fl_county_population",
+        "dependsOn": []
+      }
+    ],
+    "parameters": {
+      "pipeline_name": {
+        "type": "string"
+      },
+      "notebook_name": {
+        "type": "string"
+      },
+      "pipeline_run_id": {
+        "type": "string"
+      }
+    }
+  }
+}

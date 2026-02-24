@@ -1,0 +1,35 @@
+table DimProductCategory
+	lineageTag: 2250542c-b6e5-4b79-ad4f-8756f83b56c6
+
+	column ProductCategoryKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 123d8e6f-1da3-495e-b248-4301e90367ab
+		summarizeBy: none
+		sourceColumn: ProductCategoryKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category
+		dataType: string
+		lineageTag: 6478640d-cb1d-4cdb-ba78-4687c482443b
+		summarizeBy: none
+		sourceColumn: Category
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimProductCategory = m
+		mode: import
+		source =
+				let
+				    Source = PowerPlatform.Dataflows(null),
+				    Workspaces = Source{[Id="Workspaces"]}[Data],
+				    #"d87dfcca-dff7-477e-ae07-42996ceb937a" = Workspaces{[workspaceId="d87dfcca-dff7-477e-ae07-42996ceb937a"]}[Data],
+				    #"1c27e31b-8d09-4c60-a741-58c4cfe2cc1c" = #"d87dfcca-dff7-477e-ae07-42996ceb937a"{[dataflowId="1c27e31b-8d09-4c60-a741-58c4cfe2cc1c"]}[Data],
+				    DimProductCategory_ = #"1c27e31b-8d09-4c60-a741-58c4cfe2cc1c"{[entity="DimProductCategory",version=""]}[Data]
+				in
+				    DimProductCategory_
+

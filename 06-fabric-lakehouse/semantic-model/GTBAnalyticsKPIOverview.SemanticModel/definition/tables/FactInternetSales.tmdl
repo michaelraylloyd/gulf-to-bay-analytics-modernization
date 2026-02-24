@@ -1,0 +1,211 @@
+table FactInternetSales
+	lineageTag: d72cc9d3-98fe-45ea-9b6c-f8c1bcc2bbf3
+
+	column CarrierTrackingNumber
+		dataType: string
+		lineageTag: 857d22ee-90cd-48b1-bc4c-df5f359acba1
+		summarizeBy: none
+		sourceColumn: CarrierTrackingNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: b9104bca-e23f-45b3-87f1-424ba119276c
+		summarizeBy: none
+		sourceColumn: CustomerKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrencyKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 1d792127-9686-491c-b3d3-573513818701
+		summarizeBy: count
+		sourceColumn: CurrencyKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerPONumber
+		dataType: string
+		lineageTag: 90fd2830-832c-4226-a891-98af4a0a381f
+		summarizeBy: none
+		sourceColumn: CustomerPONumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column DiscountAmount
+		dataType: double
+		lineageTag: 10248803-0c82-4b05-abe4-1d2d6bd07f83
+		summarizeBy: sum
+		sourceColumn: DiscountAmount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column OrderDateKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: b3bd4e9f-a8c7-470b-854d-5229c2ab43b8
+		summarizeBy: none
+		sourceColumn: OrderDateKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderQuantity
+		dataType: int64
+		formatString: 0
+		lineageTag: 2d2dbf97-7153-48d0-a3d8-0431c76d16e6
+		summarizeBy: sum
+		sourceColumn: OrderQuantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 1f77618a-8ff7-401b-b319-b54cb2006d2e
+		summarizeBy: none
+		sourceColumn: ProductKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductStandardCost
+		dataType: double
+		lineageTag: 04141ee9-e803-4249-bd3a-5b10f7d27e4d
+		summarizeBy: sum
+		sourceColumn: ProductStandardCost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PromotionKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 44fd1ec7-221b-4ec0-8b8c-1a8069418f43
+		summarizeBy: count
+		sourceColumn: PromotionKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesAmount
+		dataType: double
+		lineageTag: a0361ab3-6ae7-4330-bd7d-735bc5e6856c
+		summarizeBy: sum
+		sourceColumn: SalesAmount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SalesOrderLineNumber
+		dataType: int64
+		formatString: 0
+		lineageTag: 6a09e34e-70db-4322-ad4e-ee6454bc63b2
+		summarizeBy: sum
+		sourceColumn: SalesOrderLineNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesOrderNumber
+		dataType: string
+		lineageTag: de49df88-8914-4403-9b77-f7c3d9bed6ec
+		summarizeBy: none
+		sourceColumn: SalesOrderNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderYearQuarter
+		dataType: string
+		lineageTag: 24151f84-1fc2-4016-b46c-f597be18ee1f
+		summarizeBy: none
+		sourceColumn: OrderYearQuarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalProductCost
+		dataType: double
+		lineageTag: f999d9c8-07b1-4e64-a3bf-c5b1cad982a8
+		summarizeBy: sum
+		sourceColumn: TotalProductCost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ShipDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 51b472e4-e526-4006-8a4d-8cac6099502a
+		summarizeBy: none
+		sourceColumn: ShipDate
+
+		variation Variation
+			isDefault
+			relationship: bd978b92-5f8e-4609-993e-a2991afb7b73
+			defaultHierarchy: LocalDateTable_1fd400a0-cbcd-4da4-8ec6-c10c6b4806aa.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column DueDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 5157a0d9-b2d5-4d2e-87ec-c843a7333161
+		summarizeBy: none
+		sourceColumn: DueDate
+
+		variation Variation
+			isDefault
+			relationship: ea748b23-789a-492c-bb6d-74cf67eb1105
+			defaultHierarchy: LocalDateTable_52ca0ab1-9f03-4c19-8cb8-a5e9d53ef44c.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderDate
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 0a5ce1c0-3bfb-4f0d-938a-1deee0678cb0
+		summarizeBy: none
+		sourceColumn: OrderDate
+
+		variation Variation
+			isDefault
+			relationship: 766e5f98-c0be-4e73-b471-4e4d673b454d
+			defaultHierarchy: LocalDateTable_bf64f5e1-f655-41c6-89c2-67f3a3a13814.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FactInternetSales = m
+		mode: import
+		source =
+				let
+				    Source = PowerPlatform.Dataflows(null),
+				    Workspaces = Source{[Id="Workspaces"]}[Data],
+				    #"d87dfcca-dff7-477e-ae07-42996ceb937a" = Workspaces{[workspaceId="d87dfcca-dff7-477e-ae07-42996ceb937a"]}[Data],
+				    #"1c27e31b-8d09-4c60-a741-58c4cfe2cc1c" = #"d87dfcca-dff7-477e-ae07-42996ceb937a"{[dataflowId="1c27e31b-8d09-4c60-a741-58c4cfe2cc1c"]}[Data],
+				    FactSales_ = #"1c27e31b-8d09-4c60-a741-58c4cfe2cc1c"{[entity="FactSales",version=""]}[Data]
+				in
+				    FactSales_
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Exception
+
