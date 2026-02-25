@@ -1,0 +1,133 @@
+table DimProduct
+	lineageTag: 46aaec23-dfa4-4f68-9adb-d0b0aad7128e
+
+	column ProductKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: c0cb0870-9e11-4042-b181-3f5fea8bbcd7
+		summarizeBy: none
+		sourceColumn: ProductKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductSubcategoryKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 6a7e7247-1252-4e11-ab50-8b746c125d66
+		summarizeBy: none
+		sourceColumn: ProductSubcategoryKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Class
+		dataType: string
+		lineageTag: 3ad318a1-01e2-4c1a-a95b-aa9a40ea35b8
+		summarizeBy: none
+		sourceColumn: Class
+
+		annotation SummarizationSetBy = Automatic
+
+	column Style
+		dataType: string
+		lineageTag: c8f49680-e818-440a-855b-14dbfad4045e
+		summarizeBy: none
+		sourceColumn: Style
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModelName
+		dataType: string
+		lineageTag: a25ad974-2758-43c7-829b-5bfcaf86b2ee
+		summarizeBy: none
+		sourceColumn: ModelName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Color
+		dataType: string
+		lineageTag: 75f9015b-1bd1-445b-b530-8fedd3f9ccda
+		summarizeBy: none
+		sourceColumn: Color
+
+		annotation SummarizationSetBy = Automatic
+
+	column Size
+		dataType: string
+		lineageTag: 7af48134-d5cb-41df-912a-3ac736a5ac48
+		summarizeBy: none
+		sourceColumn: Size
+
+		annotation SummarizationSetBy = Automatic
+
+	column StandardCost
+		dataType: double
+		lineageTag: 23f9d82a-ceb2-4deb-81c3-4e5d909dbca0
+		summarizeBy: sum
+		sourceColumn: StandardCost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ListPrice
+		dataType: double
+		lineageTag: d1618c51-11db-41b7-978a-5ebcf5de759f
+		summarizeBy: sum
+		sourceColumn: ListPrice
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Weight
+		dataType: double
+		lineageTag: b046f133-35c7-4e17-9ff2-851d05d4ca70
+		summarizeBy: sum
+		sourceColumn: Weight
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Status
+		dataType: string
+		lineageTag: fa59ff09-3fea-44aa-b20f-795c6e50c448
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductLine
+		dataType: string
+		lineageTag: 68dffc77-f05e-4eab-b7f2-ec4d943063e0
+		summarizeBy: none
+		sourceColumn: ProductLine
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductLineLabel
+		dataType: string
+		lineageTag: 404b921d-a3ee-44d3-b93d-616b22c4207b
+		summarizeBy: none
+		sourceColumn: ProductLineLabel
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimProduct = m
+		mode: import
+		source =
+				let
+				    Source = PowerPlatform.Dataflows(null),
+				    Workspaces = Source{[Id="Workspaces"]}[Data],
+				    #"d87dfcca-dff7-477e-ae07-42996ceb937a" = Workspaces{[workspaceId="d87dfcca-dff7-477e-ae07-42996ceb937a"]}[Data],
+				    #"1c27e31b-8d09-4c60-a741-58c4cfe2cc1c" = #"d87dfcca-dff7-477e-ae07-42996ceb937a"{[dataflowId="1c27e31b-8d09-4c60-a741-58c4cfe2cc1c"]}[Data],
+				    DimProduct_ = #"1c27e31b-8d09-4c60-a741-58c4cfe2cc1c"{[entity="DimProduct",version=""]}[Data]
+				in
+				    DimProduct_
+

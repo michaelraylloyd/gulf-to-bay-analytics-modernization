@@ -1,0 +1,47 @@
+table DimProductSubCategory
+	lineageTag: 74dc28a3-3a8d-4869-97ec-0b3767b687de
+
+	column ProductCategoryKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 65cfff1a-291a-481a-8456-c152e5935f07
+		summarizeBy: none
+		sourceColumn: ProductCategoryKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductSubcategoryKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 20cf82a2-b758-4906-9386-a6c509773d3d
+		summarizeBy: none
+		sourceColumn: ProductSubcategoryKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Subcategory
+		dataType: string
+		lineageTag: cbe7e28d-fbb1-4ee5-bd04-23ffb7998d54
+		summarizeBy: none
+		sourceColumn: Subcategory
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimProductSubCategory = m
+		mode: import
+		source =
+				let
+				    Source = PowerPlatform.Dataflows(null),
+				    Workspaces = Source{[Id="Workspaces"]}[Data],
+				    #"d87dfcca-dff7-477e-ae07-42996ceb937a" = Workspaces{[workspaceId="d87dfcca-dff7-477e-ae07-42996ceb937a"]}[Data],
+				    #"1c27e31b-8d09-4c60-a741-58c4cfe2cc1c" = #"d87dfcca-dff7-477e-ae07-42996ceb937a"{[dataflowId="1c27e31b-8d09-4c60-a741-58c4cfe2cc1c"]}[Data],
+				    DimProductSubCategory_ = #"1c27e31b-8d09-4c60-a741-58c4cfe2cc1c"{[entity="DimProductSubCategory",version=""]}[Data]
+				in
+				    DimProductSubCategory_
+

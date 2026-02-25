@@ -1,0 +1,88 @@
+table AllKPIRows
+	lineageTag: f442b0f2-53e0-4d8f-9d1a-0848446115c1
+
+	measure Value = ```
+			
+			SWITCH(
+			    SELECTEDVALUE(AllKPIRows[KPI]),
+			    
+			    -- Sales
+			    "Gross Margin %", FORMAT([Gross Margin %], "0.0%"),
+			    "Sales YoY %", FORMAT([Sales YoY %], "0.0%"),
+			    "Avg Order Value", FORMAT([Avg Order Value], "$#,0"),
+			    "Sales % to Goal", FORMAT([Sales % to Goal], "0.0%"),
+			
+			    -- Orders
+			    "Orders YoY %", FORMAT([Orders YoY %], "0.0%"),
+			    "Avg Order Size", FORMAT([Avg Order Size], "0.0"),
+			    "On-Time Orders %", FORMAT([On-Time Orders %], "0.0%"),
+			    "Return Rate %", FORMAT([Return Rate %], "0.0%"),
+			
+			    -- Customers
+			    "New Customers", FORMAT([New Customers], "#,0"),
+			    "Repeat Customer Rate %", FORMAT([Repeat Customer Rate %], "0.0%"),
+			    "Avg Revenue / Customer", FORMAT([Avg Revenue / Customer], "$#,0"),
+			    "Customer Lifetime Value", FORMAT([Customer Lifetime Value], "$#,0"),
+			
+			    BLANK()
+			)
+			```
+		lineageTag: c5166317-5144-481f-ad35-dd96f5312661
+
+	column SortOrder
+		formatString: 0
+		lineageTag: b29e6ac6-d69c-4012-b420-5a01ed373c58
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [SortOrder]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category
+		lineageTag: 1721ce67-ee96-4159-a7d5-6ca3d73ad261
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Category]
+
+		annotation SummarizationSetBy = Automatic
+
+	column KPI
+		lineageTag: ab3c3163-af10-45a9-b255-e64bd24b6556
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [KPI]
+		sortByColumn: SortOrder
+
+		annotation SummarizationSetBy = Automatic
+
+	partition AllKPIRows = calculated
+		mode: import
+		source =
+				
+				DATATABLE(
+				    "KPI", STRING,
+				    "SortOrder", INTEGER,
+				    "Category", STRING,
+				    {
+				        -- Sales KPIs
+				        { "Gross Margin %",        1, "Sales" },
+				        { "Sales YoY %",           2, "Sales" },
+				        { "Avg Order Value",       3, "Sales" },
+				        { "Sales % to Goal",       4, "Sales" },
+				
+				        -- Orders KPIs
+				        { "Orders YoY %",          1, "Orders" },
+				        { "Avg Order Size",        2, "Orders" },
+				        { "On-Time Orders %",      3, "Orders" },
+				        { "Return Rate %",         4, "Orders" },
+				
+				        -- Customer KPIs
+				        { "New Customers",         1, "Customers" },
+				        { "Repeat Customer Rate %",2, "Customers" },
+				        { "Avg Revenue / Customer",3, "Customers" },
+				        { "Customer Lifetime Value",4, "Customers" }
+				    }
+				)
+
+	annotation PBI_Id = 84cd7a79fa7b4374ac7edec00027a802
+

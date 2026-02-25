@@ -1,0 +1,65 @@
+table DimGeography
+	lineageTag: 91839763-27e9-446f-a568-70c3e3cc6c52
+
+	column GeographyKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 4e5853bc-79ca-4b32-95ce-5b446b6bc5aa
+		summarizeBy: none
+		sourceColumn: GeographyKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		lineageTag: 7ac992f2-e133-4d85-b9d4-7ccaec138b46
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'State Province'
+		dataType: string
+		lineageTag: da33f78e-ec0c-4fb3-97a9-5a15c9839f6a
+		summarizeBy: none
+		sourceColumn: State Province
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		lineageTag: efae0e26-8dee-4fd7-a131-24bf2dc99ff9
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column Continent
+		dataType: string
+		lineageTag: 24cebe63-10eb-445a-86d8-3f77e5a82382
+		summarizeBy: none
+		sourceColumn: Continent
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContinentName = DimGeography[Continent]
+		lineageTag: c486268b-746e-4d6f-be97-52f2ae44ca5a
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimGeography = m
+		mode: import
+		source =
+				let
+				    Source = PowerPlatform.Dataflows(null),
+				    Workspaces = Source{[Id="Workspaces"]}[Data],
+				    #"d87dfcca-dff7-477e-ae07-42996ceb937a" = Workspaces{[workspaceId="d87dfcca-dff7-477e-ae07-42996ceb937a"]}[Data],
+				    #"1c27e31b-8d09-4c60-a741-58c4cfe2cc1c" = #"d87dfcca-dff7-477e-ae07-42996ceb937a"{[dataflowId="1c27e31b-8d09-4c60-a741-58c4cfe2cc1c"]}[Data],
+				    DimGeography_ = #"1c27e31b-8d09-4c60-a741-58c4cfe2cc1c"{[entity="DimGeography",version=""]}[Data]
+				in
+				    DimGeography_
+

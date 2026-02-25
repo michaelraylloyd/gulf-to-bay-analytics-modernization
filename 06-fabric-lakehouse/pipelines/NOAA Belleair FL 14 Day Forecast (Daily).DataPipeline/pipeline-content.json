@@ -1,0 +1,46 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "097efc8e-4c1c-b697-4b0a-1cdc3ba278cb",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "parameters": {
+            "pipeline_name": {
+              "value": "@pipeline().PipelineName",
+              "type": "string"
+            },
+            "notebook_name": {
+              "value": "NOAA Forecast Refresh",
+              "type": "string"
+            },
+            "pipeline_run_id": {
+              "value": "@pipeline().RunId",
+              "type": "string"
+            }
+          }
+        },
+        "policy": {
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "NOAA Forecast Refresh",
+        "dependsOn": []
+      }
+    ],
+    "parameters": {
+      "pipeline_name": {
+        "type": "string"
+      },
+      "notebook_name": {
+        "type": "string"
+      },
+      "pipeline_run_id": {
+        "type": "string"
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataPipeline",
+    "displayName": "NOAA Belleair FL 14 Day Forecast (Daily)"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "279696ca-2a7e-ae95-4e29-fabfe5db98c1"
+  }
+}

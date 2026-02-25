@@ -75,6 +75,7 @@ The repository is organized into modular, prefixed folders that reflect the mode
 | **10‑** | power-apps | KPI Explorer, Equipment Requests, and operational workflow applications |
 | **11‑** | dataverse | Dataverse tables, solutions, and Power Platform data integration |
 | **12‑** | eventhouse | Eventstream ingestion, KQL database, real‑time telemetry, and streaming analytics |
+| **13‑** | apis | Token‑secured API ingestion patterns, parameterized pipelines, local validation scripts, and Fabric migration examples |
 | **assets** | assets | Branding, icons, screenshots, and visual elements |
 | **docs** | docs | Architecture diagrams, modernization notes, READMEs, and narrative documentation |
 | **tools** | tools | PowerShell automation scripts, repo utilities, and lock‑resolution helpers |
@@ -427,7 +428,31 @@ Eventhouse provides the real‑time analytics layer within the modernization eco
 
 ---
 
-## 18. Documentation & Repo Hygiene
+## 18. APIs
+
+The APIs layer provides the external‑data ingestion backbone for the modernization ecosystem, enabling secure, parameterized, and fully automated retrieval of third‑party datasets. This project uses token‑secured, metadata‑driven patterns to ingest structured API responses, validate them locally, and migrate them cleanly into Fabric Lakehouse and Warehouse layers for downstream analytics.
+
+<details>
+<summary><strong>API Highlights</strong></summary>
+
+- Token‑secured, parameterized ingestion patterns  
+- Local validation scripts for deterministic development  
+- Fabric Pipeline migration for unified orchestration  
+- Support for scheduled, incremental, and on‑demand API pulls  
+- Standardized Bronze/Silver ingestion flow for external data  
+- Reusable patterns for future REST, JSON, and paginated APIs  
+
+</details>
+
+### 🔌 API - NOAA Weather Ingest
+![alt text](../../assets/images/portfolio-overview/API_NOAA_Weather_Ingest.png)
+
+### 🔌 API - FL Census Population by County
+![alt text](../../assets/images/portfolio-overview/API_FL_Census_Pop.png)
+
+---
+
+## 19. Documentation & Repo Hygiene
 
 Documentation and automation scripts ensure a clean, discoverable, and recruiter‑ready repository.
 
@@ -447,7 +472,7 @@ Documentation and automation scripts ensure a clean, discoverable, and recruiter
 
 ---
 
-## 19. SDLC Evolution — Introducing Fabric Workspace Source Control
+## 20. SDLC Evolution — Introducing Fabric Workspace Source Control
 
 Fabric’s built‑in Git integration extends the modernization SDLC into the analytics workspace itself, allowing Lakehouses, Eventhouses, Pipelines, Notebooks, and Power BI artifacts to participate in the same branch‑based workflow used across the rest of the repo. Source control now provides full visibility into workspace changes, commit history, and promotion patterns across feature, dev, and main branches.
 
@@ -480,29 +505,30 @@ Fabric’s built‑in Git integration extends the modernization SDLC into the an
 
 ---
 
-## 20. Architecture Diagram  
+## 21. Architecture Diagram  
 ![alt text](../../assets/images/portfolio-overview/Architecture_Diagram.png)
 
 ---
 
-## 21. About the Developer
+## 22. About the Developer
 
 **Michael Lloyd**  
 Business Intelligence Developer  
 Gulf to Bay Analytics  
 Clearwater, FL  
 
-- SQL Server, SSIS, SSAS, SSRS  
-- Python ETL  
-- Fabric Data Factory  
-- Power BI  
-- Power Automate  
-- Metadata‑driven design  
-- Modernization strategy  
+- **Enterprise SQL engineering** — advanced T‑SQL, performance tuning, schema design, stored procedures, and operational data modeling across large, legacy Microsoft BI estates.  
+- **End‑to‑end ETL development** — SSIS package modernization, metadata‑driven Python ETL patterns, and clean migration paths into Fabric Pipelines.  
+- **Semantic modeling expertise** — SSAS tabular lineage, Power BI semantic models, conformed dimensions, and enterprise‑grade KPI frameworks.  
+- **Reporting modernization** — SSRS → Power BI transitions, paginated report rebuilds, and narrative‑driven dashboard design aligned to business decision flows.  
+- **Fabric architecture leadership** — Lakehouse medallion design, Warehouse integration, Pipelines orchestration, and unified governance across the Microsoft data stack.  
+- **Power Platform integration** — Power Automate orchestration, Power Apps workflow solutions, and Dataverse‑aligned data models for operational analytics.  
+- **API ingestion engineering** — token‑secured, parameterized REST ingestion patterns with local validation and Fabric migration paths.  
+- **Modernization strategy & delivery** — unifying fragmented BI ecosystems, establishing repeatable patterns, and building scalable analytics foundations for long‑term growth.  
 
 ---
 
-## 22. Contact
+## 23. Contact
 
 - GitHub: https://github.com/michaelraylloyd  
 - LinkedIn: https://www.linkedin.com/in/michael-lloyd-7aa62250/  

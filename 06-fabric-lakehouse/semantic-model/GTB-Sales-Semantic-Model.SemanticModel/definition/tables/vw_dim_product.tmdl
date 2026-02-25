@@ -1,0 +1,130 @@
+table vw_dim_product
+	lineageTag: 47603422-d5a8-4baf-aa72-101c36da4bd9
+	sourceLineageTag: [dbo].[vw_dim_product]
+
+	column product_key
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 5f95b681-27dc-450a-b9b6-6694900cc6c7
+		sourceLineageTag: product_key
+		summarizeBy: none
+		sourceColumn: product_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e637b6e7-ab2a-46b8-be53-37570d0e699e
+		sourceLineageTag: product_id
+		summarizeBy: none
+		sourceColumn: product_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 0e582932-eb61-4510-89c3-06ecb04dc4ef
+		sourceLineageTag: product_name
+		summarizeBy: none
+		sourceColumn: product_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_number
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 78bafad5-8861-4174-9293-5a18da13060a
+		sourceLineageTag: product_number
+		summarizeBy: none
+		sourceColumn: product_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column color
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ee6998e2-83bc-4c4a-b175-39ad8a8f2f33
+		sourceLineageTag: color
+		summarizeBy: none
+		sourceColumn: color
+
+		annotation SummarizationSetBy = Automatic
+
+	column standard_cost
+		dataType: double
+		sourceProviderType: real
+		lineageTag: 562a98c1-3c81-4c48-aa11-2db72b0ec13d
+		sourceLineageTag: standard_cost
+		summarizeBy: none
+		sourceColumn: standard_cost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column list_price
+		dataType: double
+		sourceProviderType: real
+		lineageTag: 90847446-db45-44ef-b106-adfa2dd06196
+		sourceLineageTag: list_price
+		summarizeBy: none
+		sourceColumn: list_price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column size
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 88c66c88-9fc2-4b0b-999f-53223b5f35bb
+		sourceLineageTag: size
+		summarizeBy: none
+		sourceColumn: size
+
+		annotation SummarizationSetBy = Automatic
+
+	column weight
+		dataType: double
+		sourceProviderType: real
+		lineageTag: eaf901ce-ce7b-4c52-aca6-1eba81f9734e
+		sourceLineageTag: weight
+		summarizeBy: none
+		sourceColumn: weight
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column category
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a3877e6c-745c-4633-b790-030e62c4d1da
+		sourceLineageTag: category
+		summarizeBy: none
+		sourceColumn: category
+
+		annotation SummarizationSetBy = Automatic
+
+	column subcategory
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c39cb4cd-eb21-4573-93a5-5a1f0c5d74d9
+		sourceLineageTag: subcategory
+		summarizeBy: none
+		sourceColumn: subcategory
+
+		annotation SummarizationSetBy = Automatic
+
+	partition vw_dim_product = entity
+		mode: directLake
+		source
+			entityName: vw_dim_product
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+
