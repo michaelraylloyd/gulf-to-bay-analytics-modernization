@@ -303,7 +303,7 @@ A dedicated DQ subsystem validates, logs, and enforces data quality rules across
 Databricks provides a unified Spark compute layer for large‑scale transformations, notebook‑driven engineering, and Lakehouse‑aligned processing that complements both Fabric and Snowflake within the modernization arc.
 
 <details>
-<summary><strong>🔥 Databricks Highlights</strong></summary>
+<summary><strong>🔄 Databricks Highlights</strong></summary>
 
 - Clean Bronze/Silver/Gold notebook hierarchy for structured Lakehouse development  
 - PySpark ingestion patterns with schema enforcement and Delta Lake optimization  
@@ -327,7 +327,7 @@ Databricks provides a unified Spark compute layer for large‑scale transformati
 Snowflake provides a cloud‑native warehouse foundation for raw ingestion, SQL exploration, and early modeling patterns that complement the broader Gulf‑to‑Bay modernization arc.
 
 <details>
-<summary><strong>🔷 Snowflake Highlights</strong></summary>
+<summary><strong>❄️ Snowflake Highlights</strong></summary>
 
 - Internal stage–based ingestion of AdventureWorks CSV exports  
 - Bronze layer creation using Snowsight’s “Create Table from File” workflow  
