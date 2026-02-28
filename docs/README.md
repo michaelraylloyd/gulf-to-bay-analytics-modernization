@@ -70,12 +70,13 @@ The repository is organized into modular, prefixed folders that reflect the mode
 | **05‑** | azure-data-factory | Legacy ADF pipelines, mappings, and modernization notes |
 | **06‑** | fabric-lakehouse | Full Fabric medallion architecture (Bronze/Silver/Gold), notebooks, pipelines, semantic model, and DQ subsystem |
 | **07‑** | databricks | Spark notebooks, workflows, and future expansion for Lakehouse compute |
-| **08‑** | power-bi | PBIX files, M scripts, DAX, semantic models, and report assets |
-| **09‑** | power-automate | Automated refresh flows, orchestration logic, and operational alerts |
-| **10‑** | power-apps | KPI Explorer, Equipment Requests, and operational workflow applications |
-| **11‑** | dataverse | Dataverse tables, solutions, and Power Platform data integration |
-| **12‑** | eventhouse | Eventstream ingestion, KQL database, real‑time telemetry, and streaming analytics |
-| **13‑** | apis | Token‑secured API ingestion patterns, parameterized pipelines, local validation scripts, and Fabric migration examples |
+| **08‑** | snowflake | Snowflake Bronze ingestion, stage patterns, SQL exploration, and warehouse‑ready modeling foundations |
+| **09‑** | power-bi | PBIX files, M scripts, DAX, semantic models, and report assets |
+| **10‑** | power-automate | Automated refresh flows, orchestration logic, and operational alerts |
+| **11‑** | power-apps | KPI Explorer, Equipment Requests, and operational workflow applications |
+| **12‑** | dataverse | Dataverse tables, solutions, and Power Platform data integration |
+| **13‑** | eventhouse | Eventstream ingestion, KQL database, real‑time telemetry, and streaming analytics |
+| **14‑** | apis | Token‑secured API ingestion patterns, parameterized pipelines, local validation scripts, and Fabric migration examples |
 | **assets** | assets | Branding, icons, screenshots, and visual elements |
 | **docs** | docs | Architecture diagrams, modernization notes, READMEs, and narrative documentation |
 | **tools** | tools | PowerShell automation scripts, repo utilities, and lock‑resolution helpers |
@@ -297,7 +298,55 @@ A dedicated DQ subsystem validates, logs, and enforces data quality rules across
 
 ---
 
-## 14. Reporting & Dashboards
+## 14. Databricks
+
+Databricks provides a unified Spark compute layer for large‑scale transformations, notebook‑driven engineering, and Lakehouse‑aligned processing that complements both Fabric and Snowflake within the modernization arc.
+
+<details>
+<summary><strong>🔥 Databricks Highlights</strong></summary>
+
+- Clean Bronze/Silver/Gold notebook hierarchy for structured Lakehouse development  
+- PySpark ingestion patterns with schema enforcement and Delta Lake optimization  
+- Parameterized workflows orchestrated through Databricks Jobs  
+- Serverless compute for scalable transformations and ML‑ready pipelines  
+- Lineage tracking and version‑controlled job definitions for reproducibility  
+- Integration points with Fabric Lakehouse and Snowflake for hybrid architectures  
+
+</details>
+
+### 🔄 Databricks Notebooks
+![alt text](../assets/images/portfolio-overview/Databricks_Notebook.png)
+
+### 🔄 Databricks Jobs
+![alt text](../assets/images/portfolio-overview/Databricks_Pipeline.png)
+
+---
+
+## 15. Snowflake
+
+Snowflake provides a cloud‑native warehouse foundation for raw ingestion, SQL exploration, and early modeling patterns that complement the broader Gulf‑to‑Bay modernization arc.
+
+<details>
+<summary><strong>🔷 Snowflake Highlights</strong></summary>
+
+- Internal stage–based ingestion of AdventureWorks CSV exports  
+- Bronze layer creation using Snowsight’s “Create Table from File” workflow  
+- Column normalization and header‑row cleanup for consistent schemas  
+- Early numeric and date type alignment for query‑ready tables  
+- Parameter‑driven SQL patterns for rollups, KPIs, and exploratory analytics  
+- Foundation for future Silver/Gold modeling or dbt‑based transformations  
+
+</details>
+
+### ❄️ Snowflake - Analysis Table
+![alt text](../assets/images/portfolio-overview/Snowflake_Table.png)
+
+### ❄️ Snowflake - Analysis Chart
+![alt text](../assets/images/portfolio-overview/Snowflake_Chart.png)
+
+---
+
+## 16. Reporting & Dashboards
 
 Power BI dashboards deliver executive‑ready KPIs and operational insights.
 
@@ -340,7 +389,7 @@ Power BI dashboards deliver executive‑ready KPIs and operational insights.
 
 ---
 
-## 15. Power Automate — Refresh & Notifications
+## 17. Power Automate — Refresh & Notifications
 
 Power Automate flows handle scheduled refreshes and alerting across the analytics ecosystem.
 
@@ -360,7 +409,7 @@ Power Automate flows handle scheduled refreshes and alerting across the analytic
 
 ---
 
-## 16. Power Apps
+## 18. Power Apps
 
 A Power Apps interface provides interactive KPI exploration for business users<strong>📱 Power.
 
@@ -404,7 +453,7 @@ A Power Apps interface provides interactive KPI exploration for business users<s
 
 ---
 
-## 17. Eventhouse
+## 19. Eventhouse
 
 Eventhouse provides the real‑time analytics layer within the modernization ecosystem, enabling continuous ingestion, storage, and querying of streaming data. In this project, an Eventstream pipeline writes live S&P 500 market data into the Eventhouse database, making it immediately available for KQL‑based validation, profiling, and downstream analytics.
 
@@ -428,7 +477,7 @@ Eventhouse provides the real‑time analytics layer within the modernization eco
 
 ---
 
-## 18. APIs
+## 20. APIs
 
 The APIs layer provides the external‑data ingestion backbone for the modernization ecosystem, enabling secure, parameterized, and fully automated retrieval of third‑party datasets. This project uses token‑secured, metadata‑driven patterns to ingest structured API responses, validate them locally, and migrate them cleanly into Fabric Lakehouse and Warehouse layers for downstream analytics.
 
@@ -452,7 +501,7 @@ The APIs layer provides the external‑data ingestion backbone for the moderniza
 
 ---
 
-## 19. Documentation & Repo Hygiene
+## 21. Documentation & Repo Hygiene
 
 Documentation and automation scripts ensure a clean, discoverable, and recruiter‑ready repository.
 
@@ -472,7 +521,7 @@ Documentation and automation scripts ensure a clean, discoverable, and recruiter
 
 ---
 
-## 20. SDLC Evolution — Introducing Fabric Workspace Source Control
+## 22. SDLC Evolution — Introducing Fabric Workspace Source Control
 
 Fabric’s built‑in Git integration extends the modernization SDLC into the analytics workspace itself, allowing Lakehouses, Eventhouses, Pipelines, Notebooks, and Power BI artifacts to participate in the same branch‑based workflow used across the rest of the repo. Source control now provides full visibility into workspace changes, commit history, and promotion patterns across feature, dev, and main branches.
 
@@ -505,12 +554,12 @@ Fabric’s built‑in Git integration extends the modernization SDLC into the an
 
 ---
 
-## 21. Architecture Diagram  
+## 23. Architecture Diagram  
 ![alt text](../assets/images/portfolio-overview/Architecture_Diagram.png)
 
 ---
 
-## 22. About the Developer
+## 24. About the Developer
 
 **Michael Lloyd**  
 Business Intelligence Developer  
@@ -528,7 +577,7 @@ Clearwater, FL
 
 ---
 
-## 23. Contact
+## 25. Contact
 
 - GitHub: https://github.com/michaelraylloyd  
 - LinkedIn: https://www.linkedin.com/in/michael-lloyd-7aa62250/  

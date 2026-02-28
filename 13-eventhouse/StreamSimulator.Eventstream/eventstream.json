@@ -1,0 +1,109 @@
+{
+  "sources": [
+    {
+      "id": "ca4a26d8-1524-45aa-9bee-f466d3aa4614",
+      "name": "Sp500Stocks",
+      "type": "SampleData",
+      "properties": {
+        "type": "SP500Stocks"
+      }
+    }
+  ],
+  "destinations": [
+    {
+      "id": "6c77501e-9855-4184-bd8a-336414683fc0",
+      "name": "StreamSimulator",
+      "type": "Eventhouse",
+      "properties": {
+        "dataIngestionMode": "ProcessedIngestion",
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "itemId": "aa328154-b313-a81f-48e9-9c596af6c4ab",
+        "databaseName": "RoboticsEventhouse",
+        "tableName": "Sp500Stocks",
+        "inputSerialization": {
+          "type": "Json",
+          "properties": {
+            "encoding": "UTF8"
+          }
+        }
+      },
+      "inputNodes": [
+        {
+          "name": "StreamSimulator-stream"
+        }
+      ],
+      "inputSchemas": [
+        {
+          "name": "StreamSimulator-stream",
+          "schema": {
+            "columns": [
+              {
+                "name": "Date",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "Open",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "High",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "Low",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "Close",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "AdjClose",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "Volume",
+                "type": "BigInt",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "Ticker",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "streams": [
+    {
+      "id": "ac33a19e-9ac6-451d-9e83-3a76a45efd76",
+      "name": "StreamSimulator-stream",
+      "type": "DefaultStream",
+      "properties": {},
+      "inputNodes": [
+        {
+          "name": "Sp500Stocks"
+        }
+      ]
+    }
+  ],
+  "operators": [],
+  "compatibilityLevel": "1.1"
+}
