@@ -583,7 +583,7 @@ classDef spacer fill:#0000,stroke:#0000,color:#0000;
 %% L1 — LEGACY ENTERPRISE BI STACK
 %% ---------------------------------
 subgraph L1[01–04 • Legacy Enterprise BI Stack]
-    L1_PAD[" "]:::spacer
+    L1_PAD["<br/><br/>"]:::spacer
     SQL[01-sql-server<br/>SQL Server DBs, metadata, procs]:::dark
     SSIS[02-ssis<br/>Legacy SSIS ETL packages]:::dark
     SSAS[03-ssas<br/>Tabular models, semantic definitions]:::dark
@@ -594,7 +594,7 @@ end
 %% L2 — CLOUD INGESTION & ORCHESTRATION
 %% ---------------------------------
 subgraph L2[05, 13, 14 • Cloud Ingestion & Orchestration]
-    L2_PAD[" "]:::spacer
+    L2_PAD["<br/><br/>"]:::spacer
     ADF[05-azure-data-factory<br/>ADF pipelines & migration notes]:::dark
     EVENT[13-eventhouse<br/>Eventstream ingestion & KQL DB]:::dark
     APIS[14-apis<br/>Token-secured API ingestion patterns]:::dark
@@ -604,7 +604,7 @@ end
 %% L3 — MODERN LAKEHOUSE & COMPUTE
 %% ---------------------------------
 subgraph L3[06, 07, 08 • Modern Lakehouse & Compute]
-    L3_PAD[" "]:::spacer
+    L3_PAD["<br/><br/>"]:::spacer
     FAB[06-fabric-lakehouse<br/>Bronze/Silver/Gold, notebooks, pipelines]:::dark
     DBX[07-databricks<br/>Spark notebooks & workflows]:::dark
     SNOW[08-snowflake<br/>Stages, Bronze ingestion, SQL modeling]:::dark
@@ -614,7 +614,7 @@ end
 %% L4 — SEMANTIC MODELING
 %% ---------------------------------
 subgraph L4[09 • Semantic Modeling]
-    L4_PAD[" "]:::spacer
+    L4_PAD["<br/><br/>"]:::spacer
     PBI[09-power-bi<br/>PBIX, M scripts, DAX, semantic models]:::dark
 end
 
@@ -622,7 +622,7 @@ end
 %% L5 — AUTOMATION & APPLICATIONS
 %% ---------------------------------
 subgraph L5[10, 11, 12 • Automation & Applications]
-    L5_PAD[" "]:::spacer
+    L5_PAD["<br/><br/>"]:::spacer
     PA[10-power-automate<br/>Refresh flows & orchestration]:::dark
     APPS[11-power-apps<br/>KPI Explorer, workflow apps]:::dark
     DV[12-dataverse<br/>Dataverse tables & integration]:::dark
