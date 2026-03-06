@@ -570,6 +570,7 @@ Fabric’s built‑in Git integration extends the modernization SDLC into the an
 
 ## 23. Architecture Diagram  
 
+```mermaid
 flowchart TB
     %% ============================
     %% SOURCE & LEGACY SYSTEMS
@@ -641,6 +642,7 @@ flowchart TB
     PBI --> APPS
     DV --> APPS
     PA --> APPS
+```
 
 ---
 
