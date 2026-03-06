@@ -571,35 +571,65 @@ Fabric’s built‑in Git integration extends the modernization SDLC into the an
 ## 23. Architecture Diagram  
 
 ```mermaid
+%%{init: {'flowchart': {'nodeSpacing': 30, 'rankSpacing': 40}}}%%
+
 flowchart TB
 
-classDef box fill:#ffffff,stroke:#999,stroke-width:1px,padding:10px;
+classDef pad fill:#ffffff,stroke:#999,stroke-width:1px,margin:20px,padding:10px;
+classDef spacer fill:#0000,stroke:#0000,color:#0000;
 
-%% L1
-SQL[01-sql-server<br/>SQL Server DBs, metadata, procs]:::box
-SSIS[02-ssis<br/>Legacy SSIS ETL packages]:::box
-SSAS[03-ssas<br/>Tabular models, semantic definitions]:::box
-SSRS[04-ssrs<br/>Paginated reports]:::box
+%% ---------------------------------
+%% SOURCE & LEGACY SYSTEMS
+%% ---------------------------------
+subgraph L1[01-04 • Legacy Enterprise BI Stack]
+    L1_PAD[" "]:::spacer
+    SQL[01-sql-server<br/>SQL Server DBs, metadata, procs]:::pad
+    SSIS[02-ssis<br/>Legacy SSIS ETL packages]:::pad
+    SSAS[03-ssas<br/>Tabular models, semantic definitions]:::pad
+    SSRS[04-ssrs<br/>Paginated reports]:::pad
+end
 
-%% L2
-ADF[05-azure-data-factory<br/>ADF pipelines & migration notes]:::box
-EVENT[13-eventhouse<br/>Eventstream ingestion & KQL DB]:::box
-APIS[14-apis<br/>Token-secured API ingestion patterns]:::box
+%% ---------------------------------
+%% CLOUD INGESTION & ORCHESTRATION
+%% ---------------------------------
+subgraph L2[05, 13, 14 • Cloud Ingestion & Orchestration]
+    L2_PAD[" "]:::spacer
+    ADF[05-azure-data-factory<br/>ADF pipelines & migration notes]:::pad
+    EVENT[13-eventhouse<br/>Eventstream ingestion & KQL DB]:::pad
+    APIS[14-apis<br/>Token-secured API ingestion patterns]:::pad
+end
 
-%% L3
-FAB[06-fabric-lakehouse<br/>Bronze/Silver/Gold, notebooks, pipelines]:::box
-DBX[07-databricks<br/>Spark notebooks & workflows]:::box
-SNOW[08-snowflake<br/>Stages, Bronze ingestion, SQL modeling]:::box
+%% ---------------------------------
+%% MODERN LAKEHOUSE & COMPUTE
+%% ---------------------------------
+subgraph L3[06, 07, 08 • Modern Lakehouse & Compute]
+    L3_PAD[" "]:::spacer
+    FAB[06-fabric-lakehouse<br/>Bronze/Silver/Gold, notebooks, pipelines]:::pad
+    DBX[07-databricks<br/>Spark notebooks & workflows]:::pad
+    SNOW[08-snowflake<br/>Stages, Bronze ingestion, SQL modeling]:::pad
+end
 
-%% L4
-PBI[09-power-bi<br/>PBIX, M scripts, DAX, semantic models]:::box
+%% ---------------------------------
+%% SEMANTIC MODELING
+%% ---------------------------------
+subgraph L4[09 • Semantic Modeling]
+    L4_PAD[" "]:::spacer
+    PBI[09-power-bi<br/>PBIX, M scripts, DAX, semantic models]:::pad
+end
 
-%% L5
-PA[10-power-automate<br/>Refresh flows & orchestration]:::box
-APPS[11-power-apps<br/>KPI Explorer, workflow apps]:::box
-DV[12-dataverse<br/>Dataverse tables & integration]:::box
+%% ---------------------------------
+%% AUTOMATION & APPS
+%% ---------------------------------
+subgraph L5[10, 11, 12 • Automation & Applications]
+    L5_PAD[" "]:::spacer
+    PA[10-power-automate<br/>Refresh flows & orchestration]:::pad
+    APPS[11-power-apps<br/>KPI Explorer, workflow apps]:::pad
+    DV[12-dataverse<br/>Dataverse tables & integration]:::pad
+end
 
+%% ---------------------------------
 %% FLOWS
+%% ---------------------------------
 SQL --> ADF
 SSIS --> ADF
 SSAS --> PBI
