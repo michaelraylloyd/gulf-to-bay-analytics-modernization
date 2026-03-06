@@ -115,7 +115,7 @@ Legacy objects were consolidated, standardized, and restructured to enable relia
 </details>
 
 ### 🧱 SQL Server  
-![alt text](../assets/images/portfolio-overview/SQL_Server.png)
+![alt text](../assets/images/portfolio-overview/SQL_Server_Database_Tools.png)
 
 ---
 
@@ -569,7 +569,78 @@ Fabric’s built‑in Git integration extends the modernization SDLC into the an
 ---
 
 ## 23. Architecture Diagram  
-![alt text](../assets/images/portfolio-overview/Architecture_Diagram.png)
+```mermaid
+flowchart TB
+    %% ============================
+    %% SOURCE & LEGACY SYSTEMS
+    %% ============================
+    subgraph L1[01–04 • Legacy Enterprise BI Stack]
+        SQL[01‑sql-server<br/>SQL Server DBs, metadata, procs]
+        SSIS[02‑ssis<br/>Legacy SSIS ETL packages]
+        SSAS[03‑ssas<br/>Tabular models, semantic definitions]
+        SSRS[04‑ssrs<br/>Paginated reports]
+    end
+
+    %% ============================
+    %% CLOUD INGESTION & ORCHESTRATION
+    %% ============================
+    subgraph L2[05, 13, 14 • Cloud Ingestion & Orchestration]
+        ADF[05‑azure-data-factory<br/>ADF pipelines & migration notes]
+        EVENT[13‑eventhouse<br/>Eventstream ingestion & KQL DB]
+        APIS[14‑apis<br/>Token‑secured API ingestion patterns]
+    end
+
+    %% ============================
+    %% MODERN LAKEHOUSE & COMPUTE
+    %% ============================
+    subgraph L3[06, 07, 08 • Modern Lakehouse & Compute]
+        FAB[06‑fabric-lakehouse<br/>Bronze/Silver/Gold, notebooks, pipelines]
+        DBX[07‑databricks<br/>Spark notebooks & workflows]
+        SNOW[08‑snowflake<br/>Stages, Bronze ingestion, SQL modeling]
+    end
+
+    %% ============================
+    %% SEMANTIC MODELING
+    %% ============================
+    subgraph L4[09 • Semantic Modeling]
+        PBI[09‑power-bi<br/>PBIX, M scripts, DAX, semantic models]
+    end
+
+    %% ============================
+    %% AUTOMATION & APPS
+    %% ============================
+    subgraph L5[10, 11, 12 • Automation & Applications]
+        PA[10‑power-automate<br/>Refresh flows & orchestration]
+        APPS[11‑power-apps<br/>KPI Explorer, workflow apps]
+        DV[12‑dataverse<br/>Dataverse tables & integration]
+    end
+
+    %% ============================
+    %% FLOWS
+    %% ============================
+    SQL --> ADF
+    SSIS --> ADF
+    SSAS --> PBI
+    SSRS --> PBI
+
+    ADF --> FAB
+    ADF --> DBX
+    ADF --> SNOW
+
+    EVENT --> FAB
+    EVENT --> SNOW
+
+    APIS --> FAB
+    APIS --> SNOW
+
+    FAB --> PBI
+    DBX --> FAB
+    SNOW --> PBI
+
+    PBI --> PA
+    PBI --> APPS
+    DV --> APPS
+    PA --> APPS
 
 ---
 
