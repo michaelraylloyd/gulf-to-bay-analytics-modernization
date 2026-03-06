@@ -571,66 +571,47 @@ Fabric’s built‑in Git integration extends the modernization SDLC into the an
 ## 23. Architecture Diagram  
 
 ```mermaid
-%%{init: {'flowchart': {'nodeSpacing': 30, 'rankSpacing': 40}}}%%
+%%{init: {'flowchart': {'nodeSpacing': 20, 'rankSpacing': 25}}}%%
 
 flowchart TB
 
-%% Dark theme node style
 classDef dark fill:#000000,stroke:#ffffff,stroke-width:1px,color:#ffffff,padding:10px;
-classDef spacer fill:#0000,stroke:#0000,color:#0000;
 
-%% ---------------------------------
-%% L1 — LEGACY ENTERPRISE BI STACK
-%% ---------------------------------
+%% L1 — Legacy BI Stack
 subgraph L1[Legacy BI Stack]
-    L1_PAD["\n\n"]:::spacer
     SQL[01-sql-server<br/>SQL Server DBs, metadata, procs]:::dark
     SSIS[02-ssis<br/>Legacy SSIS ETL packages]:::dark
     SSAS[03-ssas<br/>Tabular models, semantic definitions]:::dark
     SSRS[04-ssrs<br/>Paginated reports]:::dark
 end
 
-%% ---------------------------------
-%% L2 — CLOUD INGESTION & ORCHESTRATION
-%% ---------------------------------
+%% L2 — Cloud Orchestration
 subgraph L2[Cloud Orchestration]
-    L2_PAD["\n\n"]:::spacer
     ADF[05-azure-data-factory<br/>ADF pipelines & migration notes]:::dark
     EVENT[13-eventhouse<br/>Eventstream ingestion & KQL DB]:::dark
     APIS[14-apis<br/>Token-secured API ingestion patterns]:::dark
 end
 
-%% ---------------------------------
-%% L3 — MODERN LAKEHOUSE & COMPUTE
-%% ---------------------------------
+%% L3 — Lakehouse Compute
 subgraph L3[Lakehouse Compute]
-    L3_PAD["\n\n"]:::spacer
     FAB[06-fabric-lakehouse<br/>Bronze/Silver/Gold, notebooks, pipelines]:::dark
     DBX[07-databricks<br/>Spark notebooks & workflows]:::dark
     SNOW[08-snowflake<br/>Stages, Bronze ingestion, SQL modeling]:::dark
 end
 
-%% ---------------------------------
-%% L4 — SEMANTIC MODELING
-%% ---------------------------------
+%% L4 — Semantic Modeling
 subgraph L4[Semantic Modeling]
-    L4_PAD["\n\n"]:::spacer
     PBI[09-power-bi<br/>PBIX, M scripts, DAX, semantic models]:::dark
 end
 
-%% ---------------------------------
-%% L5 — AUTOMATION & APPLICATIONS
-%% ---------------------------------
+%% L5 — Automation & Applications
 subgraph L5[Automation & Applications]
-    L5_PAD["\n\n"]:::spacer
     PA[10-power-automate<br/>Refresh flows & orchestration]:::dark
     APPS[11-power-apps<br/>KPI Explorer, workflow apps]:::dark
     DV[12-dataverse<br/>Dataverse tables & integration]:::dark
 end
 
-%% ---------------------------------
 %% FLOWS
-%% ---------------------------------
 SQL --> ADF
 SSIS --> ADF
 SSAS --> PBI
