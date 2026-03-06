@@ -603,7 +603,7 @@ end
 %% ---------------------------------
 %% L3 — MODERN LAKEHOUSE & COMPUTE
 %% ---------------------------------
-subgraph L3[Modern Lakehouse Compute]
+subgraph L3[Lakehouse Compute]
     L3_PAD["\n\n"]:::spacer
     FAB[06-fabric-lakehouse<br/>Bronze/Silver/Gold, notebooks, pipelines]:::dark
     DBX[07-databricks<br/>Spark notebooks & workflows]:::dark
