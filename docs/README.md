@@ -571,7 +571,7 @@ Fabric’s built‑in Git integration extends the modernization SDLC into the an
 ## 23. Architecture Diagram  
 
 ```mermaid
-%%{init: {'flowchart': {'nodeSpacing': 20, 'rankSpacing': 30}}}%%
+%%{init: {'flowchart': {'nodeSpacing': 20, 'rankSpacing': 25}}}%%
 
 flowchart TB
 
@@ -585,11 +585,6 @@ subgraph L1[Legacy BI Stack]
     SSIS[02-ssis<br/>Legacy SSIS ETL packages]:::dark
     SSAS[03-ssas<br/>Tabular models, semantic definitions]:::dark
     SSRS[04-ssrs<br/>Paginated reports]:::dark
-
-    %% horizontal alignment
-    SQL --- SSIS
-    SSIS --- SSAS
-    SSAS --- SSRS
 end
 
 %% L2 — Cloud Orchestration
@@ -598,9 +593,6 @@ subgraph L2[Cloud Orchestration]
     ADF[05-azure-data-factory<br/>ADF pipelines & migration notes]:::dark
     EVENT[13-eventhouse<br/>Eventstream ingestion & KQL DB]:::dark
     APIS[14-apis<br/>Token-secured API ingestion patterns]:::dark
-
-    ADF --- EVENT
-    EVENT --- APIS
 end
 
 %% L3 — Lakehouse Compute
@@ -609,9 +601,6 @@ subgraph L3[Lakehouse Compute]
     FAB[06-fabric-lakehouse<br/>Bronze/Silver/Gold, notebooks, pipelines]:::dark
     DBX[07-databricks<br/>Spark notebooks & workflows]:::dark
     SNOW[08-snowflake<br/>Stages, Bronze ingestion, SQL modeling]:::dark
-
-    FAB --- DBX
-    DBX --- SNOW
 end
 
 %% L4 — Semantic Modeling
@@ -626,9 +615,6 @@ subgraph L5[Automation & Applications]
     PA[10-power-automate<br/>Refresh flows & orchestration]:::dark
     APPS[11-power-apps<br/>KPI Explorer, workflow apps]:::dark
     DV[12-dataverse<br/>Dataverse tables & integration]:::dark
-
-    PA --- APPS
-    APPS --- DV
 end
 
 %% FLOWS
