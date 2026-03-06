@@ -571,26 +571,18 @@ Fabric’s built‑in Git integration extends the modernization SDLC into the an
 ## 23. Architecture Diagram  
 
 ```mermaid
-%% ---------------------------------------------------------
-%% GLOBAL INIT — spacing GitHub actually honors
-%% ---------------------------------------------------------
-%%{init: {'flowchart': {'nodeSpacing': 40, 'rankSpacing': 60}}}%%
+%%{init: {'flowchart': {'nodeSpacing': 40, 'rankSpacing': 50}}}%%
 
 flowchart TB
 
-%% ---------------------------------------------------------
-%% GLOBAL CLASSES
-%% ---------------------------------------------------------
-classDef layer fill:#ffffff,stroke:#999,stroke-width:1px;
-classDef wide fill:#ffffff,stroke:#999,stroke-width:1px;
-classDef pad margin:20px,padding:10px;
-classDef spacer fill:#0000,stroke:#0000,color:#0000;
+classDef pad fill:#ffffff,stroke:#999,stroke-width:1px,margin:20px,padding:10px;
+classDef subheader fill:#f5f5f5,stroke:#999,stroke-width:1px,font-weight:bold,padding:6px;
 
 %% ---------------------------------------------------------
 %% L1 — LEGACY ENTERPRISE BI STACK
 %% ---------------------------------------------------------
-subgraph L1[01–04 • Legacy Enterprise BI Stack]
-    L1_PAD[" "]:::spacer
+subgraph L1
+    L1_HDR["<b>01–04 • Legacy Enterprise BI Stack</b>"]:::subheader
 
     SQL[01-sql-server<br/>SQL Server DBs, metadata, procs]:::pad
     SSIS[02-ssis<br/>Legacy SSIS ETL packages]:::pad
@@ -601,8 +593,8 @@ end
 %% ---------------------------------------------------------
 %% L2 — CLOUD INGESTION & ORCHESTRATION
 %% ---------------------------------------------------------
-subgraph L2[05, 13, 14 • Cloud Ingestion & Orchestration]
-    L2_PAD[" "]:::spacer
+subgraph L2
+    L2_HDR["<b>05, 13, 14 • Cloud Ingestion & Orchestration</b>"]:::subheader
 
     ADF[05-azure-data-factory<br/>ADF pipelines & migration notes]:::pad
     EVENT[13-eventhouse<br/>Eventstream ingestion & KQL DB]:::pad
@@ -612,8 +604,8 @@ end
 %% ---------------------------------------------------------
 %% L3 — MODERN LAKEHOUSE & COMPUTE
 %% ---------------------------------------------------------
-subgraph L3[06, 07, 08 • Modern Lakehouse & Compute]
-    L3_PAD[" "]:::spacer
+subgraph L3
+    L3_HDR["<b>06, 07, 08 • Modern Lakehouse & Compute</b>"]:::subheader
 
     FAB[06-fabric-lakehouse<br/>Bronze/Silver/Gold, notebooks, pipelines]:::pad
     DBX[07-databricks<br/>Spark notebooks & workflows]:::pad
@@ -623,8 +615,8 @@ end
 %% ---------------------------------------------------------
 %% L4 — SEMANTIC MODELING
 %% ---------------------------------------------------------
-subgraph L4[09 • Semantic Modeling]
-    L4_PAD[" "]:::spacer
+subgraph L4
+    L4_HDR["<b>09 • Semantic Modeling</b>"]:::subheader
 
     PBI[09-power-bi<br/>PBIX, M scripts, DAX, semantic models]:::pad
 end
@@ -632,8 +624,8 @@ end
 %% ---------------------------------------------------------
 %% L5 — AUTOMATION & APPLICATIONS
 %% ---------------------------------------------------------
-subgraph L5[10, 11, 12 • Automation & Applications]
-    L5_PAD[" "]:::spacer
+subgraph L5
+    L5_HDR["<b>10, 11, 12 • Automation & Applications</b>"]:::subheader
 
     PA[10-power-automate<br/>Refresh flows & orchestration]:::pad
     APPS[11-power-apps<br/>KPI Explorer, workflow apps]:::pad
