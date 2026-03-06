@@ -576,48 +576,50 @@ Fabric’s built‑in Git integration extends the modernization SDLC into the an
 flowchart TB
 
 classDef dark fill:#000000,stroke:#ffffff,stroke-width:1px,color:#ffffff,padding:10px;
-classDef spacer fill:#0000,stroke:#0000,color:#0000;
+classDef header fill:#111111,stroke:#ffffff,stroke-width:2px,color:#ffffff,padding:12px;
 
+%% ---------------------------------
 %% L1 — Legacy BI Stack
-L1_PAD[" "]:::spacer
-subgraph L1[Legacy BI Stack]
-    SQL[01-sql-server<br/>SQL Server DBs, metadata, procs]:::dark
-    SSIS[02-ssis<br/>Legacy SSIS ETL packages]:::dark
-    SSAS[03-ssas<br/>Tabular models, semantic definitions]:::dark
-    SSRS[04-ssrs<br/>Paginated reports]:::dark
-end
+%% ---------------------------------
+L1_HDR["Legacy BI Stack"]:::header
+SQL[01-sql-server<br/>SQL Server DBs, metadata, procs]:::dark
+SSIS[02-ssis<br/>Legacy SSIS ETL packages]:::dark
+SSAS[03-ssas<br/>Tabular models, semantic definitions]:::dark
+SSRS[04-ssrs<br/>Paginated reports]:::dark
 
+%% ---------------------------------
 %% L2 — Cloud Orchestration
-L2_PAD[" "]:::spacer
-subgraph L2[Cloud Orchestration]
-    ADF[05-azure-data-factory<br/>ADF pipelines & migration notes]:::dark
-    EVENT[13-eventhouse<br/>Eventstream ingestion & KQL DB]:::dark
-    APIS[14-apis<br/>Token-secured API ingestion patterns]:::dark
-end
+%% ---------------------------------
+L2_HDR["Cloud Orchestration"]:::header
+ADF[05-azure-data-factory<br/>ADF pipelines & migration notes]:::dark
+EVENT[13-eventhouse<br/>Eventstream ingestion & KQL DB]:::dark
+APIS[14-apis<br/>Token-secured API ingestion patterns]:::dark
 
+%% ---------------------------------
 %% L3 — Lakehouse Compute
-L3_PAD[" "]:::spacer
-subgraph L3[Lakehouse Compute]
-    FAB[06-fabric-lakehouse<br/>Bronze/Silver/Gold, notebooks, pipelines]:::dark
-    DBX[07-databricks<br/>Spark notebooks & workflows]:::dark
-    SNOW[08-snowflake<br/>Stages, Bronze ingestion, SQL modeling]:::dark
-end
+%% ---------------------------------
+L3_HDR["Lakehouse Compute"]:::header
+FAB[06-fabric-lakehouse<br/>Bronze/Silver/Gold, notebooks, pipelines]:::dark
+DBX[07-databricks<br/>Spark notebooks & workflows]:::dark
+SNOW[08-snowflake<br/>Stages, Bronze ingestion, SQL modeling]:::dark
 
+%% ---------------------------------
 %% L4 — Semantic Modeling
-L4_PAD[" "]:::spacer
-subgraph L4[Semantic Modeling]
-    PBI[09-power-bi<br/>PBIX, M scripts, DAX, semantic models]:::dark
-end
+%% ---------------------------------
+L4_HDR["Semantic Modeling"]:::header
+PBI[09-power-bi<br/>PBIX, M scripts, DAX, semantic models]:::dark
 
+%% ---------------------------------
 %% L5 — Automation & Applications
-L5_PAD[" "]:::spacer
-subgraph L5[Automation & Applications]
-    PA[10-power-automate<br/>Refresh flows & orchestration]:::dark
-    APPS[11-power-apps<br/>KPI Explorer, workflow apps]:::dark
-    DV[12-dataverse<br/>Dataverse tables & integration]:::dark
-end
+%% ---------------------------------
+L5_HDR["Automation & Applications"]:::header
+PA[10-power-automate<br/>Refresh flows & orchestration]:::dark
+APPS[11-power-apps<br/>KPI Explorer, workflow apps]:::dark
+DV[12-dataverse<br/>Dataverse tables & integration]:::dark
 
+%% ---------------------------------
 %% FLOWS
+%% ---------------------------------
 SQL --> ADF
 SSIS --> ADF
 SSAS --> PBI
