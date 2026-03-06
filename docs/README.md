@@ -571,20 +571,13 @@ Fabric’s built‑in Git integration extends the modernization SDLC into the an
 ## 23. Architecture Diagram  
 
 ```mermaid
-%%{init: {'flowchart': {'nodeSpacing': 30, 'rankSpacing': 40}}}%%
+%%{init: {'flowchart': {'nodeSpacing': 20, 'rankSpacing': 25}}}%%
 
 flowchart TB
 
 classDef dark fill:#000000,stroke:#ffffff,stroke-width:1px,color:#ffffff,padding:10px;
-classDef spacer fill:#0000,stroke:#0000,color:#0000;
 
-%% GLOBAL SPACER NODE
-TOP_PAD[" "]:::spacer
-
-%% ---------------------------------
 %% L1 — Legacy BI Stack
-%% ---------------------------------
-TOP_PAD --> L1
 subgraph L1[Legacy BI Stack]
     SQL[01-sql-server<br/>SQL Server DBs, metadata, procs]:::dark
     SSIS[02-ssis<br/>Legacy SSIS ETL packages]:::dark
@@ -592,47 +585,33 @@ subgraph L1[Legacy BI Stack]
     SSRS[04-ssrs<br/>Paginated reports]:::dark
 end
 
-%% ---------------------------------
 %% L2 — Cloud Orchestration
-%% ---------------------------------
-TOP_PAD --> L2
 subgraph L2[Cloud Orchestration]
     ADF[05-azure-data-factory<br/>ADF pipelines & migration notes]:::dark
     EVENT[13-eventhouse<br/>Eventstream ingestion & KQL DB]:::dark
     APIS[14-apis<br/>Token-secured API ingestion patterns]:::dark
 end
 
-%% ---------------------------------
 %% L3 — Lakehouse Compute
-%% ---------------------------------
-TOP_PAD --> L3
 subgraph L3[Lakehouse Compute]
     FAB[06-fabric-lakehouse<br/>Bronze/Silver/Gold, notebooks, pipelines]:::dark
     DBX[07-databricks<br/>Spark notebooks & workflows]:::dark
     SNOW[08-snowflake<br/>Stages, Bronze ingestion, SQL modeling]:::dark
 end
 
-%% ---------------------------------
 %% L4 — Semantic Modeling
-%% ---------------------------------
-TOP_PAD --> L4
 subgraph L4[Semantic Modeling]
     PBI[09-power-bi<br/>PBIX, M scripts, DAX, semantic models]:::dark
 end
 
-%% ---------------------------------
 %% L5 — Automation & Applications
-%% ---------------------------------
-TOP_PAD --> L5
 subgraph L5[Automation & Applications]
     PA[10-power-automate<br/>Refresh flows & orchestration]:::dark
     APPS[11-power-apps<br/>KPI Explorer, workflow apps]:::dark
     DV[12-dataverse<br/>Dataverse tables & integration]:::dark
 end
 
-%% ---------------------------------
 %% FLOWS
-%% ---------------------------------
 SQL --> ADF
 SSIS --> ADF
 SSAS --> PBI
