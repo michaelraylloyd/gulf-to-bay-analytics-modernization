@@ -91,23 +91,23 @@ Legacy objects were consolidated, standardized, and restructured to enable relia
 <details>
 <summary><strong>🧱 SQL Modernization Highlights</strong></summary>
 
-### 🔧 Structural & Code Modernization
+#### 🔧 Structural & Code Modernization
 - Consolidated legacy stored procedures and eliminated redundant logic  
 - Standardized naming conventions, schema organization, and dependency structure  
 - Applied GTB SQL formatting for readability, consistency, and maintainability  
 - Introduced metadata‑driven patterns for repeatable, parameterized logic  
 
-### 📊 Performance & Observability Enhancements
+#### 📊 Performance & Observability Enhancements
 - Added Query Store–based performance diagnostics  
 - Implemented blocking, wait stats, TempDB, and index health procedures  
 - Created a unified DBA Toolkit for evidence‑driven tuning and governance  
 
-### ☁️ Cloud & Lakehouse Readiness
+#### ☁️ Cloud & Lakehouse Readiness
 - Prepared schema and objects for Azure SQL compatibility  
 - Refactored logic to support Lakehouse ingestion and medallion layering  
 - Removed on‑premises assumptions and deprecated features  
 
-### 🧩 Operational Improvements
+#### 🧩 Operational Improvements
 - Reduced duplication across SQL Server, SSIS, and SSAS  
 - Improved dependency clarity and lineage documentation  
 - Enabled CI‑friendly, review‑first workflows for database changes  
