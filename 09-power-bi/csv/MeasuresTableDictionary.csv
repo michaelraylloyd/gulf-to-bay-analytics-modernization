@@ -1,0 +1,208 @@
+ID,TableID,Name,Description,DataType,Expression,FormatString,IsHidden,State,ModifiedTime,StructureModifiedTime,KPIID,IsSimpleMeasure,ErrorMessage,DisplayFolder,DetailRowsDefinitionID,DataCategory,LineageTag,SourceLineageTag
+31592,30588,"Average Order Value","",8,"
+DIVIDE([Total Sales], [Total Orders])
+","\$#,0;(\$#,0);\$#,0",False,1,2026-01-20 08:18:14.583,2026-01-20 05:57:43.520,,False,"","",,"","4ab6c9d1-f16c-411c-93c0-edc654c629f3",""
+31594,30588,"Customers Goal","",6,"20000","#,0",False,1,2026-01-20 06:08:53.210,2026-01-20 05:57:49.053,,False,"","",,"","9c87321f-85a6-4075-868d-6dd7599f64d5",""
+31599,30588,"Gross Margin","",8,"
+[Total Sales] - [Total Product Cost]","\$#,0;(\$#,0);\$#,0",False,1,2026-01-20 08:18:40.193,2026-01-20 05:58:46.310,,False,"","",,"","b44502f8-0ead-4d33-a166-b18250077ffa",""
+32577,30588,"Gross Margin %","",8,"
+DIVIDE([Gross Margin], [Total Sales])","0.0%;-0.0%;0.0%",False,1,2026-01-20 07:29:13.636,2026-01-20 05:59:12.876,,False,"","",,"","f532ca3d-26df-4b4c-958f-c64710ba3b58",""
+32579,30588,"Gross Margin LY","",8,"
+CALCULATE([Gross Margin], DATEADD('DimDate'[Date], -1, YEAR))
+","\$#,0;(\$#,0);\$#,0",False,1,2026-01-20 08:18:47.196,2026-01-20 05:59:17.943,,False,"","",,"","c16d05c4-d11b-4cfc-b350-b870c5fa07ec",""
+32581,30588,"Net Sales","",8,"
+[Total Sales] - [Total Discounts]
+","\$#,0;(\$#,0);\$#,0",False,1,2026-01-20 08:18:52.020,2026-01-20 05:59:22.183,,False,"","",,"","94aa5627-a146-451f-8608-c43463564a02",""
+32583,30588,"Orders Goal","",6,"30000","#,0",False,1,2026-01-20 17:47:11.276,2026-01-20 05:59:54.413,,False,"","",,"","de54ab38-c9ca-498b-b444-3b499d1b6d9e",""
+32584,30588,"Customers % to Goal","",8,"[Total Customers] / 20000","0.0%;-0.0%;0.0%",False,1,2026-01-20 07:27:56.350,2026-01-20 06:00:15.763,,False,"","",,"","fe406b07-2a1d-49a5-ad19-4f685719cb4e",""
+32585,30588,"Orders % to Goal","",8,"
+DIVIDE ( [Total Orders], [Orders Goal] )","0.0%;-0.0%;0.0%",False,1,2026-01-20 16:56:55.400,2026-01-20 06:00:33.450,,False,"","",,"","a6113e2a-42c1-4450-9cac-58849db76d39",""
+32586,30588,"Sales % to Goal","",8,"
+DIVIDE([Total Sales], [Sales Goal])","0.0%;-0.0%;0.0%",False,1,2026-01-20 07:26:02.986,2026-01-20 06:00:43.500,,False,"","",,"","54f1b5a9-ce14-424e-aa57-c79c4a79a4e4",""
+32588,30588,"Sales per Customer","",8,"
+DIVIDE([Total Sales], [Total Customers])
+","\$#,0;(\$#,0);\$#,0",False,1,2026-01-20 08:19:22.460,2026-01-20 06:00:56.133,,False,"","",,"","ec5dea27-a142-413b-89eb-8fadea1d688f",""
+32590,30588,"Sales per Day","",8,"
+DIVIDE(
+    [Total Sales],
+    DISTINCTCOUNT('DimDate'[Date])
+)","\$#,0;(\$#,0);\$#,0",False,1,2026-01-20 08:19:35.670,2026-01-20 06:01:09.260,,False,"","",,"","0722b4f4-c9a1-422c-bd51-e6126b36c1ec",""
+32595,30588,"Sales YoY Variance","",8,"
+[Total Sales] - [Total Sales LY]","\$#,0;(\$#,0);\$#,0",False,1,2026-01-20 08:19:49.006,2026-01-20 06:01:38.256,,False,"","",,"","4ee779b5-6e23-44d7-8e9e-a740b27ea928",""
+32597,30588,"Sales Goal","",6,"35000000","\$#,0;(\$#,0);\$#,0",False,1,2026-01-20 08:19:07.396,2026-01-20 06:01:43.940,,False,"","",,"","056ca290-72bd-4d3a-833c-6fd6c2c6430e",""
+32598,30588,"Total Customers","",6,"
+DISTINCTCOUNT(FactInternetSales[CustomerKey])
+","#,0",False,1,2026-01-20 06:03:03.676,2026-01-20 06:01:48.423,,False,"","",,"","f8381853-cdca-4e22-b058-5acbcf76cb66",""
+32599,30588,"Total Discounts","",8,"
+SUM(FactInternetSales[DiscountAmount])
+","\$#,0;(\$#,0);\$#,0",False,1,2026-01-20 08:20:04.133,2026-01-20 06:01:51.883,,False,"","",,"","03678d50-b436-4cf1-9ba5-12125d5e9e91",""
+32601,30588,"Total Orders","",6,"
+DISTINCTCOUNT ( FactInternetSales[SalesOrderNumber] )","#,0",False,1,2026-01-20 16:39:22.230,2026-01-20 06:01:55.236,,False,"","",,"","b8935caa-dae2-4b2b-a26e-f2885eae22fe",""
+32602,30588,"Total Product Cost","",8,"
+SUM(FactInternetSales[TotalProductCost])
+","\$#,0;(\$#,0);\$#,0",False,1,2026-01-20 08:20:18.283,2026-01-20 06:01:58.993,,False,"","",,"","db0b1b18-99ec-43ac-b6a2-d8308b8d5362",""
+32603,30588,"Total Sales","",8,"SUM(FactInternetSales[SalesAmount])","\$#,0;(\$#,0);\$#,0",False,1,2026-01-20 06:02:42.096,2026-01-20 06:02:02.443,,False,"","",,"","7217de09-8878-4b35-a2de-657d46e683e3",""
+32604,30588,"Total Sales LY","",8,"
+CALCULATE([Total Sales], DATEADD('DimDate'[Date], -1, YEAR))","\$#,0;(\$#,0);\$#,0",False,1,2026-01-20 08:20:31.820,2026-01-20 06:02:07.086,,False,"","",,"","76dfb905-efc3-4d22-b577-54e6e9e453fe",""
+35539,30588,"Sales YoY %","",8,"
+DIVIDE([Sales YoY Variance], [Total Sales LY])","0.0%;-0.0%;0.0%",False,1,2026-01-20 07:29:41.576,2026-01-20 06:18:49.206,,False,"","",,"","2a1e97c9-95ba-49c2-af64-cd238d52ac9e",""
+35542,30588,"Sales Mix %","",8,"
+DIVIDE(
+    [Total Sales],
+    CALCULATE([Total Sales], ALL('DimProduct'))
+)","0.0%;-0.0%;0.0%",False,1,2026-01-20 07:29:31.166,2026-01-20 06:28:30.426,,False,"","",,"","1da58e00-a00d-4f56-8b26-300d266eab31",""
+37441,30588,"Total Orders LY","",6,"
+CALCULATE ( [Total Orders], DATEADD ( DimDate[Date], -1, YEAR ) )
+","#,0",False,1,2026-01-20 17:34:42.580,2026-01-20 16:48:25.153,,False,"","",,"","e7be7219-911d-4bf9-814d-9500043d4baa",""
+37443,30588,"Orders YoY %","",8,"
+DIVIDE ( [Total Orders] - [Total Orders LY], [Total Orders LY] )
+","0.0%;-0.0%;0.0%",False,1,2026-01-20 17:33:37.303,2026-01-20 16:50:00.293,,False,"","",,"","10a1a20d-df3d-4aff-8eab-96f708e71f80",""
+37446,30588,"Average Order Size","",8,"
+DIVIDE (
+    SUM ( FactInternetSales[OrderQuantity] ),
+    [Total Orders]
+)","0.0",False,1,2026-01-20 17:32:49.806,2026-01-20 16:51:14.350,,False,"","",,"","4d2d0008-4d3f-4f08-8d38-adeae22b831d",""
+37449,30588,"On-Time Fulfillment %","",8,"
+VAR OnTimeOrders =
+    CALCULATE (
+        DISTINCTCOUNT ( FactInternetSales[SalesOrderNumber] ),
+        FactInternetSales[ShipDate] <= FactInternetSales[DueDate]
+    )
+
+RETURN
+DIVIDE ( OnTimeOrders, [Total Orders] )","0.0%;-0.0%;0.0%",False,1,2026-01-21 19:18:27.096,2026-01-20 16:51:43.246,,False,"","",,"","a4870243-c9ca-4a3c-8e1f-1feb8c329e78",""
+37453,30588,"Orders Goal Variance","",6,"
+[Total Orders] - [Orders Goal]","#,0",False,1,2026-01-20 17:33:16.420,2026-01-20 16:55:24.193,,False,"","",,"","ca05e58d-0f64-419b-af1d-8663aa2b44ae",""
+37455,30588,"Orders Goal Variance %","",8,"
+DIVIDE (
+    [Total Orders] - [Orders Goal],
+    [Orders Goal]
+)","0.0%;-0.0%;0.0%",False,1,2026-01-20 17:33:24.910,2026-01-20 16:57:29.233,,False,"","",,"","247683a0-9b3f-4f6f-a240-7957009c77e8",""
+40910,30588,"Returned Orders","",6,"
+CALCULATE (
+    DISTINCTCOUNT ( FactInternetSales[SalesOrderNumber] ),
+    FactInternetSales[OrderQuantity] < 0
+)","#,0",False,1,2026-01-20 17:33:45.260,2026-01-20 17:28:58.760,,False,"","",,"","5fd06a19-b04b-4bee-bda1-af91beedab4d",""
+42598,30588,"Return Rate %","",8,"
+DIVIDE ( [Returned Orders] , [Total Orders] )
+","0.0%;-0.0%;0.0%",False,1,2026-01-20 17:35:11.376,2026-01-20 17:29:51.576,,False,"","",,"","8a90911a-9df9-4a39-8136-fe041959edd7",""
+42602,30588,"Customer First Purchase Date","",9,"
+CALCULATE (
+    MIN ( FactInternetSales[OrderDate] ),
+    ALLEXCEPT ( FactInternetSales, FactInternetSales[CustomerKey] )
+)","Short Date",False,1,2026-01-22 04:04:39.156,2026-01-20 18:00:27.696,,False,"","",,"","663b58fa-a474-4d77-ab60-db44c2664ae3",""
+44292,30588,"New Customers","",6,"
+CALCULATE (
+    DISTINCTCOUNT ( FactInternetSales[CustomerKey] ),
+    FILTER (
+        VALUES ( FactInternetSales[CustomerKey] ),
+        [Customer First Purchase Date] >= MIN ( DimDate[Date] )
+            && [Customer First Purchase Date] <= MAX ( DimDate[Date] )
+    )
+)","#,0",False,1,2026-01-22 04:04:39.156,2026-01-20 18:02:00.680,,False,"","",,"","11ab1371-ce34-49fd-9d20-13a503095653",""
+45980,30588,"Repeat Customer Rate %","",8,"
+DIVIDE ( [Repeat Customers], [Total Customers] )","0.0%;-0.0%;0.0%",False,1,2026-01-20 18:11:37.026,2026-01-20 18:04:19.683,,False,"","",,"","429ab7cc-b917-43af-9aa1-f0e6583950ab",""
+45983,30588,"Average Revenue per Customer","",8,"
+DIVIDE (
+    SUM ( FactInternetSales[SalesAmount] ),
+    [Total Customers]
+)","\$#,0;(\$#,0);\$#,0",False,1,2026-01-20 18:12:22.553,2026-01-20 18:04:51.593,,False,"","",,"","ac0be3e7-f0e1-4c94-bfdc-531f81423159",""
+45986,30588,"Revenue per Customer","",8,"
+DIVIDE (
+    SUM ( FactInternetSales[SalesAmount] ),
+    DISTINCTCOUNT ( FactInternetSales[CustomerKey] )
+)","\$#,0;(\$#,0);\$#,0",False,1,2026-01-20 18:12:43.676,2026-01-20 18:05:12.823,,False,"","",,"","25ba99cb-b15f-4818-80eb-6bf6991e42e1",""
+45989,30588,"Customer Lifetime Value","",8,"
+[Revenue per Customer] * 12","\$#,0;(\$#,0);\$#,0",False,1,2026-01-20 18:13:06.793,2026-01-20 18:05:32.750,,False,"","",,"","92330167-bdd2-4017-92af-51ff0f90d963",""
+49362,30588,"Repeat Customers","",6,"
+CALCULATE (
+    DISTINCTCOUNT ( FactInternetSales[CustomerKey] ),
+    FILTER (
+        VALUES ( FactInternetSales[CustomerKey] ),
+        CALCULATE (
+            COUNTROWS ( FactInternetSales ),
+            ALLEXCEPT ( FactInternetSales, FactInternetSales[CustomerKey] )
+        ) > 1
+    )
+)","#,0",False,1,2026-01-20 18:11:23.123,2026-01-20 18:08:47.530,,False,"","",,"","94ee0227-3183-402d-b3d1-cdd6d706679f",""
+49364,30588,"Top Category","",2,"
+CALCULATE(
+    FIRSTNONBLANK( 'DimProductCategory'[Category], 1 ),
+    TOPN(
+        1,
+        SUMMARIZE(
+            'DimProductCategory',
+            'DimProductCategory'[Category],
+            ""Sales"", [Total Sales]
+        ),
+        [Sales],
+        DESC
+    )
+)","",False,1,2026-02-15 03:02:26.536,2026-01-21 17:20:49.940,,False,"","",,"","68a9a6f1-5866-411b-b237-6fce8ca2278d",""
+69421,30588,"Dynamic Subtitle Customers","",2,"
+VAR Pct =
+    FORMAT( [Customers % to Goal], ""0%"" )
+
+VAR Category =
+    [Top Category]
+
+RETURN
+""Customers are "" & Pct & "" to goal, led by "" & LOWER(Category) & "" customers.""","",False,1,2026-02-15 03:02:26.536,2026-01-23 21:39:00.743,,False,"","",,"","7fe10cd7-6661-402d-89e2-d43c16e6c164",""
+69423,30588,"Dynamic Subtitle Orders","",2,"
+VAR Pct =
+    FORMAT( [Orders % to Goal], ""0%"" )
+
+VAR Category =
+    [Top Category]
+
+RETURN
+""Orders are "" & Pct & "" to goal, led by "" & LOWER(Category) & "" orders.""","",False,1,2026-02-15 03:02:26.536,2026-01-23 21:39:21.633,,False,"","",,"","488639de-e11e-4a0b-bb18-7e5a6ea2a74d",""
+69425,30588,"Dynamic Subtitle Sales","",2,"
+VAR Pct =
+    FORMAT( [Sales % to Goal], ""0%"" )
+
+VAR Category =
+    [Top Category]
+
+RETURN
+""Sales are "" & Pct & "" to goal, led by "" & LOWER(Category) & "" sales.""","",False,1,2026-02-15 03:02:26.536,2026-01-23 21:39:48.126,,False,"","",,"","3bf47dba-5d3a-4a72-9b1d-770d122e8f60",""
+69427,30588,"Dynamic Subtitle Sales Geography","",2,"
+VAR GeoNameRaw =
+    SELECTEDVALUE( DimGeography[Continent],
+        SELECTEDVALUE( DimGeography[Country],
+            SELECTEDVALUE( DimGeography[State Province],
+                SELECTEDVALUE( DimGeography[City], BLANK() )
+            )
+        )
+    )
+
+VAR GeoName =
+    IF( ISBLANK( GeoNameRaw ), ""(global)"", GeoNameRaw )
+
+VAR PctOfSales =
+    DIVIDE(
+        [Total Sales],
+        CALCULATE( [Total Sales], ALL( DimGeography ) )
+    )
+
+VAR PctFormatted =
+    FORMAT( PctOfSales, ""0%"" )
+
+RETURN
+PctFormatted & "" of all sales are attributed to "" & GeoName & "".""","",False,1,2026-01-23 21:40:30.890,2026-01-23 21:40:27.500,,False,"","",,"","a1abeaab-2c8f-4f2d-9c4b-84dc5c469191",""
+69429,30588,"Dynamic Title Customers to Goal","",2,"
+VAR Pct =
+    FORMAT( [Customers % to Goal], ""0%"" )
+RETURN
+""Customers "" & Pct & "" to Goal""","",False,1,2026-01-23 21:40:55.833,2026-01-23 21:40:52.393,,False,"","",,"","e9262c43-5ea2-4411-9c7e-c421817c0e50",""
+69431,30588,"Dynamic Title Orders to Goal","",2,"
+VAR Pct =
+    FORMAT( [Orders % to Goal], ""0%"" )
+RETURN
+""Orders "" & Pct & "" to Goal""","",False,1,2026-01-23 21:41:08.126,2026-01-23 21:41:04.453,,False,"","",,"","9631b567-d42b-4e52-9d7a-c343a369eaf7",""
+69433,30588,"Dynamic Title Sales to Goal","",2,"
+VAR Pct =
+    FORMAT( [Sales % to Goal], ""0%"" )
+RETURN
+""Sales "" & Pct & "" to Goal""","",False,1,2026-01-23 21:41:25.910,2026-01-23 21:41:22.193,,False,"","",,"","5fc9049e-0d31-419b-bec5-ecb083b43aab",""
+69435,30588,"Misc Measures","",2,"""(Below)""","",False,1,2026-01-23 21:56:33.586,2026-01-23 21:56:29.226,,False,"","",,"","1dc63112-2bd8-443a-bab5-384d1bad6631",""

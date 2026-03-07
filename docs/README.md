@@ -85,21 +85,37 @@ The repository is organized into modular, prefixed folders that reflect the mode
 
 ## 5. SQL Server Modernization
 
-SQL Server objects were modernized, standardized, and prepared for migration into the cloud‑aligned architecture.
+The SQL Server layer was fully modernized to support a cloud‑aligned, metadata‑driven architecture.  
+Legacy objects were consolidated, standardized, and restructured to enable reliable migration into Azure SQL and the Fabric Lakehouse.
 
 <details>
 <summary><strong>🧱 SQL Modernization Highlights</strong></summary>
 
-- Consolidated legacy stored procedures  
-- Standardized naming and formatting  
-- Introduced metadata‑driven patterns  
-- Prepared schema for Lakehouse migration  
-- Applied GTB SQL formatting conventions  
+#### 🔧 Structural & Code Modernization
+- Consolidated legacy stored procedures and eliminated redundant logic  
+- Standardized naming conventions, schema organization, and dependency structure  
+- Applied GTB SQL formatting for readability, consistency, and maintainability  
+- Introduced metadata‑driven patterns for repeatable, parameterized logic  
+
+#### 📊 Performance & Observability Enhancements
+- Added Query Store–based performance diagnostics  
+- Implemented blocking, wait stats, TempDB, and index health procedures  
+- Created a unified DBA Toolkit for evidence‑driven tuning and governance  
+
+#### ☁️ Cloud & Lakehouse Readiness
+- Prepared schema and objects for Azure SQL compatibility  
+- Refactored logic to support Lakehouse ingestion and medallion layering  
+- Removed on‑premises assumptions and deprecated features  
+
+#### 🧩 Operational Improvements
+- Reduced duplication across SQL Server, SSIS, and SSAS  
+- Improved dependency clarity and lineage documentation  
+- Enabled CI‑friendly, review‑first workflows for database changes  
 
 </details>
 
 ### 🧱 SQL Server  
-![alt text](../assets/images/portfolio-overview/SQL_Server.png)
+![alt text](../assets/images/portfolio-overview/SQL_Server_Database_Tools.png)
 
 ---
 
@@ -230,6 +246,7 @@ Fabric Dataflows provide reusable, GUI‑driven ingestion and transformation log
 </details>
 
 ### 🧮 Dataflow Highlight
+
 <strong>🧮 Power Query</strong>
 ![alt text](../assets/images/portfolio-overview/Fabric_Dataflow_Power_Query.png)
 
@@ -367,7 +384,7 @@ Power BI dashboards deliver executive‑ready KPIs and operational insights.
 
 ### 📈 Power BI Revenue Stream KPI Overview
 
-<strong>Gulf-To-Bay Analytics Revenue Stream KIP Overview</strong> Available to Public at: https://app.powerbi.com/view?r=eyJrIjoiMzcyYTIzN2EtYzBjNi00MmY5LWJhY2UtZDk5MDkyZTYwNDExIiwidCI6ImE0MzI2YTU4LWY3ZDktNDQ0ZC1iM2FhLWIwOTAyN2U1ZTg2NiIsImMiOjF9
+<strong>Gulf-To-Bay Analytics Revenue Stream KPI Overview</strong> Available to Public at: https://app.powerbi.com/view?r=eyJrIjoiMzcyYTIzN2EtYzBjNi00MmY5LWJhY2UtZDk5MDkyZTYwNDExIiwidCI6ImE0MzI2YTU4LWY3ZDktNDQ0ZC1iM2FhLWIwOTAyN2U1ZTg2NiIsImMiOjF9
 
 <strong>📈 Revenue Stream KPI Overview - Global KPIs</strong>
 [![alt text](../assets/images/portfolio-overview/Rev_Stream_KPI_Overview_Global_KPIs.png)](https://app.powerbi.com/view?r=eyJrIjoiMzcyYTIzN2EtYzBjNi00MmY5LWJhY2UtZDk5MDkyZTYwNDExIiwidCI6ImE0MzI2YTU4LWY3ZDktNDQ0ZC1iM2FhLWIwOTAyN2U1ZTg2NiIsImMiOjF9)
@@ -411,25 +428,24 @@ Power Automate flows handle scheduled refreshes and alerting across the analytic
 
 ## 18. Power Apps
 
-A Power Apps interface provides interactive KPI exploration for business users<strong>📱 Power.
+Power Apps provides the user-facing interaction layer of the analytics ecosystem, giving business users a guided, role‑aware interface for exploring KPIs, submitting operational requests, and interacting directly with governed data. These applications sit on top of the unified semantic model and enable closed‑loop analytics where insights and actions live in the same workflow.
 
 <details>
-<summary><strong>Apps Highlights</strong></summary>
+<summary><strong>📱 Power Apps Highlights</strong></summary>
 
-- KPI Explorer app
-  - Drill‑down navigation
-  - Embedded Power BI visuals
-  - Role‑based access patterns
-  - Operational workflow integration
+- **KPI Explorer App**  
+  - Drill‑down navigation aligned with the enterprise semantic model  
+  - Embedded Power BI visuals for real‑time KPI exploration  
+  - Role‑based access patterns that tailor the experience to each user group  
+  - Integration with operational workflows to support closed‑loop analytics  
 
-- Equipment Request app
-  - Data intake to Dataverse table
-  - Role‑based access and approval routing
-  - Quick‑access page for approvers
-  - Embedded Power BI dashboard and details
+- **Equipment Request App**  
+  - Structured data intake captured in Dataverse for auditability and downstream reporting  
+  - Role‑based approval routing with clear reviewer and requester views  
+  - Quick‑access pages for managers to process requests efficiently  
+  - Embedded Power BI dashboards showing request volume, cycle time, and SLA performance  
 
 </details>
-
 
 ### 📱 Power Apps
 
@@ -458,7 +474,7 @@ A Power Apps interface provides interactive KPI exploration for business users<s
 Eventhouse provides the real‑time analytics layer within the modernization ecosystem, enabling continuous ingestion, storage, and querying of streaming data. In this project, an Eventstream pipeline writes live S&P 500 market data into the Eventhouse database, making it immediately available for KQL‑based validation, profiling, and downstream analytics.
 
 <details>
-<summary><strong>Eventhouse Highlights</strong></summary>
+<summary><strong>📡 Eventhouse Highlights</strong></summary>
 
 - Real‑time ingestion through Eventstream  
 - Continuous writes to the **Sp500Stocks** table  
@@ -540,8 +556,6 @@ Fabric’s built‑in Git integration extends the modernization SDLC into the an
 
 </details>
 
-### 🔧 Git Branch Protection and GitKraken Workflows
-
 ### 🔧 Git Branch Protection Rules
 ![alt text](../assets/images/portfolio-overview/Git_Feature_Branch_Protection_Header.png)
 ![alt text](../assets/images/portfolio-overview/Git_Feature_Branch_Protection_Rules.png)
@@ -555,7 +569,11 @@ Fabric’s built‑in Git integration extends the modernization SDLC into the an
 ---
 
 ## 23. Architecture Diagram  
+<<<<<<< HEAD
 ![alt text](../assets/images/portfolio-overview/Architecture_Diagram.png)
+=======
+![alt text](../assets/images/portfolio-overview/Architecture_Diagram.drawio.svg)
+>>>>>>> ad5d6b0e5347db9fd33b7f99a27ed7897f54aa6f
 
 ---
 
