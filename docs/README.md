@@ -569,11 +569,7 @@ Fabric’s built‑in Git integration extends the modernization SDLC into the an
 ---
 
 ## 23. Architecture Diagram  
-<<<<<<< HEAD
-![alt text](../assets/images/portfolio-overview/Architecture_Diagram.png)
-=======
 ![alt text](../assets/images/portfolio-overview/Architecture_Diagram.drawio.svg)
->>>>>>> ad5d6b0e5347db9fd33b7f99a27ed7897f54aa6f
 
 ---
 
