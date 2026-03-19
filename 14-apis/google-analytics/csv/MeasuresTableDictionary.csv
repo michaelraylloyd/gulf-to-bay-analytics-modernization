@@ -1,0 +1,107 @@
+ID,Name,Table,Description,DataType,Expression,FormatString,IsHidden,State,KPIID,IsSimpleMeasure,DisplayFolder,DetailRowsDefinition,DataCategory,FormatStringDefinition,LineageTag,ExpressionTrimmed
+115,"Total Users","_Measures","","Integer","
+SUM ( FactDailyKPIs[users] )","",False,"Valid",,False,"","","","""#,0""","9e9acc18-61ff-4785-a468-d5114670c59b","SUM ( FactDailyKPIs[users] )"
+116,"Total Sessions","_Measures","","Integer","
+SUM ( FactDailyKPIs[sessions] )","",False,"Valid",,False,"","","","""#,0""","677f2a11-84c8-42fe-bde9-ce8145eecfd3","SUM ( FactDailyKPIs[sessions] )"
+117,"Total Pageviews","_Measures","","Integer","
+SUM ( FactDailyKPIs[pageviews] )","",False,"Valid",,False,"","","","""#,0""","5f60de53-6937-44d1-96c1-2e25cf986890","SUM ( FactDailyKPIs[pageviews] )"
+118,"Total Events","_Measures","","Integer","
+SUM ( FactDailyKPIs[events] )","",False,"Valid",,False,"","","","""#,0""","aaacf05f-b632-45ef-aabd-eab085ea4f8b","SUM ( FactDailyKPIs[events] )"
+119,"Total Engaged Sessions","_Measures","","Integer","
+SUM ( FactDailyKPIs[engaged_sessions] )","",False,"Valid",,False,"","","","""#,0""","c13e08e3-fb83-4dc5-bc0b-16ce3f77815d","SUM ( FactDailyKPIs[engaged_sessions] )"
+120,"Engagement Rate","_Measures","","Number","
+DIVIDE ( [Total Engaged Sessions], [Total Sessions] )","",False,"Valid",,False,"","","","""0.0%;-0.0%;0.0%""","60663c93-d31f-4226-bc8e-6489f11f43e7","DIVIDE ( [Total Engaged Sessions], [Total Sessions] )"
+121,"Pages per Session","_Measures","","Number","
+DIVIDE ( [Total Pageviews], [Total Sessions] )","",False,"Valid",,False,"","","","""0.0""","00a30348-f3a5-4a95-b0cd-710af487fb02","DIVIDE ( [Total Pageviews], [Total Sessions] )"
+122,"Events per Session","_Measures","","Number","
+DIVIDE ( [Total Events], [Total Sessions] )","",False,"Valid",,False,"","","","""0.0""","dd750e9f-f282-43a8-a955-b4d37db0473b","DIVIDE ( [Total Events], [Total Sessions] )"
+123,"Page Pageviews","_Measures","","Integer","
+SUM ( FactContentPerformance[pageviews] )","",False,"Valid",,False,"","","","""#,0""","bfaf3919-a330-426b-9e2f-73cbd5dfd2fe","SUM ( FactContentPerformance[pageviews] )"
+124,"Page Sessions","_Measures","","Integer","
+SUM ( FactContentPerformance[sessions] )","",False,"Valid",,False,"","","","""#,0""","016617ee-2129-4298-b4be-fc4d8b986646","SUM ( FactContentPerformance[sessions] )"
+125,"Pageviews per Session","_Measures","","Number","
+DIVIDE ( [Page Pageviews], [Page Sessions] )","",False,"Valid",,False,"","","","""0.0""","2fac125d-889e-4dec-bef3-0d740dc14d0d","DIVIDE ( [Page Pageviews], [Page Sessions] )"
+126,"Event Count","_Measures","","Integer","
+SUM ( FactTopEvents[event_count] )","",False,"Valid",,False,"","","","""#,0""","eb304e8c-1353-49bf-acb5-6e910668253f","SUM ( FactTopEvents[event_count] )"
+127,"Event Users","_Measures","","Integer","
+SUM ( FactTopEvents[users] )","",False,"Valid",,False,"","","","""#,0""","696f857c-8f82-47bf-b031-f3b33adae65e","SUM ( FactTopEvents[users] )"
+128,"Events per User","_Measures","","Number","
+DIVIDE ( [Event Count], [Event Users] )","",False,"Valid",,False,"","","","""0.0""","57d83b9d-f494-4830-94f4-a82d25ef9a10","DIVIDE ( [Event Count], [Event Users] )"
+129,"Selected Date","_Measures","","Date","
+MAX ( DimDate[full_date] )","",False,"Valid",,False,"","","","""General Date""","ef14dfe6-42d8-46b2-88da-13de6d5a0604","MAX ( DimDate[full_date] )"
+130,"Users Day Over Day","_Measures","","Integer","
+[Total Users]
+    - CALCULATE ( [Total Users], DATEADD ( DimDate[full_date], -1, DAY ) )","",False,"Valid",,False,"","","","""#,0""","3b5fbe7b-435b-40a0-bcbf-f8709784102f","[Total Users]
+    - CALCULATE ( [Total Users], DATEADD ( DimDate[full_date], -1, DAY ) )"
+131,"Sessions Day Over Day","_Measures","","Integer","
+[Total Sessions]
+    - CALCULATE ( [Total Sessions], DATEADD ( DimDate[full_date], -1, DAY ) )","",False,"Valid",,False,"","","","""0""","fed7dbe2-ec5c-43c6-8e88-ad2f4a02bcbb","[Total Sessions]
+    - CALCULATE ( [Total Sessions], DATEADD ( DimDate[full_date], -1, DAY ) )"
+132,"Users (Last 7 Days)","_Measures","","Integer","
+CALCULATE (
+    [Total Users],
+    DATESINPERIOD ( DimDate[full_date], MAX ( DimDate[full_date] ), -7, DAY )
+)","",False,"Valid",,False,"","","","""#,0""","39fccca6-2fb2-47ed-b657-4a4f2397fc52","CALCULATE (
+    [Total Users],
+    DATESINPERIOD ( DimDate[full_date], MAX ( DimDate[full_date] ), -7, DAY )
+)"
+133,"Sessions (Last 7 Days)","_Measures","","Integer","
+CALCULATE (
+    [Total Sessions],
+    DATESINPERIOD ( DimDate[full_date], MAX ( DimDate[full_date] ), -7, DAY )
+)","",False,"Valid",,False,"","","","""#,0""","da33f528-d8f3-4f67-bc1d-49e7f677697a","CALCULATE (
+    [Total Sessions],
+    DATESINPERIOD ( DimDate[full_date], MAX ( DimDate[full_date] ), -7, DAY )
+)"
+134,"Non‑Engaged Sessions","_Measures","","Integer","
+[Total Sessions] - [Total Engaged Sessions]","",False,"Valid",,False,"","","","""#,0""","0e31769c-9d3f-4dc1-b9e2-319be7a0a289","[Total Sessions] - [Total Engaged Sessions]"
+135,"Bounce Rate","_Measures","","Number","
+DIVIDE ( [Non‑Engaged Sessions], [Total Sessions] )","",False,"Valid",,False,"","","","""0.0%;-0.0%;0.0%""","3ccd599a-ae49-4ea3-856b-90242aa868ca","DIVIDE ( [Non‑Engaged Sessions], [Total Sessions] )"
+136,"Events per Page","_Measures","","Number","
+DIVIDE ( [Event Count], [Page Pageviews] )","",False,"Valid",,False,"","","","""0.0""","8c77208b-6011-4a5d-a20b-9e3cc467b2cc","DIVIDE ( [Event Count], [Page Pageviews] )"
+137,"Top Pages by Pageviews","_Measures","","Integer","
+RANKX (
+    ALL ( DimPage[page_location] ),
+    [Page Pageviews],
+    ,
+    DESC
+)","",False,"Valid",,False,"","","","""#,0""","ba2a5a06-4cf8-479b-b81a-73cdb36b293b","RANKX (
+    ALL ( DimPage[page_location] ),
+    [Page Pageviews],
+    ,
+    DESC
+)"
+138,"Top Events by Count","_Measures","","Integer","
+RANKX (
+    ALL ( DimEvent[event_name] ),
+    [Event Count],
+    ,
+    DESC
+)","",False,"Valid",,False,"","","","""#,0""","be2bd0d0-ce16-45bc-a00c-3a95044e00b5","RANKX (
+    ALL ( DimEvent[event_name] ),
+    [Event Count],
+    ,
+    DESC
+)"
+139,"Selected Page","_Measures","","Text","
+SELECTEDVALUE ( DimPage[page_location] )","",False,"Valid",,False,"","","","","467a25b6-df78-4df3-bd7c-7b6fd82f1d37","SELECTEDVALUE ( DimPage[page_location] )"
+140,"Selected Event","_Measures","","Text","
+SELECTEDVALUE ( DimEvent[event_name] )","",False,"Valid",,False,"","","","","d5cbe98c-676a-45db-92cf-2b6ca5021419","SELECTEDVALUE ( DimEvent[event_name] )"
+141,"KPI Value","_Measures","","Number","
+SWITCH (
+    SELECTEDVALUE ( KPI_Metadata[KPI] ),
+    ""Total Users"", [Total Users],
+    ""Total Sessions"", [Total Sessions],
+    ""Engagement Rate"", [Engagement Rate],
+    ""Total Pageviews"", [Total Pageviews],
+    ""Events per Session"", [Events per Session],
+    ""Pages per Session"", [Pages per Session]
+)","",False,"Valid",,False,"","","","","4052453d-c8a9-4460-9495-5fbb75f0b1a4","SWITCH (
+    SELECTEDVALUE ( KPI_Metadata[KPI] ),
+    ""Total Users"", [Total Users],
+    ""Total Sessions"", [Total Sessions],
+    ""Engagement Rate"", [Engagement Rate],
+    ""Total Pageviews"", [Total Pageviews],
+    ""Events per Session"", [Events per Session],
+    ""Pages per Session"", [Pages per Session]
+)"

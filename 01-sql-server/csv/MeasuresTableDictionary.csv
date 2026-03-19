@@ -1,0 +1,102 @@
+ID,Name,Table,Description,DataType,Expression,FormatString,IsHidden,State,KPIID,IsSimpleMeasure,DisplayFolder,DetailRowsDefinition,DataCategory,FormatStringDefinition,LineageTag,ExpressionTrimmed
+912,"Total Balance","_Measures","","Number","
+SUM ( factAccount[TotalBalance] )","",False,"Valid",,False,"","","","""\$#,0;(\$#,0);\$#,0""","cbec9f61-8347-4902-aaae-d88cf651407d","SUM ( factAccount[TotalBalance] )"
+915,"Insured Amount","_Measures","","Number","
+SUM ( factAccount[ComputedInsured] )","",False,"Valid",,False,"","","","""\$#,0;(\$#,0);\$#,0""","a82a28f7-2b85-4316-9a3f-b8c60adc5475","SUM ( factAccount[ComputedInsured] )"
+918,"Uninsured Amount","_Measures","","Number","
+SUM ( factAccount[ComputedUninsured] )","",False,"Valid",,False,"","","","""\$#,0;(\$#,0);\$#,0""","238dd4be-b7d5-4f6c-804e-6f256f0e44b0","SUM ( factAccount[ComputedUninsured] )"
+921,"Customers Over 250K","_Measures","","Integer","
+VAR CustomerTotals =
+    SUMMARIZE (
+        factAccount,
+        factAccount[CustomerSK],
+        ""TotalBalance"", SUM ( factAccount[TotalBalance] )
+    )
+RETURN
+COUNTROWS (
+    FILTER ( CustomerTotals, [TotalBalance] > 250000 )
+)","",False,"Valid",,False,"","","","""#,0""","835c95ef-bd49-4d90-ba9f-90d56bed45da","VAR CustomerTotals =
+    SUMMARIZE (
+        factAccount,
+        factAccount[CustomerSK],
+        ""TotalBalance"", SUM ( factAccount[TotalBalance] )
+    )
+RETURN
+COUNTROWS (
+    FILTER ( CustomerTotals, [TotalBalance] > 250000 )
+)"
+933,"Customer Total Balance","_Measures","","Number","
+CALCULATE (
+    [Total Balance],
+    ALLEXCEPT ( factAccount, factAccount[CustomerSK] )
+)","",False,"Valid",,False,"","","","""\$#,0;(\$#,0);\$#,0""","1388ef54-e57b-4b0a-b920-5eb1cdf8e4d8","CALCULATE (
+    [Total Balance],
+    ALLEXCEPT ( factAccount, factAccount[CustomerSK] )
+)"
+936,"Total Uninsured","_Measures","","Number","[Uninsured Amount]","",False,"Valid",,False,"","","","""\$#,0;(\$#,0);\$#,0""","1d7d6d6c-3417-46c0-aebd-7f53f20d028a","[Uninsured Amount]"
+939,"Percent Uninsured","_Measures","","Number","
+DIVIDE ( [Uninsured Amount], [Total Balance] )","",False,"Valid",,False,"","","","""0.0%;-0.0%;0.0%""","9dcdc84a-0ec1-409d-88f0-d2d25b9ba89f","DIVIDE ( [Uninsured Amount], [Total Balance] )"
+942,"Customer Uninsured","_Measures","","Number","
+CALCULATE (
+    [Uninsured Amount],
+    ALLEXCEPT ( factAccount, factAccount[CustomerSK] )
+)","",False,"Valid",,False,"","","","""\$#,0;(\$#,0);\$#,0""","4898e443-f1b2-4795-aedc-ef5535ebaf37","CALCULATE (
+    [Uninsured Amount],
+    ALLEXCEPT ( factAccount, factAccount[CustomerSK] )
+)"
+1524,"Total Accounts","_Measures","","Integer","COUNTROWS(factAccount)","",False,"Valid",,False,"","","","""#,0""","c65c5934-ffa1-4120-9314-a95d9838a905","COUNTROWS(factAccount)"
+3448,"DAX Insured Amount","_Measures","","Number","
+SUMX (
+    factAccount,
+    VAR Bal = factAccount[TotalBalance]
+    RETURN
+        IF ( Bal <= 250000, Bal, 250000 )
+)","",False,"Valid",,False,"","","","""\$#,0;(\$#,0);\$#,0""","eb544cfe-5b8c-4b66-989e-c811d6f4dece","SUMX (
+    factAccount,
+    VAR Bal = factAccount[TotalBalance]
+    RETURN
+        IF ( Bal <= 250000, Bal, 250000 )
+)"
+3451,"DAX Uninsured Amount","_Measures","","Number","
+SUMX (
+    factAccount,
+    VAR Bal = factAccount[TotalBalance]
+    RETURN
+        IF ( Bal > 250000, Bal - 250000, 0 )
+)","",False,"Valid",,False,"","","","""\$#,0;(\$#,0);\$#,0""","04a0e123-3565-4833-a3ae-aab90e69da6a","SUMX (
+    factAccount,
+    VAR Bal = factAccount[TotalBalance]
+    RETURN
+        IF ( Bal > 250000, Bal - 250000, 0 )
+)"
+5662,"Total Customers","_Measures","","Integer","COUNTROWS(dimCustomer)","",False,"Valid",,False,"","","","""#,0""","c96dd624-69cc-40af-a8c7-e96955bf21ea","COUNTROWS(dimCustomer)"
+5905,"Value","KPI_Metadata","","Text","
+SWITCH (
+    SELECTEDVALUE ( KPI_Metadata[KPI] ),
+
+    -- Accounts
+    ""Total Accounts"",        FORMAT ( [Total Accounts], ""#,0"" ),
+    ""Total Customers"",       FORMAT ( [Total Customers], ""#,0"" ),
+    ""Customers Over 250K"",   FORMAT ( [Customers Over 250K], ""#,0"" ),
+
+    -- Balance
+    ""Total Balance"",         FORMAT ( [Total Balance], ""$#,0,,M"" ),
+    ""Insured Amount"",        FORMAT ( [Insured Amount], ""$#,0,,M"" ),
+    ""Uninsured Amount"",      FORMAT ( [Uninsured Amount], ""$#,0,,M"" ),
+
+    BLANK()
+)","",False,"Valid",,False,"","","","","6ecbabc0-49fe-4b3a-8b65-57c2f8f89775","SWITCH (
+    SELECTEDVALUE ( KPI_Metadata[KPI] ),
+
+    -- Accounts
+    ""Total Accounts"",        FORMAT ( [Total Accounts], ""#,0"" ),
+    ""Total Customers"",       FORMAT ( [Total Customers], ""#,0"" ),
+    ""Customers Over 250K"",   FORMAT ( [Customers Over 250K], ""#,0"" ),
+
+    -- Balance
+    ""Total Balance"",         FORMAT ( [Total Balance], ""$#,0,,M"" ),
+    ""Insured Amount"",        FORMAT ( [Insured Amount], ""$#,0,,M"" ),
+    ""Uninsured Amount"",      FORMAT ( [Uninsured Amount], ""$#,0,,M"" ),
+
+    BLANK()
+)"

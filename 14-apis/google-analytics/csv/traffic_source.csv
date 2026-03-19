@@ -1,0 +1,918 @@
+event_date,source,medium,campaign,sessions
+20201101,google,organic,(organic),824
+20201101,(direct),(none),(direct),611
+20201101,<Other>,<Other>,<Other>,370
+20201101,<Other>,referral,(referral),255
+20201101,shop.googlemerchandisestore.com,referral,(referral),212
+20201101,(data deleted),(data deleted),(data deleted),122
+20201101,google,cpc,<Other>,108
+20201101,<Other>,organic,(organic),88
+20201101,<Other>,(data deleted),(data deleted),3
+20201101,(data deleted),(data deleted),<Other>,1
+20201102,google,organic,(organic),1099
+20201102,(direct),(none),(direct),821
+20201102,<Other>,<Other>,<Other>,529
+20201102,<Other>,referral,(referral),360
+20201102,shop.googlemerchandisestore.com,referral,(referral),321
+20201102,(data deleted),(data deleted),(data deleted),254
+20201102,google,cpc,<Other>,175
+20201102,<Other>,organic,(organic),109
+20201102,<Other>,(data deleted),(data deleted),7
+20201102,(data deleted),(data deleted),<Other>,7
+20201103,google,organic,(organic),1682
+20201103,(direct),(none),(direct),1234
+20201103,<Other>,<Other>,<Other>,740
+20201103,<Other>,referral,(referral),511
+20201103,shop.googlemerchandisestore.com,referral,(referral),402
+20201103,(data deleted),(data deleted),(data deleted),322
+20201103,google,cpc,<Other>,238
+20201103,<Other>,organic,(organic),135
+20201103,<Other>,(data deleted),(data deleted),10
+20201103,(data deleted),(data deleted),<Other>,7
+20201104,google,organic,(organic),1310
+20201104,(direct),(none),(direct),954
+20201104,<Other>,<Other>,<Other>,630
+20201104,<Other>,referral,(referral),408
+20201104,shop.googlemerchandisestore.com,referral,(referral),373
+20201104,(data deleted),(data deleted),(data deleted),300
+20201104,google,cpc,<Other>,169
+20201104,<Other>,organic,(organic),123
+20201104,(data deleted),(data deleted),<Other>,6
+20201104,<Other>,(data deleted),(data deleted),6
+20201104,<Other>,referral,<Other>,1
+20201105,google,organic,(organic),1168
+20201105,(direct),(none),(direct),852
+20201105,<Other>,<Other>,<Other>,480
+20201105,<Other>,referral,(referral),357
+20201105,shop.googlemerchandisestore.com,referral,(referral),342
+20201105,(data deleted),(data deleted),(data deleted),335
+20201105,google,cpc,<Other>,154
+20201105,<Other>,organic,(organic),91
+20201105,(data deleted),(data deleted),<Other>,8
+20201105,<Other>,(data deleted),(data deleted),7
+20201106,google,organic,(organic),998
+20201106,(direct),(none),(direct),748
+20201106,<Other>,<Other>,<Other>,412
+20201106,shop.googlemerchandisestore.com,referral,(referral),312
+20201106,<Other>,referral,(referral),293
+20201106,(data deleted),(data deleted),(data deleted),265
+20201106,google,cpc,<Other>,134
+20201106,<Other>,organic,(organic),91
+20201106,<Other>,(data deleted),(data deleted),6
+20201106,(data deleted),(data deleted),<Other>,4
+20201106,(data deleted),referral,(referral),1
+20201107,google,organic,(organic),684
+20201107,(direct),(none),(direct),548
+20201107,<Other>,<Other>,<Other>,307
+20201107,<Other>,referral,(referral),227
+20201107,shop.googlemerchandisestore.com,referral,(referral),178
+20201107,(data deleted),(data deleted),(data deleted),132
+20201107,google,cpc,<Other>,106
+20201107,<Other>,organic,(organic),52
+20201107,(data deleted),(data deleted),<Other>,5
+20201108,google,organic,(organic),656
+20201108,(direct),(none),(direct),473
+20201108,<Other>,<Other>,<Other>,309
+20201108,<Other>,referral,(referral),216
+20201108,shop.googlemerchandisestore.com,referral,(referral),192
+20201108,(data deleted),(data deleted),(data deleted),137
+20201108,google,cpc,<Other>,88
+20201108,<Other>,organic,(organic),56
+20201108,<Other>,(data deleted),(data deleted),3
+20201108,(data deleted),(data deleted),<Other>,2
+20201109,google,organic,(organic),972
+20201109,(direct),(none),(direct),787
+20201109,<Other>,<Other>,<Other>,454
+20201109,<Other>,referral,(referral),294
+20201109,shop.googlemerchandisestore.com,referral,(referral),264
+20201109,(data deleted),(data deleted),(data deleted),230
+20201109,google,cpc,<Other>,122
+20201109,<Other>,organic,(organic),90
+20201109,<Other>,(data deleted),(data deleted),8
+20201109,(data deleted),(data deleted),<Other>,6
+20201110,google,organic,(organic),1151
+20201110,(direct),(none),(direct),850
+20201110,<Other>,<Other>,<Other>,518
+20201110,<Other>,referral,(referral),387
+20201110,shop.googlemerchandisestore.com,referral,(referral),345
+20201110,(data deleted),(data deleted),(data deleted),268
+20201110,google,cpc,<Other>,159
+20201110,<Other>,organic,(organic),93
+20201110,<Other>,(data deleted),(data deleted),7
+20201110,(data deleted),(data deleted),<Other>,3
+20201111,google,organic,(organic),1187
+20201111,(direct),(none),(direct),826
+20201111,<Other>,<Other>,<Other>,528
+20201111,<Other>,referral,(referral),348
+20201111,shop.googlemerchandisestore.com,referral,(referral),309
+20201111,(data deleted),(data deleted),(data deleted),280
+20201111,google,cpc,<Other>,180
+20201111,<Other>,organic,(organic),97
+20201111,<Other>,(data deleted),(data deleted),7
+20201111,(data deleted),(data deleted),<Other>,2
+20201112,google,organic,(organic),1071
+20201112,(direct),(none),(direct),872
+20201112,<Other>,<Other>,<Other>,488
+20201112,<Other>,referral,(referral),349
+20201112,shop.googlemerchandisestore.com,referral,(referral),340
+20201112,(data deleted),(data deleted),(data deleted),269
+20201112,google,cpc,<Other>,131
+20201112,<Other>,organic,(organic),96
+20201112,(data deleted),(data deleted),<Other>,9
+20201112,<Other>,(data deleted),(data deleted),6
+20201113,google,organic,(organic),1003
+20201113,(direct),(none),(direct),814
+20201113,<Other>,<Other>,<Other>,458
+20201113,<Other>,referral,(referral),309
+20201113,shop.googlemerchandisestore.com,referral,(referral),278
+20201113,(data deleted),(data deleted),(data deleted),235
+20201113,google,cpc,<Other>,116
+20201113,<Other>,organic,(organic),75
+20201113,<Other>,(data deleted),(data deleted),6
+20201113,(data deleted),(data deleted),<Other>,4
+20201113,<Other>,<Other>,(data deleted),1
+20201114,google,organic,(organic),715
+20201114,(direct),(none),(direct),506
+20201114,<Other>,<Other>,<Other>,343
+20201114,<Other>,referral,(referral),236
+20201114,shop.googlemerchandisestore.com,referral,(referral),201
+20201114,(data deleted),(data deleted),(data deleted),170
+20201114,google,cpc,<Other>,105
+20201114,<Other>,organic,(organic),55
+20201114,<Other>,(data deleted),(data deleted),2
+20201114,(data deleted),(data deleted),<Other>,1
+20201115,google,organic,(organic),660
+20201115,(direct),(none),(direct),534
+20201115,<Other>,<Other>,<Other>,338
+20201115,<Other>,referral,(referral),217
+20201115,shop.googlemerchandisestore.com,referral,(referral),174
+20201115,(data deleted),(data deleted),(data deleted),119
+20201115,google,cpc,<Other>,90
+20201115,<Other>,organic,(organic),54
+20201115,(data deleted),(data deleted),<Other>,2
+20201115,<Other>,(data deleted),(data deleted),2
+20201116,google,organic,(organic),1041
+20201116,(direct),(none),(direct),784
+20201116,<Other>,<Other>,<Other>,516
+20201116,shop.googlemerchandisestore.com,referral,(referral),327
+20201116,<Other>,referral,(referral),318
+20201116,(data deleted),(data deleted),(data deleted),276
+20201116,google,cpc,<Other>,138
+20201116,<Other>,organic,(organic),84
+20201116,<Other>,(data deleted),(data deleted),6
+20201116,(data deleted),(data deleted),<Other>,5
+20201117,google,organic,(organic),1209
+20201117,(direct),(none),(direct),907
+20201117,<Other>,<Other>,<Other>,537
+20201117,<Other>,referral,(referral),398
+20201117,shop.googlemerchandisestore.com,referral,(referral),362
+20201117,(data deleted),(data deleted),(data deleted),341
+20201117,google,cpc,<Other>,141
+20201117,<Other>,organic,(organic),106
+20201117,(data deleted),(data deleted),<Other>,6
+20201117,<Other>,(data deleted),(data deleted),4
+20201118,google,organic,(organic),1274
+20201118,(direct),(none),(direct),969
+20201118,<Other>,<Other>,<Other>,520
+20201118,<Other>,referral,(referral),407
+20201118,shop.googlemerchandisestore.com,referral,(referral),350
+20201118,(data deleted),(data deleted),(data deleted),296
+20201118,google,cpc,<Other>,154
+20201118,<Other>,organic,(organic),110
+20201118,(data deleted),(data deleted),<Other>,6
+20201118,<Other>,(data deleted),(data deleted),6
+20201119,google,organic,(organic),1234
+20201119,(direct),(none),(direct),972
+20201119,<Other>,<Other>,<Other>,558
+20201119,<Other>,referral,(referral),417
+20201119,shop.googlemerchandisestore.com,referral,(referral),373
+20201119,(data deleted),(data deleted),(data deleted),308
+20201119,google,cpc,<Other>,177
+20201119,<Other>,organic,(organic),99
+20201119,(data deleted),(data deleted),<Other>,8
+20201119,<Other>,(data deleted),(data deleted),4
+20201120,google,organic,(organic),1244
+20201120,(direct),(none),(direct),970
+20201120,<Other>,<Other>,<Other>,513
+20201120,<Other>,referral,(referral),418
+20201120,shop.googlemerchandisestore.com,referral,(referral),334
+20201120,(data deleted),(data deleted),(data deleted),303
+20201120,google,cpc,<Other>,163
+20201120,<Other>,organic,(organic),124
+20201120,(data deleted),(data deleted),<Other>,10
+20201120,<Other>,(data deleted),(data deleted),4
+20201121,google,organic,(organic),985
+20201121,(direct),(none),(direct),720
+20201121,<Other>,<Other>,<Other>,452
+20201121,<Other>,referral,(referral),291
+20201121,shop.googlemerchandisestore.com,referral,(referral),242
+20201121,(data deleted),(data deleted),(data deleted),217
+20201121,google,cpc,<Other>,145
+20201121,<Other>,organic,(organic),92
+20201121,<Other>,(data deleted),(data deleted),5
+20201121,(data deleted),(data deleted),<Other>,2
+20201122,google,organic,(organic),840
+20201122,(direct),(none),(direct),626
+20201122,<Other>,<Other>,<Other>,367
+20201122,<Other>,referral,(referral),260
+20201122,shop.googlemerchandisestore.com,referral,(referral),226
+20201122,(data deleted),(data deleted),(data deleted),159
+20201122,google,cpc,<Other>,106
+20201122,<Other>,organic,(organic),62
+20201122,<Other>,(data deleted),(data deleted),3
+20201122,(data deleted),(data deleted),<Other>,1
+20201123,google,organic,(organic),1229
+20201123,(direct),(none),(direct),943
+20201123,<Other>,<Other>,<Other>,527
+20201123,<Other>,referral,(referral),354
+20201123,shop.googlemerchandisestore.com,referral,(referral),311
+20201123,(data deleted),(data deleted),(data deleted),289
+20201123,google,cpc,<Other>,156
+20201123,<Other>,organic,(organic),96
+20201123,<Other>,(data deleted),(data deleted),6
+20201123,(data deleted),(data deleted),<Other>,3
+20201124,google,organic,(organic),1319
+20201124,(direct),(none),(direct),941
+20201124,<Other>,<Other>,<Other>,546
+20201124,<Other>,referral,(referral),421
+20201124,shop.googlemerchandisestore.com,referral,(referral),382
+20201124,(data deleted),(data deleted),(data deleted),271
+20201124,google,cpc,<Other>,156
+20201124,<Other>,organic,(organic),121
+20201124,(data deleted),(data deleted),<Other>,7
+20201124,<Other>,(data deleted),(data deleted),5
+20201125,google,organic,(organic),1324
+20201125,(direct),(none),(direct),974
+20201125,<Other>,<Other>,<Other>,603
+20201125,<Other>,referral,(referral),433
+20201125,shop.googlemerchandisestore.com,referral,(referral),353
+20201125,(data deleted),(data deleted),(data deleted),298
+20201125,google,cpc,<Other>,189
+20201125,<Other>,organic,(organic),105
+20201125,(data deleted),(data deleted),<Other>,8
+20201125,<Other>,(data deleted),(data deleted),5
+20201126,google,organic,(organic),1262
+20201126,(direct),(none),(direct),965
+20201126,<Other>,<Other>,<Other>,604
+20201126,<Other>,referral,(referral),372
+20201126,shop.googlemerchandisestore.com,referral,(referral),312
+20201126,(data deleted),(data deleted),(data deleted),274
+20201126,google,cpc,<Other>,153
+20201126,<Other>,organic,(organic),104
+20201126,<Other>,(data deleted),(data deleted),8
+20201126,(data deleted),(data deleted),<Other>,4
+20201127,google,organic,(organic),1176
+20201127,(direct),(none),(direct),910
+20201127,<Other>,<Other>,<Other>,600
+20201127,<Other>,referral,(referral),377
+20201127,shop.googlemerchandisestore.com,referral,(referral),313
+20201127,(data deleted),(data deleted),(data deleted),221
+20201127,google,cpc,<Other>,187
+20201127,<Other>,organic,(organic),129
+20201127,(data deleted),(data deleted),<Other>,8
+20201127,<Other>,(data deleted),(data deleted),7
+20201128,google,organic,(organic),1042
+20201128,(direct),(none),(direct),813
+20201128,<Other>,<Other>,<Other>,503
+20201128,<Other>,referral,(referral),348
+20201128,shop.googlemerchandisestore.com,referral,(referral),240
+20201128,(data deleted),(data deleted),(data deleted),166
+20201128,google,cpc,<Other>,131
+20201128,<Other>,organic,(organic),96
+20201128,<Other>,(data deleted),(data deleted),4
+20201128,(data deleted),(data deleted),<Other>,2
+20201129,google,organic,(organic),985
+20201129,(direct),(none),(direct),747
+20201129,<Other>,<Other>,<Other>,491
+20201129,<Other>,referral,(referral),299
+20201129,shop.googlemerchandisestore.com,referral,(referral),255
+20201129,(data deleted),(data deleted),(data deleted),194
+20201129,google,cpc,<Other>,130
+20201129,<Other>,organic,(organic),97
+20201129,<Other>,(data deleted),(data deleted),4
+20201129,(data deleted),(data deleted),<Other>,4
+20201130,google,organic,(organic),1410
+20201130,(direct),(none),(direct),977
+20201130,<Other>,<Other>,<Other>,632
+20201130,<Other>,referral,(referral),455
+20201130,shop.googlemerchandisestore.com,referral,(referral),355
+20201130,(data deleted),(data deleted),(data deleted),321
+20201130,google,cpc,<Other>,225
+20201130,<Other>,organic,(organic),133
+20201130,<Other>,(data deleted),(data deleted),4
+20201130,(data deleted),(data deleted),<Other>,2
+20201201,google,organic,(organic),1533
+20201201,(direct),(none),(direct),1113
+20201201,<Other>,<Other>,<Other>,684
+20201201,<Other>,referral,(referral),484
+20201201,shop.googlemerchandisestore.com,referral,(referral),439
+20201201,(data deleted),(data deleted),(data deleted),318
+20201201,google,cpc,<Other>,202
+20201201,<Other>,organic,(organic),124
+20201201,(data deleted),(data deleted),<Other>,10
+20201201,<Other>,(data deleted),(data deleted),5
+20201202,google,organic,(organic),1491
+20201202,(direct),(none),(direct),1077
+20201202,<Other>,<Other>,<Other>,644
+20201202,shop.googlemerchandisestore.com,referral,(referral),428
+20201202,<Other>,referral,(referral),427
+20201202,(data deleted),(data deleted),(data deleted),321
+20201202,google,cpc,<Other>,213
+20201202,<Other>,organic,(organic),141
+20201202,<Other>,(data deleted),(data deleted),10
+20201202,(data deleted),(data deleted),<Other>,7
+20201203,google,organic,(organic),1641
+20201203,(direct),(none),(direct),1161
+20201203,<Other>,<Other>,<Other>,697
+20201203,<Other>,referral,(referral),486
+20201203,shop.googlemerchandisestore.com,referral,(referral),443
+20201203,(data deleted),(data deleted),(data deleted),329
+20201203,google,cpc,<Other>,227
+20201203,<Other>,organic,(organic),150
+20201203,(data deleted),(data deleted),<Other>,3
+20201203,<Other>,(data deleted),(data deleted),3
+20201204,google,organic,(organic),1486
+20201204,(direct),(none),(direct),1096
+20201204,<Other>,<Other>,<Other>,602
+20201204,<Other>,referral,(referral),430
+20201204,shop.googlemerchandisestore.com,referral,(referral),393
+20201204,(data deleted),(data deleted),(data deleted),325
+20201204,google,cpc,<Other>,204
+20201204,<Other>,organic,(organic),129
+20201204,(data deleted),(data deleted),<Other>,5
+20201204,<Other>,(data deleted),(data deleted),5
+20201205,google,organic,(organic),1078
+20201205,(direct),(none),(direct),838
+20201205,<Other>,<Other>,<Other>,520
+20201205,<Other>,referral,(referral),296
+20201205,shop.googlemerchandisestore.com,referral,(referral),280
+20201205,(data deleted),(data deleted),(data deleted),177
+20201205,google,cpc,<Other>,176
+20201205,<Other>,organic,(organic),86
+20201205,<Other>,(data deleted),(data deleted),6
+20201205,(data deleted),(data deleted),<Other>,5
+20201206,google,organic,(organic),1005
+20201206,(direct),(none),(direct),754
+20201206,<Other>,<Other>,<Other>,496
+20201206,<Other>,referral,(referral),333
+20201206,shop.googlemerchandisestore.com,referral,(referral),262
+20201206,(data deleted),(data deleted),(data deleted),201
+20201206,google,cpc,<Other>,151
+20201206,<Other>,organic,(organic),94
+20201206,(data deleted),(data deleted),<Other>,5
+20201206,<Other>,(data deleted),(data deleted),1
+20201207,google,organic,(organic),1635
+20201207,(direct),(none),(direct),1264
+20201207,<Other>,<Other>,<Other>,750
+20201207,<Other>,referral,(referral),522
+20201207,shop.googlemerchandisestore.com,referral,(referral),442
+20201207,(data deleted),(data deleted),(data deleted),372
+20201207,google,cpc,<Other>,238
+20201207,<Other>,organic,(organic),162
+20201207,(data deleted),(data deleted),<Other>,12
+20201207,<Other>,(data deleted),(data deleted),12
+20201208,google,organic,(organic),2366
+20201208,(direct),(none),(direct),1741
+20201208,<Other>,<Other>,<Other>,1120
+20201208,<Other>,referral,(referral),745
+20201208,shop.googlemerchandisestore.com,referral,(referral),585
+20201208,(data deleted),(data deleted),(data deleted),439
+20201208,google,cpc,<Other>,332
+20201208,<Other>,organic,(organic),179
+20201208,<Other>,(data deleted),(data deleted),9
+20201208,(data deleted),(data deleted),<Other>,6
+20201209,google,organic,(organic),1949
+20201209,(direct),(none),(direct),1404
+20201209,<Other>,<Other>,<Other>,908
+20201209,<Other>,referral,(referral),576
+20201209,shop.googlemerchandisestore.com,referral,(referral),548
+20201209,(data deleted),(data deleted),(data deleted),371
+20201209,google,cpc,<Other>,246
+20201209,<Other>,organic,(organic),189
+20201209,(data deleted),(data deleted),<Other>,10
+20201209,<Other>,(data deleted),(data deleted),6
+20201210,google,organic,(organic),1716
+20201210,(direct),(none),(direct),1335
+20201210,<Other>,<Other>,<Other>,839
+20201210,<Other>,referral,(referral),595
+20201210,shop.googlemerchandisestore.com,referral,(referral),460
+20201210,(data deleted),(data deleted),(data deleted),368
+20201210,google,cpc,<Other>,266
+20201210,<Other>,organic,(organic),159
+20201210,(data deleted),(data deleted),<Other>,11
+20201210,<Other>,(data deleted),(data deleted),8
+20201210,(data deleted),referral,(referral),1
+20201211,google,organic,(organic),1692
+20201211,(direct),(none),(direct),1213
+20201211,<Other>,<Other>,<Other>,826
+20201211,<Other>,referral,(referral),551
+20201211,shop.googlemerchandisestore.com,referral,(referral),437
+20201211,(data deleted),(data deleted),(data deleted),353
+20201211,google,cpc,<Other>,256
+20201211,<Other>,organic,(organic),141
+20201211,(data deleted),(data deleted),<Other>,6
+20201211,<Other>,(data deleted),(data deleted),1
+20201212,google,organic,(organic),1267
+20201212,(direct),(none),(direct),919
+20201212,<Other>,<Other>,<Other>,652
+20201212,<Other>,referral,(referral),415
+20201212,shop.googlemerchandisestore.com,referral,(referral),314
+20201212,google,cpc,<Other>,195
+20201212,(data deleted),(data deleted),(data deleted),193
+20201212,<Other>,organic,(organic),123
+20201212,(data deleted),(data deleted),<Other>,6
+20201212,<Other>,(data deleted),(data deleted),3
+20201213,google,organic,(organic),1231
+20201213,(direct),(none),(direct),864
+20201213,<Other>,<Other>,<Other>,548
+20201213,<Other>,referral,(referral),337
+20201213,shop.googlemerchandisestore.com,referral,(referral),236
+20201213,google,cpc,<Other>,164
+20201213,(data deleted),(data deleted),(data deleted),163
+20201213,<Other>,organic,(organic),119
+20201213,(data deleted),(data deleted),<Other>,3
+20201213,<Other>,(data deleted),(data deleted),1
+20201214,google,organic,(organic),1626
+20201214,(direct),(none),(direct),1195
+20201214,<Other>,<Other>,<Other>,696
+20201214,<Other>,referral,(referral),478
+20201214,shop.googlemerchandisestore.com,referral,(referral),416
+20201214,(data deleted),(data deleted),(data deleted),274
+20201214,google,cpc,<Other>,214
+20201214,<Other>,organic,(organic),139
+20201214,(data deleted),(data deleted),<Other>,6
+20201214,<Other>,(data deleted),(data deleted),4
+20201215,google,organic,(organic),1737
+20201215,(direct),(none),(direct),1299
+20201215,<Other>,<Other>,<Other>,811
+20201215,<Other>,referral,(referral),550
+20201215,shop.googlemerchandisestore.com,referral,(referral),491
+20201215,(data deleted),(data deleted),(data deleted),360
+20201215,google,cpc,<Other>,256
+20201215,<Other>,organic,(organic),157
+20201215,<Other>,(data deleted),(data deleted),10
+20201215,(data deleted),(data deleted),<Other>,7
+20201216,google,organic,(organic),1706
+20201216,(direct),(none),(direct),1264
+20201216,<Other>,<Other>,<Other>,762
+20201216,<Other>,referral,(referral),527
+20201216,shop.googlemerchandisestore.com,referral,(referral),474
+20201216,(data deleted),(data deleted),(data deleted),347
+20201216,google,cpc,<Other>,241
+20201216,<Other>,organic,(organic),151
+20201216,(data deleted),(data deleted),<Other>,7
+20201216,<Other>,(data deleted),(data deleted),5
+20201216,<Other>,cpc,<Other>,1
+20201217,google,organic,(organic),1647
+20201217,(direct),(none),(direct),1234
+20201217,<Other>,<Other>,<Other>,768
+20201217,<Other>,referral,(referral),523
+20201217,shop.googlemerchandisestore.com,referral,(referral),393
+20201217,(data deleted),(data deleted),(data deleted),316
+20201217,google,cpc,<Other>,252
+20201217,<Other>,organic,(organic),132
+20201217,<Other>,(data deleted),(data deleted),9
+20201217,(data deleted),(data deleted),<Other>,8
+20201218,google,organic,(organic),1527
+20201218,(direct),(none),(direct),1149
+20201218,<Other>,<Other>,<Other>,719
+20201218,<Other>,referral,(referral),449
+20201218,shop.googlemerchandisestore.com,referral,(referral),380
+20201218,(data deleted),(data deleted),(data deleted),230
+20201218,google,cpc,<Other>,185
+20201218,<Other>,organic,(organic),130
+20201218,(data deleted),(data deleted),<Other>,9
+20201218,<Other>,(data deleted),(data deleted),4
+20201219,google,organic,(organic),1094
+20201219,(direct),(none),(direct),886
+20201219,<Other>,<Other>,<Other>,534
+20201219,<Other>,referral,(referral),349
+20201219,shop.googlemerchandisestore.com,referral,(referral),250
+20201219,google,cpc,<Other>,177
+20201219,(data deleted),(data deleted),(data deleted),171
+20201219,<Other>,organic,(organic),93
+20201219,<Other>,(data deleted),(data deleted),2
+20201219,(data deleted),(data deleted),<Other>,2
+20201220,google,organic,(organic),1060
+20201220,(direct),(none),(direct),756
+20201220,<Other>,<Other>,<Other>,503
+20201220,<Other>,referral,(referral),293
+20201220,shop.googlemerchandisestore.com,referral,(referral),239
+20201220,(data deleted),(data deleted),(data deleted),156
+20201220,google,cpc,<Other>,140
+20201220,<Other>,organic,(organic),93
+20201220,(data deleted),(data deleted),<Other>,4
+20201220,<Other>,(data deleted),(data deleted),3
+20201221,google,organic,(organic),1242
+20201221,(direct),(none),(direct),899
+20201221,<Other>,<Other>,<Other>,588
+20201221,<Other>,referral,(referral),409
+20201221,shop.googlemerchandisestore.com,referral,(referral),312
+20201221,(data deleted),(data deleted),(data deleted),229
+20201221,google,cpc,<Other>,160
+20201221,<Other>,organic,(organic),102
+20201221,<Other>,(data deleted),(data deleted),5
+20201221,(data deleted),(data deleted),<Other>,4
+20201222,google,organic,(organic),1197
+20201222,(direct),(none),(direct),838
+20201222,<Other>,<Other>,<Other>,570
+20201222,<Other>,referral,(referral),353
+20201222,shop.googlemerchandisestore.com,referral,(referral),312
+20201222,(data deleted),(data deleted),(data deleted),235
+20201222,google,cpc,<Other>,157
+20201222,<Other>,organic,(organic),117
+20201222,<Other>,(data deleted),(data deleted),9
+20201222,(data deleted),(data deleted),<Other>,3
+20201223,google,organic,(organic),1074
+20201223,(direct),(none),(direct),777
+20201223,<Other>,<Other>,<Other>,528
+20201223,<Other>,referral,(referral),327
+20201223,shop.googlemerchandisestore.com,referral,(referral),258
+20201223,(data deleted),(data deleted),(data deleted),186
+20201223,google,cpc,<Other>,144
+20201223,<Other>,organic,(organic),104
+20201223,(data deleted),(data deleted),<Other>,6
+20201223,<Other>,(data deleted),(data deleted),2
+20201224,google,organic,(organic),877
+20201224,(direct),(none),(direct),626
+20201224,<Other>,<Other>,<Other>,456
+20201224,<Other>,referral,(referral),260
+20201224,shop.googlemerchandisestore.com,referral,(referral),201
+20201224,google,cpc,<Other>,145
+20201224,(data deleted),(data deleted),(data deleted),116
+20201224,<Other>,organic,(organic),89
+20201224,(data deleted),(data deleted),<Other>,2
+20201224,<Other>,(data deleted),(data deleted),1
+20201225,google,organic,(organic),867
+20201225,(direct),(none),(direct),590
+20201225,<Other>,<Other>,<Other>,408
+20201225,<Other>,referral,(referral),264
+20201225,shop.googlemerchandisestore.com,referral,(referral),186
+20201225,google,cpc,<Other>,144
+20201225,(data deleted),(data deleted),(data deleted),93
+20201225,<Other>,organic,(organic),69
+20201225,<Other>,(data deleted),(data deleted),1
+20201225,(data deleted),(data deleted),<Other>,1
+20201226,google,organic,(organic),881
+20201226,(direct),(none),(direct),646
+20201226,<Other>,<Other>,<Other>,425
+20201226,<Other>,referral,(referral),233
+20201226,shop.googlemerchandisestore.com,referral,(referral),167
+20201226,google,cpc,<Other>,126
+20201226,(data deleted),(data deleted),(data deleted),94
+20201226,<Other>,organic,(organic),75
+20201226,<Other>,(data deleted),(data deleted),2
+20201226,(data deleted),(data deleted),<Other>,2
+20201227,google,organic,(organic),902
+20201227,(direct),(none),(direct),607
+20201227,<Other>,<Other>,<Other>,404
+20201227,<Other>,referral,(referral),256
+20201227,shop.googlemerchandisestore.com,referral,(referral),177
+20201227,google,cpc,<Other>,124
+20201227,(data deleted),(data deleted),(data deleted),105
+20201227,<Other>,organic,(organic),66
+20201227,(data deleted),(data deleted),<Other>,3
+20201227,<Other>,(data deleted),(data deleted),2
+20201228,google,organic,(organic),1055
+20201228,(direct),(none),(direct),782
+20201228,<Other>,<Other>,<Other>,493
+20201228,<Other>,referral,(referral),322
+20201228,shop.googlemerchandisestore.com,referral,(referral),244
+20201228,(data deleted),(data deleted),(data deleted),158
+20201228,google,cpc,<Other>,150
+20201228,<Other>,organic,(organic),120
+20201228,<Other>,(data deleted),(data deleted),3
+20201228,(data deleted),(data deleted),<Other>,2
+20201229,google,organic,(organic),1094
+20201229,(direct),(none),(direct),818
+20201229,<Other>,<Other>,<Other>,522
+20201229,<Other>,referral,(referral),307
+20201229,shop.googlemerchandisestore.com,referral,(referral),228
+20201229,(data deleted),(data deleted),(data deleted),166
+20201229,google,cpc,<Other>,156
+20201229,<Other>,organic,(organic),106
+20201229,<Other>,(data deleted),(data deleted),2
+20201229,(data deleted),(data deleted),<Other>,1
+20201230,google,organic,(organic),1019
+20201230,(direct),(none),(direct),751
+20201230,<Other>,<Other>,<Other>,460
+20201230,<Other>,referral,(referral),333
+20201230,shop.googlemerchandisestore.com,referral,(referral),253
+20201230,google,cpc,<Other>,134
+20201230,(data deleted),(data deleted),(data deleted),132
+20201230,<Other>,organic,(organic),98
+20201230,google,<Other>,<Other>,1
+20201230,(data deleted),(data deleted),<Other>,1
+20201231,google,organic,(organic),862
+20201231,(direct),(none),(direct),612
+20201231,<Other>,<Other>,<Other>,388
+20201231,<Other>,referral,(referral),228
+20201231,shop.googlemerchandisestore.com,referral,(referral),175
+20201231,google,cpc,<Other>,118
+20201231,(data deleted),(data deleted),(data deleted),112
+20201231,<Other>,organic,(organic),90
+20201231,(data deleted),(data deleted),<Other>,2
+20210101,google,organic,(organic),746
+20210101,(direct),(none),(direct),564
+20210101,<Other>,<Other>,<Other>,377
+20210101,<Other>,referral,(referral),211
+20210101,shop.googlemerchandisestore.com,referral,(referral),134
+20210101,google,cpc,<Other>,103
+20210101,(data deleted),(data deleted),(data deleted),85
+20210101,<Other>,organic,(organic),64
+20210101,(data deleted),(data deleted),<Other>,3
+20210101,<Other>,(data deleted),(data deleted),2
+20210102,google,organic,(organic),896
+20210102,(direct),(none),(direct),633
+20210102,<Other>,<Other>,<Other>,428
+20210102,<Other>,referral,(referral),281
+20210102,shop.googlemerchandisestore.com,referral,(referral),149
+20210102,google,cpc,<Other>,147
+20210102,(data deleted),(data deleted),(data deleted),96
+20210102,<Other>,organic,(organic),72
+20210102,(data deleted),(data deleted),<Other>,3
+20210103,google,organic,(organic),891
+20210103,(direct),(none),(direct),634
+20210103,<Other>,<Other>,<Other>,476
+20210103,<Other>,referral,(referral),280
+20210103,shop.googlemerchandisestore.com,referral,(referral),174
+20210103,google,cpc,<Other>,109
+20210103,(data deleted),(data deleted),(data deleted),92
+20210103,<Other>,organic,(organic),91
+20210103,(data deleted),(data deleted),<Other>,4
+20210103,<Other>,(data deleted),(data deleted),2
+20210104,google,organic,(organic),1066
+20210104,(direct),(none),(direct),784
+20210104,<Other>,<Other>,<Other>,510
+20210104,<Other>,referral,(referral),323
+20210104,shop.googlemerchandisestore.com,referral,(referral),229
+20210104,google,cpc,<Other>,162
+20210104,(data deleted),(data deleted),(data deleted),143
+20210104,<Other>,organic,(organic),94
+20210104,(data deleted),(data deleted),<Other>,3
+20210104,<Other>,(data deleted),(data deleted),3
+20210105,google,organic,(organic),1476
+20210105,(direct),(none),(direct),1021
+20210105,<Other>,<Other>,<Other>,664
+20210105,<Other>,referral,(referral),438
+20210105,shop.googlemerchandisestore.com,referral,(referral),306
+20210105,google,cpc,<Other>,197
+20210105,(data deleted),(data deleted),(data deleted),176
+20210105,<Other>,organic,(organic),130
+20210105,<Other>,(data deleted),(data deleted),2
+20210106,google,organic,(organic),1930
+20210106,(direct),(none),(direct),1408
+20210106,<Other>,<Other>,<Other>,902
+20210106,<Other>,referral,(referral),567
+20210106,shop.googlemerchandisestore.com,referral,(referral),421
+20210106,(data deleted),(data deleted),(data deleted),263
+20210106,google,cpc,<Other>,261
+20210106,<Other>,organic,(organic),187
+20210106,(data deleted),(data deleted),<Other>,8
+20210106,<Other>,(data deleted),(data deleted),4
+20210107,google,organic,(organic),1539
+20210107,(direct),(none),(direct),1061
+20210107,<Other>,<Other>,<Other>,680
+20210107,<Other>,referral,(referral),406
+20210107,shop.googlemerchandisestore.com,referral,(referral),335
+20210107,(data deleted),(data deleted),(data deleted),239
+20210107,google,cpc,<Other>,206
+20210107,<Other>,organic,(organic),136
+20210107,(data deleted),(data deleted),<Other>,4
+20210107,<Other>,(data deleted),(data deleted),1
+20210108,google,organic,(organic),1337
+20210108,(direct),(none),(direct),1006
+20210108,<Other>,<Other>,<Other>,619
+20210108,<Other>,referral,(referral),401
+20210108,shop.googlemerchandisestore.com,referral,(referral),311
+20210108,(data deleted),(data deleted),(data deleted),213
+20210108,google,cpc,<Other>,183
+20210108,<Other>,organic,(organic),136
+20210108,(data deleted),(data deleted),<Other>,8
+20210108,<Other>,(data deleted),(data deleted),3
+20210109,google,organic,(organic),1067
+20210109,(direct),(none),(direct),757
+20210109,<Other>,<Other>,<Other>,485
+20210109,<Other>,referral,(referral),304
+20210109,shop.googlemerchandisestore.com,referral,(referral),241
+20210109,(data deleted),(data deleted),(data deleted),147
+20210109,google,cpc,<Other>,134
+20210109,<Other>,organic,(organic),103
+20210109,(data deleted),(data deleted),<Other>,1
+20210110,google,organic,(organic),968
+20210110,(direct),(none),(direct),702
+20210110,<Other>,<Other>,<Other>,479
+20210110,<Other>,referral,(referral),245
+20210110,shop.googlemerchandisestore.com,referral,(referral),200
+20210110,google,cpc,<Other>,153
+20210110,(data deleted),(data deleted),(data deleted),120
+20210110,<Other>,organic,(organic),100
+20210110,<Other>,(data deleted),(data deleted),4
+20210110,(data deleted),(data deleted),<Other>,3
+20210111,google,organic,(organic),1266
+20210111,(direct),(none),(direct),896
+20210111,<Other>,<Other>,<Other>,624
+20210111,<Other>,referral,(referral),367
+20210111,shop.googlemerchandisestore.com,referral,(referral),273
+20210111,(data deleted),(data deleted),(data deleted),208
+20210111,google,cpc,<Other>,162
+20210111,<Other>,organic,(organic),116
+20210111,(data deleted),(data deleted),<Other>,3
+20210112,google,organic,(organic),1475
+20210112,(direct),(none),(direct),1084
+20210112,<Other>,<Other>,<Other>,721
+20210112,<Other>,referral,(referral),462
+20210112,shop.googlemerchandisestore.com,referral,(referral),340
+20210112,(data deleted),(data deleted),(data deleted),246
+20210112,google,cpc,<Other>,202
+20210112,<Other>,organic,(organic),137
+20210112,(data deleted),(data deleted),<Other>,5
+20210112,<Other>,(data deleted),(data deleted),5
+20210113,google,organic,(organic),1377
+20210113,(direct),(none),(direct),1078
+20210113,<Other>,<Other>,<Other>,676
+20210113,<Other>,referral,(referral),424
+20210113,shop.googlemerchandisestore.com,referral,(referral),319
+20210113,(data deleted),(data deleted),(data deleted),236
+20210113,google,cpc,<Other>,215
+20210113,<Other>,organic,(organic),146
+20210113,<Other>,(data deleted),(data deleted),3
+20210113,(data deleted),(data deleted),<Other>,3
+20210114,google,organic,(organic),1359
+20210114,(direct),(none),(direct),1038
+20210114,<Other>,<Other>,<Other>,626
+20210114,<Other>,referral,(referral),395
+20210114,shop.googlemerchandisestore.com,referral,(referral),348
+20210114,(data deleted),(data deleted),(data deleted),225
+20210114,google,cpc,<Other>,187
+20210114,<Other>,organic,(organic),135
+20210114,<Other>,(data deleted),(data deleted),6
+20210114,(data deleted),(data deleted),<Other>,2
+20210115,google,organic,(organic),1246
+20210115,(direct),(none),(direct),937
+20210115,<Other>,<Other>,<Other>,593
+20210115,<Other>,referral,(referral),383
+20210115,shop.googlemerchandisestore.com,referral,(referral),268
+20210115,(data deleted),(data deleted),(data deleted),190
+20210115,google,cpc,<Other>,160
+20210115,<Other>,organic,(organic),108
+20210115,(data deleted),(data deleted),<Other>,6
+20210115,<Other>,(data deleted),(data deleted),2
+20210116,google,organic,(organic),1000
+20210116,(direct),(none),(direct),768
+20210116,<Other>,<Other>,<Other>,482
+20210116,<Other>,referral,(referral),330
+20210116,shop.googlemerchandisestore.com,referral,(referral),218
+20210116,(data deleted),(data deleted),(data deleted),128
+20210116,google,cpc,<Other>,117
+20210116,<Other>,organic,(organic),96
+20210116,(data deleted),(data deleted),<Other>,4
+20210116,<Other>,(data deleted),(data deleted),3
+20210117,google,organic,(organic),1004
+20210117,(direct),(none),(direct),686
+20210117,<Other>,<Other>,<Other>,438
+20210117,<Other>,referral,(referral),289
+20210117,shop.googlemerchandisestore.com,referral,(referral),195
+20210117,(data deleted),(data deleted),(data deleted),137
+20210117,google,cpc,<Other>,129
+20210117,<Other>,organic,(organic),78
+20210117,(data deleted),(data deleted),<Other>,4
+20210118,google,organic,(organic),1187
+20210118,(direct),(none),(direct),804
+20210118,<Other>,<Other>,<Other>,567
+20210118,<Other>,referral,(referral),313
+20210118,shop.googlemerchandisestore.com,referral,(referral),275
+20210118,(data deleted),(data deleted),(data deleted),172
+20210118,google,cpc,<Other>,156
+20210118,<Other>,organic,(organic),84
+20210118,<Other>,(data deleted),(data deleted),2
+20210118,(data deleted),(data deleted),<Other>,1
+20210119,google,organic,(organic),1309
+20210119,(direct),(none),(direct),946
+20210119,<Other>,<Other>,<Other>,603
+20210119,<Other>,referral,(referral),381
+20210119,shop.googlemerchandisestore.com,referral,(referral),370
+20210119,(data deleted),(data deleted),(data deleted),208
+20210119,google,cpc,<Other>,177
+20210119,<Other>,organic,(organic),142
+20210119,(data deleted),(data deleted),<Other>,8
+20210119,<Other>,(data deleted),(data deleted),2
+20210120,google,organic,(organic),1476
+20210120,(direct),(none),(direct),1106
+20210120,<Other>,<Other>,<Other>,706
+20210120,<Other>,referral,(referral),465
+20210120,shop.googlemerchandisestore.com,referral,(referral),347
+20210120,(data deleted),(data deleted),(data deleted),271
+20210120,google,cpc,<Other>,198
+20210120,<Other>,organic,(organic),144
+20210120,(data deleted),(data deleted),<Other>,9
+20210120,<Other>,(data deleted),(data deleted),5
+20210121,google,organic,(organic),1452
+20210121,(direct),(none),(direct),1057
+20210121,<Other>,<Other>,<Other>,690
+20210121,<Other>,referral,(referral),452
+20210121,shop.googlemerchandisestore.com,referral,(referral),360
+20210121,(data deleted),(data deleted),(data deleted),258
+20210121,google,cpc,<Other>,223
+20210121,<Other>,organic,(organic),138
+20210121,(data deleted),(data deleted),<Other>,5
+20210121,<Other>,(data deleted),(data deleted),4
+20210122,google,organic,(organic),1215
+20210122,(direct),(none),(direct),946
+20210122,<Other>,<Other>,<Other>,574
+20210122,<Other>,referral,(referral),398
+20210122,shop.googlemerchandisestore.com,referral,(referral),337
+20210122,(data deleted),(data deleted),(data deleted),227
+20210122,google,cpc,<Other>,198
+20210122,<Other>,organic,(organic),125
+20210122,(data deleted),(data deleted),<Other>,6
+20210122,<Other>,(data deleted),(data deleted),5
+20210123,google,organic,(organic),944
+20210123,(direct),(none),(direct),716
+20210123,<Other>,<Other>,<Other>,501
+20210123,<Other>,referral,(referral),293
+20210123,shop.googlemerchandisestore.com,referral,(referral),251
+20210123,google,cpc,<Other>,146
+20210123,(data deleted),(data deleted),(data deleted),143
+20210123,<Other>,organic,(organic),88
+20210123,(data deleted),(data deleted),<Other>,3
+20210123,<Other>,(data deleted),(data deleted),3
+20210124,google,organic,(organic),928
+20210124,(direct),(none),(direct),684
+20210124,<Other>,<Other>,<Other>,422
+20210124,<Other>,referral,(referral),293
+20210124,shop.googlemerchandisestore.com,referral,(referral),233
+20210124,google,cpc,<Other>,142
+20210124,(data deleted),(data deleted),(data deleted),136
+20210124,<Other>,organic,(organic),83
+20210124,(data deleted),(data deleted),<Other>,4
+20210124,<Other>,(data deleted),(data deleted),3
+20210125,google,organic,(organic),1248
+20210125,(direct),(none),(direct),874
+20210125,<Other>,<Other>,<Other>,583
+20210125,<Other>,referral,(referral),348
+20210125,shop.googlemerchandisestore.com,referral,(referral),300
+20210125,(data deleted),(data deleted),(data deleted),216
+20210125,google,cpc,<Other>,174
+20210125,<Other>,organic,(organic),108
+20210125,(data deleted),(data deleted),<Other>,9
+20210125,<Other>,(data deleted),(data deleted),2
+20210126,google,organic,(organic),1277
+20210126,(direct),(none),(direct),895
+20210126,<Other>,<Other>,<Other>,596
+20210126,<Other>,referral,(referral),381
+20210126,shop.googlemerchandisestore.com,referral,(referral),320
+20210126,(data deleted),(data deleted),(data deleted),259
+20210126,google,cpc,<Other>,192
+20210126,<Other>,organic,(organic),116
+20210126,(data deleted),(data deleted),<Other>,7
+20210126,<Other>,(data deleted),(data deleted),5
+20210127,google,organic,(organic),1357
+20210127,(direct),(none),(direct),958
+20210127,<Other>,<Other>,<Other>,612
+20210127,<Other>,referral,(referral),411
+20210127,shop.googlemerchandisestore.com,referral,(referral),340
+20210127,(data deleted),(data deleted),(data deleted),274
+20210127,google,cpc,<Other>,178
+20210127,<Other>,organic,(organic),130
+20210127,(data deleted),(data deleted),<Other>,6
+20210127,<Other>,(data deleted),(data deleted),5
+20210128,google,organic,(organic),1209
+20210128,(direct),(none),(direct),988
+20210128,<Other>,<Other>,<Other>,592
+20210128,<Other>,referral,(referral),395
+20210128,shop.googlemerchandisestore.com,referral,(referral),336
+20210128,(data deleted),(data deleted),(data deleted),247
+20210128,google,cpc,<Other>,167
+20210128,<Other>,organic,(organic),117
+20210128,<Other>,(data deleted),(data deleted),3
+20210128,(data deleted),(data deleted),<Other>,2
+20210129,google,organic,(organic),1181
+20210129,(direct),(none),(direct),880
+20210129,<Other>,<Other>,<Other>,537
+20210129,<Other>,referral,(referral),348
+20210129,shop.googlemerchandisestore.com,referral,(referral),285
+20210129,(data deleted),(data deleted),(data deleted),225
+20210129,google,cpc,<Other>,156
+20210129,<Other>,organic,(organic),123
+20210129,(data deleted),(data deleted),<Other>,4
+20210129,<Other>,(data deleted),(data deleted),2
+20210130,google,organic,(organic),863
+20210130,(direct),(none),(direct),664
+20210130,<Other>,<Other>,<Other>,413
+20210130,<Other>,referral,(referral),276
+20210130,shop.googlemerchandisestore.com,referral,(referral),213
+20210130,(data deleted),(data deleted),(data deleted),153
+20210130,google,cpc,<Other>,129
+20210130,<Other>,organic,(organic),94
+20210130,<Other>,(data deleted),(data deleted),2
+20210131,google,organic,(organic),888
+20210131,(direct),(none),(direct),631
+20210131,<Other>,<Other>,<Other>,404
+20210131,<Other>,referral,(referral),256
+20210131,shop.googlemerchandisestore.com,referral,(referral),215
+20210131,google,cpc,<Other>,152
+20210131,(data deleted),(data deleted),(data deleted),137
+20210131,<Other>,organic,(organic),67
+20210131,(data deleted),(data deleted),<Other>,5
+20210131,<Other>,(data deleted),(data deleted),3

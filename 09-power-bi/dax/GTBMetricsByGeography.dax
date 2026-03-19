@@ -1,0 +1,59 @@
+﻿//DAX Query
+//Define Filter Variables OrderDate_ and SalesAmount_
+DEFINE
+    VAR OrderDate_ =
+        FILTER (
+            FactInternetSales,
+            YEAR ( FactInternetSales[OrderDate] ) < 2026
+        )
+    VAR SalesAmount_ =
+        FILTER (
+            FactInternetSales,
+            FactInternetSales[SalesAmount] > 0
+        )
+    //Define Main_ query variable to evaluate using SELECTCOLUMNS later to order columns appropriately
+    VAR Main_ =
+        ADDCOLUMNS (
+            SUMMARIZECOLUMNS (
+                DimGeography[Country],
+                DimGeography[State Province],
+                DimGeography[City],
+                OrderDate_, //OrderDate_ filter applied here
+                SalesAmount_, //SalesAmount_ filter applied here
+                "Total Customers", DISTINCTCOUNT ( DimCustomer[CustomerKey] ),
+                "Total Orders", SUM ( FactInternetSales[OrderQuantity] ),
+                "Total Sales",
+                    FORMAT (
+                        SUM ( FactInternetSales[SalesAmount] ),
+                        "Currency"
+                    )
+            ),
+            "Continent",
+                SWITCH (
+                    DimGeography[Country],
+                    "Australia", "Australia",
+                    "Canada", "North America",
+                    "France", "Europe",
+                    "Germany", "Europe",
+                    "United Kingdom", "Europe",
+                    "United States", "North America",
+                    "N/A"
+                )
+        )
+//Evauate Main_ query variable and select columns in appropriate order
+EVALUATE
+SELECTCOLUMNS (
+    Main_,
+    "Continent", [Continent],
+    "Country", [Country],
+    "State Province", [State Province],
+    "City", [City],
+    "Total Customers", [Total Customers],
+    "Total Orders", [Total Orders],
+    "Total Sales", [Total Sales]
+)
+ORDER BY
+    [Continent],
+    [Country],
+    [State Province],
+    [City]

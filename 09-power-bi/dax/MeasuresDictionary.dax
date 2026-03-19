@@ -1,0 +1,30 @@
+﻿EVALUATE
+ADDCOLUMNS (
+    INFO.VIEW.MEASURES(),
+    "ExpressionTrimmed",
+        VAR Expr = [Expression]
+
+        VAR Chars =
+            ADDCOLUMNS (
+                GENERATESERIES ( 1, LEN ( Expr ), 1 ),
+                "Ch", MID ( Expr, [Value], 1 )
+            )
+
+        VAR FirstGoodPos =
+            MINX (
+                FILTER (
+                    Chars,
+                        [Ch] <> UNICHAR(10)      // LF
+                        && [Ch] <> UNICHAR(13)   // CR
+                        && [Ch] <> UNICHAR(9)    // TAB
+                        && [Ch] <> UNICHAR(160)  // NBSP
+                        && [Ch] <> UNICHAR(65279)// BOM
+                        && [Ch] <> UNICHAR(8203) // ZWSP
+                        && [Ch] <> UNICHAR(8233) // PARAGRAPH SEPARATOR (U+2029)
+                ),
+                [Value]
+            )
+
+        RETURN
+            MID ( Expr, FirstGoodPos, LEN ( Expr ) - FirstGoodPos + 1 )
+)
