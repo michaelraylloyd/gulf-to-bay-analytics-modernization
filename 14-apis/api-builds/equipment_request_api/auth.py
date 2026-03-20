@@ -1,12 +1,15 @@
+import os
 import httpx
 import time
 
-TENANT_ID = "a4326a58-f7d9-444d-b3aa-b09027e5e866"
-CLIENT_ID = "d3eb65b0-7f7f-4790-b54d-71591b36e42f"
-CLIENT_SECRET = "0Fx8Q~jfWjQpPcB34i9xufNcz64CvV_2wiaG5bcH"
-RESOURCE = "https://org7ad35dcc.crm.dynamics.com"
+# Load secrets and configuration from environment variables
+TENANT_ID = os.getenv("DATAVERSE_TENANT_ID")
+CLIENT_ID = os.getenv("DATAVERSE_CLIENT_ID")
+CLIENT_SECRET = os.getenv("DATAVERSE_CLIENT_SECRET")
+RESOURCE = os.getenv("DATAVERSE_RESOURCE_URL")  # e.g. https://org7ad35dcc.crm.dynamics.com
 
-TOKEN_URL = f"https://login.microsoftonline.com/a4326a58-f7d9-444d-b3aa-b09027e5e866/oauth2/v2.0/token"
+# Construct token URL dynamically
+TOKEN_URL = f"https://login.microsoftonline.com/{TENANT_ID}/oauth2/v2.0/token"
 
 _cached_token = None
 _cached_expiry = 0

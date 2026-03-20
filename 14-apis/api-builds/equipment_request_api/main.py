@@ -1,5 +1,8 @@
 print(">>> MAIN.PY LOADED", flush=True)
 
+from dotenv import load_dotenv
+load_dotenv()  # <-- loads .env from this folder
+
 from fastapi import FastAPI
 from routes import router as equipment_router
 
