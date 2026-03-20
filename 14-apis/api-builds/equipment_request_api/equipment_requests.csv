@@ -1,0 +1,17 @@
+id,requested_by,request_date,quantity,estimated_cost,equipment_type_label,approval_stage_label,status_label,justification,is_archived
+8df46aee-d30a-f111-8406-6045bd0a812b,mlloyd9@pods9.onmicrosoft.com,2026-02-16,1,75.0,Docking Station,Denied,Submitted,The HDMI port stopped working...,False
+73dddc50-d40a-f111-8406-6045bd0a812b,mlloyd9@pods9.onmicrosoft.com,2026-02-16,1,1000.0,Miscellaneous,Denied,Submitted,Lamp for lighting during online meetings.,False
+20871076-f10a-f111-8406-6045bd0a812b,mlloyd9@pods9.onmicrosoft.com,2026-02-16,1,80.0,Docking Station,Approved,Submitted,Needed for new monitors,False
+2148889a-f10a-f111-8406-6045bd0a812b,mlloyd9@pods9.onmicrosoft.com,2026-02-16,1,80.0,Docking Station,Approved,Submitted,needed for new monitors,False
+ee5ae96f-f70a-f111-8406-6045bd0a812b,mlloyd9@pods9.onmicrosoft.com,2026-02-16,1,799.0,Laptop,Approved,Submitted,Onboarding new employee.,False
+97faa4fa-f80a-f111-8406-6045bd0a812b,mlloyd9@pods9.onmicrosoft.com,2026-02-16,1,39.0,Keyboard/Mouse,Approved,Submitted,New Data Analyst onboarding.,False
+ac91eb0f-f90a-f111-8406-6045bd0a812b,mlloyd9@pods9.onmicrosoft.com,2026-02-16,1,49.0,Headset,Denied,Submitted,Needed for online meetings.,False
+6f91a61d-f90a-f111-8406-6045bd0a812b,mlloyd9@pods9.onmicrosoft.com,2026-02-16,1,99.0,Webcam,Denied,Submitted,Needed for online meetings.,False
+f96f3639-f90a-f111-8406-6045bd0a812b,mlloyd9@pods9.onmicrosoft.com,2026-02-16,1,699.0,Office Chair,Approved,Submitted,Lumbar support for broken vertebrae.,False
+36940c40-f90a-f111-8406-6045bd0a812b,mlloyd9@pods9.onmicrosoft.com,2026-02-16,1,1499.0,Standing Desk,Denied,Submitted,Back pain.,False
+e2621352-f90a-f111-8406-6045bd0a812b,mlloyd9@pods9.onmicrosoft.com,2026-02-16,2,299.0,Monitor,Denied,Submitted,Old ones broke.,False
+30dd5236-fd0a-f111-8406-6045bd0a812b,mlloyd9@pods9.onmicrosoft.com,2026-02-16,1,299.0,Webcam,Requested,Submitted,Needed for online meetings with clients.,False
+5732c154-fd0a-f111-8406-6045bd0a812b,mlloyd9@pods9.onmicrosoft.com,2026-03-04,1,799.0,Laptop,Approved,Submitted,Onboarding new Developer.,False
+8d0e4269-fd0a-f111-8406-6045bd0a812b,mlloyd9@pods9.onmicrosoft.com,2026-02-16,2,499.0,Monitor,Approved,Submitted,Onboarding new Developer.,False
+07b65857-020b-f111-8406-6045bd0a812b,mlloyd9@pods9.onmicrosoft.com,2026-02-16,1,999.0,Standing Desk,Approved,Submitted,Needed for rehabilitation - broken vertebrae.,False
+580620a2-aa0b-f111-8406-6045bd0a812b,mlloyd9@pods9.onmicrosoft.com,2026-02-17,1,189.0,Monitor,Approved,Submitted,Onboarding developer.,False
