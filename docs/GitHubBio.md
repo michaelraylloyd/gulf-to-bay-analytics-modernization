@@ -8,10 +8,10 @@ I’m a Business Intelligence Developer who builds end‑to‑end analytics ecos
 My flagship project, **Gulf to Bay Analytics**, is a full modernization narrative showing how SQL Server, SSIS, SSAS, and SSRS evolve into Azure Data Factory, Microsoft Fabric, Python ETL, Power BI, and Power Automate.
 
 ### 🔧 What I Build
-- Metadata‑driven ETL pipelines (Python, SQL, SSIS → Fabric)
+- Metadata‑driven ETL pipelines (Python, SQL, SSIS → Databricks → Fabric)
 - Cloud‑ready architectures (Azure SQL, Data Lake, Fabric)
 - Semantic models (SSAS → Power BI)
-- Automated refresh pipelines (ADF → Fabric → Power Automate)
+- Automated refresh pipelines (Azure Data Factory → Fabric → Power Automate)
 - Clean, documented, reproducible BI ecosystems
 
 ### 📌 Featured Project  
